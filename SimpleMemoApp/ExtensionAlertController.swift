@@ -10,10 +10,10 @@ extension UIAlertController {
         
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
         alert.addTextField(configurationHandler: textFieldConfig)
-
+        
         return alert
     }
-
+    
     //追加ボタンの設定とタップ時の処理
     func addDefaultActionWithText(title: String?, textHandler: ((String) -> Void)?) -> UIAlertController {
         
@@ -28,14 +28,14 @@ extension UIAlertController {
         addAction(action)
         return self
     }
-
+    
     //キャンセルボタンを押したときの処理
     func addCancelAction() -> UIAlertController {
         
         addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
         return self
     }
-
+    
     //遷移の実装
     func present(from viewController: UIViewController) {
         

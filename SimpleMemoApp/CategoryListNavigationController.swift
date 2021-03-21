@@ -11,12 +11,8 @@ class CategoryListNavigationController: UINavigationController {
         UINavigationBar.appearance().isTranslucent = false
         // ナビゲーションバーの下部ボーダーを消す
         navigationBar.shadowImage = UIImage()
-        
-        
-       
     }
  
-  
 }
 
 

@@ -5,8 +5,14 @@ import UIKit
 
 class CategoryListController: UIViewController {
     
-    private var viewModel: ViewModel!
+    //テーブルビュー
+    @IBOutlet weak var categoryTableView: UITableView!
+    //テーブルビューの高さ
+    @IBOutlet weak var categoryTableViewHeight: NSLayoutConstraint!
+    //テーブルビューのsafe area（下）からの距離
+    @IBOutlet weak var categoryTableViewBottom: NSLayoutConstraint!
     
+    private var viewModel: ViewModel!
     //UserDefaultsに保存するためのキー
     static let categoryStoreKey = "categoryKey"
     //cellId
@@ -15,24 +21,15 @@ class CategoryListController: UIViewController {
     var memoCategoryList = ["カテゴリー未指定"]
     //UserDefaultsの宣言
     let ud = UserDefaults.standard
-    
     //Idリストを一時的に補完するための変数
     var memoIdList = [String]()
-    
-    //テーブルビュー
-    @IBOutlet weak var categoryTableView: UITableView!
-    //テーブルビューの高さ
-    @IBOutlet weak var categoryTableViewHeight: NSLayoutConstraint!
-    //テーブルビューのsafe area（下）からの距離
-    @IBOutlet weak var categoryTableViewBottom: NSLayoutConstraint!
-    
     
     //viewが読み込まれた後の処理
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.navigationItem.title = "カテゴリー"
-       
+        
         loadCategory()
         
         //viewModelの初期化
@@ -44,26 +41,26 @@ class CategoryListController: UIViewController {
         
         //戻るボタンの設定
         self.navigationItem.backBarButtonItem = UIBarButtonItem(
-                    title: "",
-                    style: .plain,
-                    target: nil,
-                    action: nil
-                )
-            
+            title: "",
+            style: .plain,
+            target: nil,
+            action: nil
+        )
+        
     }
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         
         if categoryTableViewBottom.constant >= CGFloat(0) {
-        categoryTableViewHeight.constant = CGFloat(categoryTableView.contentSize.height)
+            categoryTableViewHeight.constant = CGFloat(categoryTableView.contentSize.height)
         }
         
     }
     
     //viewを表示する前に実行される
     override func viewWillAppear(_ animated: Bool) {
-           super.viewWillAppear(animated)
+        super.viewWillAppear(animated)
         
         loadCategory()
         
@@ -71,7 +68,7 @@ class CategoryListController: UIViewController {
         viewModel = ViewModel()
         
         if categoryTableViewBottom.constant >= CGFloat(0) {
-        categoryTableViewHeight.constant = CGFloat(categoryTableView.contentSize.height)
+            categoryTableViewHeight.constant = CGFloat(categoryTableView.contentSize.height)
         }
         //何度もカテゴリーが追加されない様にするための条件
         guard memoCategoryList.count == 1 else {return}
@@ -80,14 +77,14 @@ class CategoryListController: UIViewController {
         viewModel = ViewModel()
         categoryTableView.reloadData()
         
-       }
+    }
     
     override func viewDidDisappear(_ animated: Bool) {
-      super.viewDidDisappear(animated)
+        super.viewDidDisappear(animated)
         
         memoIdList = [String]()
-      
-     }
+        
+    }
     
     //カテゴリーの配列の更新をする関数
     func loadCategory(){
@@ -121,23 +118,23 @@ extension CategoryListController: UITableViewDelegate {
     //cellをタップしたときの処理
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-       
+        
         if viewModel.currentMemos.count != 0 {
-        for count in 0...viewModel.currentMemos.count-1 {
-          //  viewModel.currentMemos[count]
-            if memoCategoryList[indexPath.row] == viewModel.currentMemos[count].category {
-                memoIdList.append(viewModel.currentMemos[count].id)
-                
+            for count in 0...viewModel.currentMemos.count-1 {
+                //  viewModel.currentMemos[count]
+                if memoCategoryList[indexPath.row] == viewModel.currentMemos[count].category {
+                    memoIdList.append(viewModel.currentMemos[count].id)
+                    
+                }
             }
-        }
         }
         
         
         let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "titleListController") as! TitleListController
         nextVC.memoIdList = memoIdList
-              self.navigationController?.pushViewController(nextVC, animated: true)
-
-}
+        self.navigationController?.pushViewController(nextVC, animated: true)
+        
+    }
     
     
 }
@@ -155,7 +152,7 @@ extension CategoryListController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: .default, reuseIdentifier: categoryListCellId)
         cell.textLabel?.text = "\(memoCategoryList[indexPath.row])"
-
+        
         return cell
     }
     

@@ -6,12 +6,6 @@ import FSCalendar
 
 class CalenderController: UIViewController, FSCalendarDelegate, FSCalendarDataSource {
     
-    private var viewModel: ViewModel!
-    
-    var displayMemo = [MemoData]()
-    var selectedDate:String = ""
-    var now:Date!
-    
     //カレンダー
     @IBOutlet weak var calendarView: FSCalendar!
     //カレンダーの下に配置するtableView
@@ -20,6 +14,12 @@ class CalenderController: UIViewController, FSCalendarDelegate, FSCalendarDataSo
     @IBOutlet weak var calenderTableHeight: NSLayoutConstraint!
     //tableViewの下からの距離
     @IBOutlet weak var calendertableBottom: NSLayoutConstraint!
+    
+    private var viewModel: ViewModel!
+    var displayMemo = [MemoData]()
+    var selectedDate:String = ""
+    var now:Date!
+    
     //viewが読み込まれた後の処理
     override func viewDidLoad() {
         super.viewDidLoad()

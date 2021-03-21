@@ -5,25 +5,22 @@ import UIKit
 
 class AddMemoChoseCategoryController: UIViewController {
     
-    //UserDefaultsに保存するためのキー
-    static let categoryStoreKey = "categoryKey"
-    
-    //カテゴリーリストのcellId
-    private let categoryCellId = "categoryCell"
-    //新規カテゴリーを追加するためのcellのcellId
-    private let addCategoryCellId = "addCategoryCell"
-    
-    var memoCategoryArray = ["カテゴリー未指定"]
-    
-    //UserDefaultsの宣言
-    let ud = UserDefaults.standard
-    
     //カテゴリーのテーブルビュー紐付け
     @IBOutlet weak var categoryTableView: UITableView!
     //カテゴリーテーブルビューの高さ
     @IBOutlet weak var catagoryTableViewHeight: NSLayoutConstraint!
     
     @IBOutlet weak var categoryTableViewBottom: NSLayoutConstraint!
+    
+    //UserDefaultsに保存するためのキー
+    static let categoryStoreKey = "categoryKey"
+    //カテゴリーリストのcellId
+    private let categoryCellId = "categoryCell"
+    //新規カテゴリーを追加するためのcellのcellId
+    private let addCategoryCellId = "addCategoryCell"
+    var memoCategoryArray = ["カテゴリー未指定"]
+    //UserDefaultsの宣言
+    let ud = UserDefaults.standard
     
     //viewが読み込まれた後の処理
     override func viewDidLoad() {
@@ -39,7 +36,7 @@ class AddMemoChoseCategoryController: UIViewController {
         super.viewWillLayoutSubviews()
         
         if categoryTableViewBottom.constant >= CGFloat(0) {
-        catagoryTableViewHeight.constant = CGFloat(categoryTableView.contentSize.height)
+            catagoryTableViewHeight.constant = CGFloat(categoryTableView.contentSize.height)
         }
         
     }
@@ -48,7 +45,7 @@ class AddMemoChoseCategoryController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         
         if categoryTableViewBottom.constant >= CGFloat(0) {
-        catagoryTableViewHeight.constant = CGFloat(categoryTableView.contentSize.height)
+            catagoryTableViewHeight.constant = CGFloat(categoryTableView.contentSize.height)
         }
         //何度もカテゴリーが追加されない様にするための条件
         guard memoCategoryArray.count == 1 else {return}
@@ -123,24 +120,24 @@ extension AddMemoChoseCategoryController: UITableViewDelegate {
             }
             
             
-           //メモ確認画面にカテゴリー名を渡す
+            //メモ確認画面にカテゴリー名を渡す
             if let preNC = presentingViewController as? CategoryListNavigationController{
-            let preVC = preNC.viewControllers[preNC.viewControllers.count - 1] as! MemoCheckController
-            preVC.categoryName = memoCategoryArray[indexPath.row]
-            preVC.modalDidFinished()
+                let preVC = preNC.viewControllers[preNC.viewControllers.count - 1] as! MemoCheckController
+                preVC.categoryName = memoCategoryArray[indexPath.row]
+                preVC.modalDidFinished()
             }
             //メモ確認画面にカテゴリー名を渡す(検索画面から遷移)
-             if let preNC = presentingViewController as? SearchNavigationController{
-             let preVC = preNC.viewControllers[preNC.viewControllers.count - 1] as! MemoCheckController
-             preVC.categoryName = memoCategoryArray[indexPath.row]
-             preVC.modalDidFinished()
-             }
+            if let preNC = presentingViewController as? SearchNavigationController{
+                let preVC = preNC.viewControllers[preNC.viewControllers.count - 1] as! MemoCheckController
+                preVC.categoryName = memoCategoryArray[indexPath.row]
+                preVC.modalDidFinished()
+            }
             //メモ確認画面にカテゴリー名を渡す(検索画面から遷移)
-             if let preNC = presentingViewController as? CalenderNavigationController{
-             let preVC = preNC.viewControllers[preNC.viewControllers.count - 1] as! MemoCheckController
-             preVC.categoryName = memoCategoryArray[indexPath.row]
-             preVC.modalDidFinished()
-             }
+            if let preNC = presentingViewController as? CalenderNavigationController{
+                let preVC = preNC.viewControllers[preNC.viewControllers.count - 1] as! MemoCheckController
+                preVC.categoryName = memoCategoryArray[indexPath.row]
+                preVC.modalDidFinished()
+            }
             
             //モーダルを閉じる
             dismiss(animated: true, completion: nil)

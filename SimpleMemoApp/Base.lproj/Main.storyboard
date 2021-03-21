@@ -680,10 +680,10 @@
                     </view>
                     <navigationItem key="navigationItem" id="jD8-Dp-Ssv"/>
                     <connections>
-                        <outlet property="thirdCategoryLabel" destination="tO2-mi-U6p" id="9Bm-Y3-q5e"/>
-                        <outlet property="thirdDateLabel" destination="nbj-5k-OBf" id="Y6f-ns-bkh"/>
-                        <outlet property="thirdText" destination="bpQ-gX-kwb" id="tFb-c8-7ci"/>
-                        <outlet property="thirdTitleLabel" destination="b1C-Oj-Ndq" id="XCT-7e-ZU9"/>
+                        <outlet property="categoryLabel" destination="tO2-mi-U6p" id="9Bm-Y3-q5e"/>
+                        <outlet property="dateLabel" destination="nbj-5k-OBf" id="Y6f-ns-bkh"/>
+                        <outlet property="textView" destination="bpQ-gX-kwb" id="tFb-c8-7ci"/>
+                        <outlet property="titleLabel" destination="b1C-Oj-Ndq" id="XCT-7e-ZU9"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zUM-SX-tqv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

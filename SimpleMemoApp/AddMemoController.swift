@@ -5,13 +5,6 @@ import UIKit
 
 class AddMemoController : UIViewController {
     
-    var categoryName : String?
-    
-    private var viewModel: ViewModel!
-    
-    //日付の一時保管
-    var nowDate : String = ""
-    
     //日付の欄
     @IBOutlet weak var addDate: UILabel!
     //カテゴリーの欄
@@ -21,6 +14,10 @@ class AddMemoController : UIViewController {
     //テキストの欄
     @IBOutlet weak var addText: UITextView!
     
+    var categoryName : String?
+    private var viewModel: ViewModel!
+    //日付の一時保管
+    var nowDate : String = ""
     
     //保存ボタンを押したときの処理
     @IBAction func addSaveText(_ sender: Any) {

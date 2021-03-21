@@ -12,7 +12,6 @@ class CategoryListButtonController: UIViewController {
     //カレンダー画面を表示するボタン
     @IBOutlet weak var calendarButton: UIButton!
     
-    
     //viewが読み込まれた後の処理
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,18 +30,12 @@ class CategoryListButtonController: UIViewController {
         self.navigationItem.title = "カテゴリー"
         
         self.navigationItem.backBarButtonItem = UIBarButtonItem(
+            
             title: "",
             style: .plain,
             target: nil,
             action: nil
         )
-        
     }
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-        
-       }
     
-
 }
