@@ -4,7 +4,7 @@
 import UIKit
 import FSCalendar
 
-class CalenderController: UIViewController, FSCalendarDelegate {
+class CalenderController: UIViewController, FSCalendarDelegate, FSCalendarDataSource {
     
     private var viewModel: ViewModel!
     
@@ -24,6 +24,9 @@ class CalenderController: UIViewController, FSCalendarDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.calendarView.delegate = self
+        self.calendarView.dataSource = self
+        
         //viewModelの初期化
         viewModel = ViewModel()
         
@@ -34,7 +37,6 @@ class CalenderController: UIViewController, FSCalendarDelegate {
         calenderTableView.dataSource = self
         
         now = Date()
-        let calendar = Calendar.current
         calendarView.select(now)
         let formatter = DateFormatter()
         formatter.dateFormat = "yyyy/MM/dd(EEE)"
@@ -52,6 +54,10 @@ class CalenderController: UIViewController, FSCalendarDelegate {
                 )
         
     }
+    override func didReceiveMemoryWarning() {
+            super.didReceiveMemoryWarning()
+           
+        }
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()

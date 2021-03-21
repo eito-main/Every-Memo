@@ -119,6 +119,10 @@
                                         <integer key="value" value="15"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <outlet property="dataSource" destination="hxQ-YZ-gYK" id="zKw-mm-hXi"/>
+                                    <outlet property="delegate" destination="hxQ-YZ-gYK" id="FgE-GG-Txx"/>
+                                </connections>
                             </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="TrO-Ob-FQX"/>
@@ -226,10 +230,9 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="メモ追加" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Vv-bT-tF2">
-                                <rect key="frame" x="157" y="58" width="100" height="30"/>
+                                <rect key="frame" x="172.5" y="58" width="69.5" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="oq0-re-sYO"/>
-                                    <constraint firstAttribute="width" constant="100" id="x54-tL-Gjh"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
@@ -258,6 +261,7 @@
                             <constraint firstItem="imW-RB-XYc" firstAttribute="top" secondItem="Vmq-Dt-TpU" secondAttribute="bottom" constant="10" id="4zt-bE-mtm"/>
                             <constraint firstItem="doi-Nc-I9R" firstAttribute="top" secondItem="oLT-08-sxJ" secondAttribute="bottom" id="71X-MY-2JW"/>
                             <constraint firstItem="Vmq-Dt-TpU" firstAttribute="top" secondItem="qzU-bz-EcI" secondAttribute="top" constant="14" id="7Cc-1a-SYF"/>
+                            <constraint firstItem="iWL-J9-RxY" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="3Vv-bT-tF2" secondAttribute="trailing" constant="10" id="Bp9-Mh-5Mm"/>
                             <constraint firstItem="imW-RB-XYc" firstAttribute="top" secondItem="iWL-J9-RxY" secondAttribute="bottom" constant="10" id="Dlt-1Z-Was"/>
                             <constraint firstItem="8zB-db-g7k" firstAttribute="trailing" secondItem="qzU-bz-EcI" secondAttribute="trailing" constant="-20" id="GSg-6G-H1S"/>
                             <constraint firstItem="qzU-bz-EcI" firstAttribute="trailing" secondItem="iWL-J9-RxY" secondAttribute="trailing" constant="25" id="IC3-6h-dBU"/>
@@ -273,6 +277,7 @@
                             <constraint firstItem="PLa-9j-bbt" firstAttribute="top" secondItem="kl5-hz-fKk" secondAttribute="bottom" id="byw-Df-Mzm"/>
                             <constraint firstItem="XAj-vr-NsG" firstAttribute="top" secondItem="8zB-db-g7k" secondAttribute="bottom" id="d1S-VI-XRn"/>
                             <constraint firstItem="qzU-bz-EcI" firstAttribute="trailing" secondItem="imW-RB-XYc" secondAttribute="trailing" constant="15" id="fcf-8H-TNY"/>
+                            <constraint firstItem="3Vv-bT-tF2" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Vmq-Dt-TpU" secondAttribute="trailing" constant="10" id="hFg-GL-cdo"/>
                             <constraint firstItem="oLT-08-sxJ" firstAttribute="top" secondItem="PLa-9j-bbt" secondAttribute="bottom" id="hhs-i2-wfb"/>
                             <constraint firstItem="oLT-08-sxJ" firstAttribute="leading" secondItem="qzU-bz-EcI" secondAttribute="leading" constant="20" id="jCf-5S-qvM"/>
                             <constraint firstItem="iWL-J9-RxY" firstAttribute="top" secondItem="qzU-bz-EcI" secondAttribute="top" constant="14" id="jaj-kx-een"/>
@@ -529,22 +534,22 @@
         <scene sceneID="JD1-92-Cp9">
             <objects>
                 <viewController storyboardIdentifier="titleListController" useStoryboardIdentifierAsRestorationIdentifier="YES" id="wbV-6s-hwg" customClass="TitleListController" customModule="SimpleMemoApp" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="96U-xk-Gp5">
+                    <view key="view" contentMode="scaleToFill" id="96U-xk-Gp5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="w9Q-AK-183">
-                                <rect key="frame" x="15" y="54" width="384" height="758"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="w9Q-AK-183">
+                                <rect key="frame" x="15" y="54" width="384" height="700"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="810" id="WEg-Zo-R37"/>
+                                    <constraint firstAttribute="height" constant="700" id="WEg-Zo-R37"/>
                                 </constraints>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="titleListCellId" id="OFr-qA-UfW">
-                                        <rect key="frame" x="0.0" y="28" width="384" height="44"/>
+                                        <rect key="frame" x="0.0" y="28" width="384" height="43.5"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="OFr-qA-UfW" id="qOM-NK-7os">
-                                            <rect key="frame" x="0.0" y="0.0" width="384" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="384" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                         </tableViewCellContentView>
                                     </tableViewCell>

@@ -48,14 +48,14 @@ class MemoCheckController: UIViewController {
         @objc func editBarButtonTapped(_ sender: UIBarButtonItem) {
             
             if editCheck == false {
-                print("【編集】ボタンが押された!")
+               
                 editCheck = true
                 editBarButtonItem.title = "完了"
                 thirdTitleLabel.isEnabled = true
                 thirdText.isEditable = true
                 self.navigationItem.hidesBackButton = true
             } else {
-                print("【完了】ボタンが押された!")
+               
                 guard thirdCategoryLabel.text != nil && thirdText.text != nil && thirdTitleLabel.text != nil else {return}
                 editCheck = false
                 editBarButtonItem.title = "編集"

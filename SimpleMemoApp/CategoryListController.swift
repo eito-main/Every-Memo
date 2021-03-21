@@ -94,7 +94,7 @@ class CategoryListController: UIViewController {
         if ud.array(forKey: AddMemoChoseCategoryController.categoryStoreKey) != nil{
             
             //取得 またas!でアンラップしているのでnilじゃない時のみ
-            var udMemoCategoryArray = ud.array(forKey: AddMemoChoseCategoryController.categoryStoreKey) as! [String]
+            let udMemoCategoryArray = ud.array(forKey: AddMemoChoseCategoryController.categoryStoreKey) as! [String]
             if udMemoCategoryArray.count == 0 {
                 
                 memoCategoryList = memoCategoryList + udMemoCategoryArray

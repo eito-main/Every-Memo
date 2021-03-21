@@ -85,10 +85,10 @@ class TitleListController: UIViewController {
     }
     
     func editCheck(checkMemo: MemoData) {
-        print(memoList.count)
+       
         if category != checkMemo.category{
             for count in 0...memoList.count-1 {
-                print(count)
+               
                 if checkMemo.id == memoList[count].id {
                     memoList.remove(at: count)
                     return
