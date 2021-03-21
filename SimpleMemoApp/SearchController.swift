@@ -56,6 +56,11 @@ class SearchController: UIViewController, UISearchBarDelegate {
     //viewを表示する前に実行される
     override func viewWillAppear(_ animated: Bool) {
            super.viewWillAppear(animated)
+        viewModel = ViewModel()
+        searchBar.text = ""
+        searchResult.removeAll()
+        searchResultTableView.reloadData()
+        
         
         if searchTableViewBottom.constant >= CGFloat(0) {
         searchTableViewHeight.constant = CGFloat(searchResultTableView.contentSize.height)

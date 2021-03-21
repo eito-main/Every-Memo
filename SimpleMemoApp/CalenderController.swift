@@ -10,6 +10,7 @@ class CalenderController: UIViewController, FSCalendarDelegate {
     
     var displayMemo = [MemoData]()
     var selectedDate:String = ""
+    var now:Date!
     
     //カレンダー
     @IBOutlet weak var calendarView: FSCalendar!
@@ -32,7 +33,7 @@ class CalenderController: UIViewController, FSCalendarDelegate {
         calenderTableView.delegate = self
         calenderTableView.dataSource = self
         
-        let now = Date()
+        now = Date()
         let calendar = Calendar.current
         calendarView.select(now)
         let formatter = DateFormatter()
@@ -63,6 +64,14 @@ class CalenderController: UIViewController, FSCalendarDelegate {
     //viewを表示する前に実行される
     override func viewWillAppear(_ animated: Bool) {
            super.viewWillAppear(animated)
+        viewModel = ViewModel()
+        calenderTableView.reloadData()
+        calendarView.select(now)
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy/MM/dd(EEE)"
+        selectedDate = formatter.string(from: now)
+        displayMemoChange()
+        
         
         if calendertableBottom.constant >= CGFloat(0) {
         calenderTableHeight.constant = CGFloat(calenderTableView.contentSize.height)

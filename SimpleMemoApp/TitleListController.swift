@@ -16,6 +16,7 @@ class TitleListController: UIViewController {
     
     var memoIdList = [String]()
     var memoList = [MemoData]()
+    var category = " "
         
         
     //viewが読み込まれた後の処理
@@ -59,6 +60,10 @@ class TitleListController: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
            super.viewWillAppear(animated)
         
+        
+        
+        titleListTableView.reloadData()
+        
         if titleListTableViewBottom.constant >= CGFloat(0) {
         titleListTableViewHeight.constant = CGFloat(titleListTableView.contentSize.height)
         }
@@ -72,9 +77,24 @@ class TitleListController: UIViewController {
             for count2 in 0...memoIdList.count-1 {
                 if viewModel.currentMemos[count].id == memoIdList[count2] {
                     memoList.append(viewModel.currentMemos[count])
+                    category = memoList[0].category
                     
             }
         }
+        }
+    }
+    
+    func editCheck(checkMemo: MemoData) {
+        print(memoList.count)
+        if category != checkMemo.category{
+            for count in 0...memoList.count-1 {
+                print(count)
+                if checkMemo.id == memoList[count].id {
+                    memoList.remove(at: count)
+                    return
+                }
+            }
+            titleListTableView.reloadData()
         }
     }
     

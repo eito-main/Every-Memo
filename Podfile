@@ -7,5 +7,6 @@ target 'SimpleMemoApp' do
 
   # Pods for SimpleMemoApp
 pod 'FSCalendar'
+pod 'IQKeyboardManagerSwift'
 
 end

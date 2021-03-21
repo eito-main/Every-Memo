@@ -115,14 +115,37 @@ extension AddMemoChoseCategoryController: UITableViewDelegate {
             return
         } else {
             
+            
             //メモ追加画面に選択されたカテゴリー名を渡す
             if let vc = presentingViewController as? AddMemoController {
                 vc.categoryName = memoCategoryArray[indexPath.row]
                 vc.modalDidFinished()
             }
             
+            
+           //メモ確認画面にカテゴリー名を渡す
+            if let preNC = presentingViewController as? CategoryListNavigationController{
+            let preVC = preNC.viewControllers[preNC.viewControllers.count - 1] as! MemoCheckController
+            preVC.categoryName = memoCategoryArray[indexPath.row]
+            preVC.modalDidFinished()
+            }
+            //メモ確認画面にカテゴリー名を渡す(検索画面から遷移)
+             if let preNC = presentingViewController as? SearchNavigationController{
+             let preVC = preNC.viewControllers[preNC.viewControllers.count - 1] as! MemoCheckController
+             preVC.categoryName = memoCategoryArray[indexPath.row]
+             preVC.modalDidFinished()
+             }
+            //メモ確認画面にカテゴリー名を渡す(検索画面から遷移)
+             if let preNC = presentingViewController as? CalenderNavigationController{
+             let preVC = preNC.viewControllers[preNC.viewControllers.count - 1] as! MemoCheckController
+             preVC.categoryName = memoCategoryArray[indexPath.row]
+             preVC.modalDidFinished()
+             }
+            
             //モーダルを閉じる
             dismiss(animated: true, completion: nil)
+            
+            
             
         }
     }

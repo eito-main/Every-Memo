@@ -21,11 +21,6 @@ class AddMemoController : UIViewController {
     //テキストの欄
     @IBOutlet weak var addText: UITextView!
     
-    //カテゴリーの欄をタップしたときの処理
-    @IBAction func tapLabel(_ sender: Any) {
-       
-    }
-    
     
     //保存ボタンを押したときの処理
     @IBAction func addSaveText(_ sender: Any) {
@@ -90,20 +85,6 @@ class AddMemoController : UIViewController {
         addDate.text = dateFormatter.string(from: now)
         
         
-        //keybordの上のカスタムバー宣言
-        let custombar = UIView(frame: CGRect(x:0, y:0,width:(UIScreen.main.bounds.size.width),height:40))
-        
-                addText.inputAccessoryView = custombar
-                addText.keyboardType = .default
-                addText.delegate = self
-
-        
-        ChoseCategory.layer.cornerRadius = 15
-        ChoseCategory.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
-        
-        addText.layer.cornerRadius = 15
-        addText.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
-        
                 
     }
     
@@ -128,6 +109,13 @@ class AddMemoController : UIViewController {
         //navigationBarを表示するメソッド
            showNavigationBar()
        }
+    
+    //入力画面ないしkeyboardの外を押したら、キーボードを閉じる処理
+        override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+            if (addText.isFirstResponder) {
+                addText.resignFirstResponder()
+            }
+        }
     
     func modalDidFinished(){
             
