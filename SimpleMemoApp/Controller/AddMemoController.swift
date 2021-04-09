@@ -82,6 +82,13 @@ class AddMemoController : UIViewController {
         addDate.text = dateFormatter.string(from: now)
         
         
+        if (UITraitCollection.current.userInterfaceStyle == .dark) {
+            /* ダークモード時の処理 */
+            ChoseCategory.backgroundColor = .black
+            addDate.backgroundColor = .black
+            addTitle.backgroundColor = .black
+        }
+        
                 
     }
     
@@ -119,6 +126,7 @@ class AddMemoController : UIViewController {
             ChoseCategory.text = categoryName
             
         }
+    
    
     
     
