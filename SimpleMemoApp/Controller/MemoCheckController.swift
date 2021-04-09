@@ -38,6 +38,15 @@ class MemoCheckController: UIViewController {
         editBarButtonItem = UIBarButtonItem(title: "編集", style: .done, target: self, action: #selector(editBarButtonTapped(_:)))
         
         self.navigationItem.rightBarButtonItems = [editBarButtonItem]
+        
+        if (UITraitCollection.current.userInterfaceStyle == .dark) {
+            /* ダークモード時の処理 */
+            categoryLabel.backgroundColor = .black
+            dateLabel.backgroundColor = .black
+            titleLabel.backgroundColor = .black
+        }
+    
+
     }
     
     // "編集"ボタンが押された時の処理
@@ -50,11 +59,13 @@ class MemoCheckController: UIViewController {
             titleLabel.isEnabled = true
             textView.isEditable = true
             self.navigationItem.hidesBackButton = true
+            isModalInPresentation = true
             
         } else {
             
             guard categoryLabel.text != nil && textView.text != nil && titleLabel.text != nil else {return}
             
+            isModalInPresentation = false
             editCheck = false
             editBarButtonItem.title = "編集"
             titleLabel.isEnabled = false
@@ -71,6 +82,7 @@ class MemoCheckController: UIViewController {
                 self.navigationItem.hidesBackButton = false
             }
         }
+        
     }
     
     override func touchesBegan(_ touches: Set<UITouch>,with event: UIEvent?){
@@ -121,5 +133,5 @@ class MemoCheckController: UIViewController {
     func updateMemo(Memo: MemoData) {
         viewModel.updateMemo(for: Memo.id, to: Memo )
     }
-    
+  
 }
