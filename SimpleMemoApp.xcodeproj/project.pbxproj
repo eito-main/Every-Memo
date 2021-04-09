@@ -93,30 +93,54 @@
 		4E0B919025DAE87E006BF644 /* SimpleMemoApp */ = {
 			isa = PBXGroup;
 			children = (
-				4E0B919725DAE87E006BF644 /* Main.storyboard */,
-				4E0B91AF25DC32FA006BF644 /* MemoData.swift */,
-				4E0B91EE25E967C4006BF644 /* ViewModel.swift */,
-				4E0B91EB25E965F4006BF644 /* MemoRepository.swift */,
-				4E0B922C25F866FF006BF644 /* CategoryListNavigationController.swift */,
-				4E0B919525DAE87E006BF644 /* CategoryListController.swift */,
-				4E0B91B925DC8BF1006BF644 /* CategoryListButtonController.swift */,
-				4E0B91A725DC2EC3006BF644 /* TitleListController.swift */,
-				4E0B91AA25DC2FB8006BF644 /* MemoCheckController.swift */,
-				4E0B922F25FC8906006BF644 /* SearchNavigationController.swift */,
-				4E0B91C225DD09E0006BF644 /* SearchController.swift */,
-				4E0B923225FC8953006BF644 /* CalenderNavigationController.swift */,
-				4E0B91BD25DD0554006BF644 /* CalenderController.swift */,
-				4E0B91C625DD0A26006BF644 /* AddMemoController.swift */,
-				4E0B91CC25DD21B0006BF644 /* AddMemoChoseCategoryController.swift */,
-				4E0B921D25EE359D006BF644 /* ExtensionAlertController.swift */,
-				4E0B91D825DEB732006BF644 /* ExtensionNavigationHide.swift */,
-				4E0B919A25DAE87F006BF644 /* Assets.xcassets */,
-				4E0B919125DAE87E006BF644 /* AppDelegate.swift */,
-				4E0B919325DAE87E006BF644 /* SceneDelegate.swift */,
+				4EFA9740261C75FB00655626 /* Model */,
+				4EFA9741261C760600655626 /* View */,
+				4EFA9742261C760F00655626 /* Controller */,
 				4E0B919C25DAE87F006BF644 /* LaunchScreen.storyboard */,
 				4E0B919F25DAE87F006BF644 /* Info.plist */,
 			);
 			path = SimpleMemoApp;
+			sourceTree = "<group>";
+		};
+		4EFA9740261C75FB00655626 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4E0B91AF25DC32FA006BF644 /* MemoData.swift */,
+				4E0B91EE25E967C4006BF644 /* ViewModel.swift */,
+				4E0B91EB25E965F4006BF644 /* MemoRepository.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4EFA9741261C760600655626 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4E0B919725DAE87E006BF644 /* Main.storyboard */,
+				4E0B919A25DAE87F006BF644 /* Assets.xcassets */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4EFA9742261C760F00655626 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4E0B919325DAE87E006BF644 /* SceneDelegate.swift */,
+				4E0B919125DAE87E006BF644 /* AppDelegate.swift */,
+				4E0B91D825DEB732006BF644 /* ExtensionNavigationHide.swift */,
+				4E0B921D25EE359D006BF644 /* ExtensionAlertController.swift */,
+				4E0B91CC25DD21B0006BF644 /* AddMemoChoseCategoryController.swift */,
+				4E0B91C625DD0A26006BF644 /* AddMemoController.swift */,
+				4E0B91BD25DD0554006BF644 /* CalenderController.swift */,
+				4E0B923225FC8953006BF644 /* CalenderNavigationController.swift */,
+				4E0B91C225DD09E0006BF644 /* SearchController.swift */,
+				4E0B922F25FC8906006BF644 /* SearchNavigationController.swift */,
+				4E0B91AA25DC2FB8006BF644 /* MemoCheckController.swift */,
+				4E0B91A725DC2EC3006BF644 /* TitleListController.swift */,
+				4E0B91B925DC8BF1006BF644 /* CategoryListButtonController.swift */,
+				4E0B919525DAE87E006BF644 /* CategoryListController.swift */,
+				4E0B922C25F866FF006BF644 /* CategoryListNavigationController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		F6430532E8FC5E404B810FC9 /* Frameworks */ = {
