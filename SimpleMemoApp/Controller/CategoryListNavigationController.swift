@@ -3,7 +3,7 @@
 
 import UIKit
  
-class CategoryListNavigationController: UINavigationController {
+final class CategoryListNavigationController: UINavigationController {
  
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -3,7 +3,7 @@
 
 import UIKit
 
-class MemoCheckController: UIViewController {
+final class MemoCheckController: UIViewController {
     
     @IBOutlet weak var categoryLabel: UILabel!
     @IBOutlet weak var titleLabel: UITextField!

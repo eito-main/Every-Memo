@@ -3,7 +3,7 @@
 
 import UIKit
 
-class TitleListController: UIViewController {
+final class TitleListController: UIViewController {
     
     //tableView
     @IBOutlet weak var titleListTableView: UITableView!

@@ -3,7 +3,7 @@
 
 import UIKit
 
-class CategoryListController: UIViewController {
+final class CategoryListController: UIViewController {
     
     //テーブルビュー
     @IBOutlet weak var categoryTableView: UITableView!

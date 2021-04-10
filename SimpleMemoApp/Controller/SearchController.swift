@@ -3,7 +3,7 @@
 
 import UIKit
 
-class SearchController: UIViewController, UISearchBarDelegate {
+final class SearchController: UIViewController, UISearchBarDelegate {
     
     //検索バー
     @IBOutlet weak var searchBar: UISearchBar!

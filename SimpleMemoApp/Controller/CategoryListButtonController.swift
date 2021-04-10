@@ -3,7 +3,7 @@
 
 import UIKit
 
-class CategoryListButtonController: UIViewController {
+final class CategoryListButtonController: UIViewController {
     
     //メモ追加画面を表示するボタン
     @IBOutlet weak var memoButton: UIButton!
