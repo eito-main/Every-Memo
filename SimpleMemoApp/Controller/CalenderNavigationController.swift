@@ -3,7 +3,7 @@
 
 import UIKit
 
-class CalenderNavigationController: UINavigationController {
+final class CalenderNavigationController: UINavigationController {
     
     override func viewDidLoad() {
         super.viewDidLoad()

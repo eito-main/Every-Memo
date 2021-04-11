@@ -4,7 +4,7 @@
 import UIKit
 import FSCalendar
 
-class CalenderController: UIViewController, FSCalendarDelegate, FSCalendarDataSource {
+final class CalenderController: UIViewController, FSCalendarDelegate, FSCalendarDataSource {
     
     //カレンダー
     @IBOutlet weak var calendarView: FSCalendar!
@@ -52,6 +52,12 @@ class CalenderController: UIViewController, FSCalendarDelegate, FSCalendarDataSo
                     target: nil,
                     action: nil
                 )
+        
+        if (UITraitCollection.current.userInterfaceStyle == .dark) {
+            /* ダークモード時の処理 */
+            calendarView.appearance.titleDefaultColor = UIColor.white
+            
+        }
         
     }
     override func didReceiveMemoryWarning() {

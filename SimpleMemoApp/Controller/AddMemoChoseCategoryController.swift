@@ -3,7 +3,7 @@
 
 import UIKit
 
-class AddMemoChoseCategoryController: UIViewController {
+final class AddMemoChoseCategoryController: UIViewController {
     
     //カテゴリーのテーブルビュー紐付け
     @IBOutlet weak var categoryTableView: UITableView!

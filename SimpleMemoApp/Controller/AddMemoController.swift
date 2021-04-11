@@ -3,7 +3,7 @@
 
 import UIKit
 
-class AddMemoController : UIViewController {
+final class AddMemoController : UIViewController {
     
     //日付の欄
     @IBOutlet weak var addDate: UILabel!
@@ -127,11 +127,7 @@ class AddMemoController : UIViewController {
             
         }
     
-   
-    
-    
 }
-
 
 //TextViewのデリゲート宣言
 extension AddMemoController: UITextViewDelegate{

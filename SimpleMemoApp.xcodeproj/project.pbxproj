@@ -124,8 +124,6 @@
 		4EFA9742261C760F00655626 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				4E0B919325DAE87E006BF644 /* SceneDelegate.swift */,
-				4E0B919125DAE87E006BF644 /* AppDelegate.swift */,
 				4E0B91D825DEB732006BF644 /* ExtensionNavigationHide.swift */,
 				4E0B921D25EE359D006BF644 /* ExtensionAlertController.swift */,
 				4E0B91CC25DD21B0006BF644 /* AddMemoChoseCategoryController.swift */,
@@ -139,6 +137,8 @@
 				4E0B91B925DC8BF1006BF644 /* CategoryListButtonController.swift */,
 				4E0B919525DAE87E006BF644 /* CategoryListController.swift */,
 				4E0B922C25F866FF006BF644 /* CategoryListNavigationController.swift */,
+				4E0B919125DAE87E006BF644 /* AppDelegate.swift */,
+				4E0B919325DAE87E006BF644 /* SceneDelegate.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
