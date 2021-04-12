@@ -15,7 +15,7 @@ final class SearchController: UIViewController, UISearchBarDelegate {
     @IBOutlet weak var searchTableViewBottom: NSLayoutConstraint!
     
     //viewModelの初期化
-    private var viewModel: ViewModel!
+    private var viewModel: OperationMemo!
     //検索結果配列
     var searchResult:[MemoData] = []
     
@@ -29,7 +29,7 @@ final class SearchController: UIViewController, UISearchBarDelegate {
         //サーチバーのセット
         setSearchBar()
         //viewModelの初期化
-        viewModel = ViewModel()
+        viewModel = OperationMemo()
         
         if viewModel.currentMemos.count == 0 {return}
         
@@ -57,7 +57,7 @@ final class SearchController: UIViewController, UISearchBarDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        viewModel = ViewModel()
+        viewModel = OperationMemo()
         searchBar.text = ""
         searchResult.removeAll()
         searchResultTableView.reloadData()

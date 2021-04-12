@@ -1,35 +1,32 @@
 
-//UserDefaultsに対するCRUD操作を担うclassです。
 
 import Foundation
 
-final class MemoRepository {
+final class SaveCategory {
     
     private let userDefaults = UserDefaults.standard
     private let jsonEncoder = JSONEncoder()
     private let jsonDecoder = JSONDecoder()
     
     //userDefaultsに保存してあるデータをデコードして取得する関数
-    func allMemos() -> [MemoData] {
+    func allCategory() -> [CategoryData] {
         
-        guard let data = userDefaults.data(forKey: MemoData.storeKey),
-              let Memos = try? jsonDecoder.decode([MemoData].self, from: data) else {
+        guard let data = userDefaults.data(forKey: CategoryData.storeKey),
+              let categorys = try? jsonDecoder.decode([CategoryData].self, from: data) else {
             
             return []
         }
         
-        return Memos
+        return categorys
     }
     
     //新たなデータをエンコードしてuserDefaultsに保存する関数
-    func save(memos: [MemoData]) {
+    func save(categorys: [CategoryData]) {
         
-        guard let data = try? jsonEncoder.encode(memos) else {
+        guard let data = try? jsonEncoder.encode(categorys) else {
             
             return
         }
-        userDefaults.set(data, forKey: MemoData.storeKey)
+        userDefaults.set(data, forKey: CategoryData.storeKey)
     }
-    
 }
-

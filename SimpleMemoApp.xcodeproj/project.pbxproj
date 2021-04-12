@@ -22,12 +22,15 @@
 		4E0B91C725DD0A26006BF644 /* AddMemoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0B91C625DD0A26006BF644 /* AddMemoController.swift */; };
 		4E0B91CD25DD21B0006BF644 /* AddMemoChoseCategoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0B91CC25DD21B0006BF644 /* AddMemoChoseCategoryController.swift */; };
 		4E0B91D925DEB732006BF644 /* ExtensionNavigationHide.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0B91D825DEB732006BF644 /* ExtensionNavigationHide.swift */; };
-		4E0B91EC25E965F4006BF644 /* MemoRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0B91EB25E965F4006BF644 /* MemoRepository.swift */; };
-		4E0B91EF25E967C4006BF644 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0B91EE25E967C4006BF644 /* ViewModel.swift */; };
+		4E0B91EC25E965F4006BF644 /* SaveMemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0B91EB25E965F4006BF644 /* SaveMemo.swift */; };
+		4E0B91EF25E967C4006BF644 /* OperationMemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0B91EE25E967C4006BF644 /* OperationMemo.swift */; };
 		4E0B921E25EE359D006BF644 /* ExtensionAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0B921D25EE359D006BF644 /* ExtensionAlertController.swift */; };
 		4E0B922D25F866FF006BF644 /* CategoryListNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0B922C25F866FF006BF644 /* CategoryListNavigationController.swift */; };
 		4E0B923025FC8906006BF644 /* SearchNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0B922F25FC8906006BF644 /* SearchNavigationController.swift */; };
 		4E0B923325FC8953006BF644 /* CalenderNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0B923225FC8953006BF644 /* CalenderNavigationController.swift */; };
+		4E5E3782262391A000BD3F39 /* SaveCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5E3781262391A000BD3F39 /* SaveCategory.swift */; };
+		4E5E37862623923400BD3F39 /* OperationCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5E37852623923400BD3F39 /* OperationCategory.swift */; };
+		4E5E37892623925300BD3F39 /* CategoryData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5E37882623925300BD3F39 /* CategoryData.swift */; };
 		671DC72C4259F7E0EED669F1 /* Pods_SimpleMemoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 864060A8D17041F0137C5B89 /* Pods_SimpleMemoApp.framework */; };
 /* End PBXBuildFile section */
 
@@ -49,12 +52,15 @@
 		4E0B91C625DD0A26006BF644 /* AddMemoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemoController.swift; sourceTree = "<group>"; };
 		4E0B91CC25DD21B0006BF644 /* AddMemoChoseCategoryController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemoChoseCategoryController.swift; sourceTree = "<group>"; };
 		4E0B91D825DEB732006BF644 /* ExtensionNavigationHide.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionNavigationHide.swift; sourceTree = "<group>"; };
-		4E0B91EB25E965F4006BF644 /* MemoRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoRepository.swift; sourceTree = "<group>"; };
-		4E0B91EE25E967C4006BF644 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		4E0B91EB25E965F4006BF644 /* SaveMemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveMemo.swift; sourceTree = "<group>"; };
+		4E0B91EE25E967C4006BF644 /* OperationMemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationMemo.swift; sourceTree = "<group>"; };
 		4E0B921D25EE359D006BF644 /* ExtensionAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionAlertController.swift; sourceTree = "<group>"; };
 		4E0B922C25F866FF006BF644 /* CategoryListNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListNavigationController.swift; sourceTree = "<group>"; };
 		4E0B922F25FC8906006BF644 /* SearchNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNavigationController.swift; sourceTree = "<group>"; };
 		4E0B923225FC8953006BF644 /* CalenderNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderNavigationController.swift; sourceTree = "<group>"; };
+		4E5E3781262391A000BD3F39 /* SaveCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveCategory.swift; sourceTree = "<group>"; };
+		4E5E37852623923400BD3F39 /* OperationCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationCategory.swift; sourceTree = "<group>"; };
+		4E5E37882623925300BD3F39 /* CategoryData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryData.swift; sourceTree = "<group>"; };
 		5826EE33DBCD0815579DEBDE /* Pods-SimpleMemoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleMemoApp.debug.xcconfig"; path = "Target Support Files/Pods-SimpleMemoApp/Pods-SimpleMemoApp.debug.xcconfig"; sourceTree = "<group>"; };
 		864060A8D17041F0137C5B89 /* Pods_SimpleMemoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleMemoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		97DBC14F315E8531A4C57EB5 /* Pods-SimpleMemoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleMemoApp.release.xcconfig"; path = "Target Support Files/Pods-SimpleMemoApp/Pods-SimpleMemoApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -106,8 +112,11 @@
 			isa = PBXGroup;
 			children = (
 				4E0B91AF25DC32FA006BF644 /* MemoData.swift */,
-				4E0B91EE25E967C4006BF644 /* ViewModel.swift */,
-				4E0B91EB25E965F4006BF644 /* MemoRepository.swift */,
+				4E5E37882623925300BD3F39 /* CategoryData.swift */,
+				4E0B91EB25E965F4006BF644 /* SaveMemo.swift */,
+				4E5E3781262391A000BD3F39 /* SaveCategory.swift */,
+				4E0B91EE25E967C4006BF644 /* OperationMemo.swift */,
+				4E5E37852623923400BD3F39 /* OperationCategory.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -275,6 +284,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E0B91C325DD09E0006BF644 /* SearchController.swift in Sources */,
+				4E5E37892623925300BD3F39 /* CategoryData.swift in Sources */,
+				4E5E37862623923400BD3F39 /* OperationCategory.swift in Sources */,
 				4E0B91A825DC2EC3006BF644 /* TitleListController.swift in Sources */,
 				4E0B923325FC8953006BF644 /* CalenderNavigationController.swift in Sources */,
 				4E0B921E25EE359D006BF644 /* ExtensionAlertController.swift in Sources */,
@@ -287,11 +298,12 @@
 				4E0B922D25F866FF006BF644 /* CategoryListNavigationController.swift in Sources */,
 				4E0B91D925DEB732006BF644 /* ExtensionNavigationHide.swift in Sources */,
 				4E0B91C725DD0A26006BF644 /* AddMemoController.swift in Sources */,
-				4E0B91EF25E967C4006BF644 /* ViewModel.swift in Sources */,
+				4E5E3782262391A000BD3F39 /* SaveCategory.swift in Sources */,
+				4E0B91EF25E967C4006BF644 /* OperationMemo.swift in Sources */,
 				4E0B919225DAE87E006BF644 /* AppDelegate.swift in Sources */,
 				4E0B919425DAE87E006BF644 /* SceneDelegate.swift in Sources */,
 				4E0B91BA25DC8BF1006BF644 /* CategoryListButtonController.swift in Sources */,
-				4E0B91EC25E965F4006BF644 /* MemoRepository.swift in Sources */,
+				4E0B91EC25E965F4006BF644 /* SaveMemo.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

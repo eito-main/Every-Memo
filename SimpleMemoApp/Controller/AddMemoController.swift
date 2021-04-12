@@ -15,7 +15,7 @@ final class AddMemoController : UIViewController {
     @IBOutlet weak var addText: UITextView!
     
     var categoryName : String?
-    private var viewModel: ViewModel!
+    private var viewModel: OperationMemo!
     //日付の一時保管
     var nowDate : String = ""
     
@@ -71,7 +71,7 @@ final class AddMemoController : UIViewController {
         addTitle.placeholder = "タイトルを入力"
         
         //viewModelの初期化
-        viewModel = ViewModel()
+        viewModel = OperationMemo()
         
         //開いたときの日付の取得
         let now = Date()

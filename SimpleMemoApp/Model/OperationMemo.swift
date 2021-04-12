@@ -3,22 +3,23 @@
 
 import Foundation
 
-final class ViewModel {
+final class OperationMemo {
     
-    private let repository: MemoRepository
+    
+    private let saveMemo: SaveMemo
     //デコードされたメモ一覧
     private(set) var currentMemos: [MemoData] {
         //値が更新されるたび保存するための処理
         didSet {
-            
-            repository.save(memos: currentMemos)
+            saveMemo.save(memos: currentMemos)
         }
     }
     
     //初期化
     init() {
-        repository = MemoRepository()
-        currentMemos = repository.allMemos()
+        
+        saveMemo = SaveMemo()
+        currentMemos = saveMemo.allMemos()
     }
     
     //デコードされたメモ一覧に新たなメモを追加するメソッド
@@ -46,5 +47,4 @@ final class ViewModel {
         }
         currentMemos[index] = newMemo
     }
-    
 }
