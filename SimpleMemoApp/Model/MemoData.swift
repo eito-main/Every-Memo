@@ -1,9 +1,9 @@
 
-//メモデータの型
+//メモの型
 
 import Foundation
 
-struct MemoData: Equatable {
+struct MemoData: Equatable, Codable {
     
     //UserDefaultsに保存するためのキー
     static let storeKey = "Memo"
@@ -32,5 +32,3 @@ struct MemoData: Equatable {
     
     
 }
-
-extension MemoData: Codable {}

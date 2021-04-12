@@ -12,7 +12,7 @@ final class TitleListController: UIViewController {
     //テーブルビューのsafe area（下）からの距離
     @IBOutlet weak var titleListTableViewBottom: NSLayoutConstraint!
     
-    private var viewModel: ViewModel!
+    private var viewModel: OperationMemo!
     var memoIdList = [String]()
     var memoList = [MemoData]()
     var category = " "
@@ -23,7 +23,7 @@ final class TitleListController: UIViewController {
         
         self.navigationItem.title = "タイトル"
         //viewModelの初期化
-        viewModel = ViewModel()
+        viewModel = OperationMemo()
         
         if viewModel.currentMemos.count != 0 {
             

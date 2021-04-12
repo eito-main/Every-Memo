@@ -15,7 +15,7 @@ final class CalenderController: UIViewController, FSCalendarDelegate, FSCalendar
     //tableViewの下からの距離
     @IBOutlet weak var calendertableBottom: NSLayoutConstraint!
     
-    private var viewModel: ViewModel!
+    private var viewModel: OperationMemo!
     var displayMemo = [MemoData]()
     var selectedDate:String = ""
     var now:Date!
@@ -28,7 +28,7 @@ final class CalenderController: UIViewController, FSCalendarDelegate, FSCalendar
         self.calendarView.dataSource = self
         
         //viewModelの初期化
-        viewModel = ViewModel()
+        viewModel = OperationMemo()
         
         //FSCalendarの関数をViewControllerに委任する
         self.calendarView.delegate = self
@@ -76,7 +76,7 @@ final class CalenderController: UIViewController, FSCalendarDelegate, FSCalendar
     //viewを表示する前に実行される
     override func viewWillAppear(_ animated: Bool) {
            super.viewWillAppear(animated)
-        viewModel = ViewModel()
+        viewModel = OperationMemo()
         calenderTableView.reloadData()
         calendarView.select(now)
         let formatter = DateFormatter()

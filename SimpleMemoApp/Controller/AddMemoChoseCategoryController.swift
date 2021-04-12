@@ -6,11 +6,11 @@ import UIKit
 final class AddMemoChoseCategoryController: UIViewController {
     
     //カテゴリーのテーブルビュー紐付け
-    @IBOutlet weak var categoryTableView: UITableView!
+    @IBOutlet private weak var categoryTableView: UITableView!
     //カテゴリーテーブルビューの高さ
-    @IBOutlet weak var catagoryTableViewHeight: NSLayoutConstraint!
+    @IBOutlet private weak var catagoryTableViewHeight: NSLayoutConstraint!
     
-    @IBOutlet weak var categoryTableViewBottom: NSLayoutConstraint!
+    @IBOutlet private weak var categoryTableViewBottom: NSLayoutConstraint!
     
     //UserDefaultsに保存するためのキー
     static let categoryStoreKey = "categoryKey"
@@ -21,6 +21,7 @@ final class AddMemoChoseCategoryController: UIViewController {
     var memoCategoryArray = ["カテゴリー未指定"]
     //UserDefaultsの宣言
     let ud = UserDefaults.standard
+    
     
     //viewが読み込まれた後の処理
     override func viewDidLoad() {

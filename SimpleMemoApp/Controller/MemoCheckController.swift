@@ -13,7 +13,7 @@ final class MemoCheckController: UIViewController {
     // 編集ボタン
     var editBarButtonItem: UIBarButtonItem!
     var categoryName : String?
-    private var viewModel: ViewModel!
+    private var viewModel: OperationMemo!
     var editCheck = false
     var memoData: MemoData!
     
@@ -22,7 +22,7 @@ final class MemoCheckController: UIViewController {
         super.viewDidLoad()
         
         //viewModelの初期化
-        viewModel = ViewModel()
+        viewModel = OperationMemo()
         self.navigationItem.title = "メモ"
         categoryLabel.text = memoData.category
         titleLabel.text = memoData.title

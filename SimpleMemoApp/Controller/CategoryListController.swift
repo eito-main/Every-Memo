@@ -6,15 +6,15 @@ import UIKit
 final class CategoryListController: UIViewController {
     
     //テーブルビュー
-    @IBOutlet weak var categoryTableView: UITableView!
+    @IBOutlet private weak var categoryTableView: UITableView!
     //テーブルビューの高さ
-    @IBOutlet weak var categoryTableViewHeight: NSLayoutConstraint!
+    @IBOutlet private weak var categoryTableViewHeight: NSLayoutConstraint!
     //テーブルビューのsafe area（下）からの距離
-    @IBOutlet weak var categoryTableViewBottom: NSLayoutConstraint!
+    @IBOutlet private weak var categoryTableViewBottom: NSLayoutConstraint!
     
-    private var viewModel: ViewModel!
+    private var viewModel: OperationMemo!
     //UserDefaultsに保存するためのキー
-    static let categoryStoreKey = "categoryKey"
+//    static let categoryStoreKey = "categoryKey"
     //cellId
     private let categoryListCellId = "categoryListCell"
     //メモカテゴリーの配列（初期値あり）
@@ -23,6 +23,7 @@ final class CategoryListController: UIViewController {
     let ud = UserDefaults.standard
     //Idリストを一時的に補完するための変数
     var memoIdList = [String]()
+    
     
     //viewが読み込まれた後の処理
     override func viewDidLoad() {
@@ -33,7 +34,7 @@ final class CategoryListController: UIViewController {
         loadCategory()
         
         //viewModelの初期化
-        viewModel = ViewModel()
+        viewModel = OperationMemo()
         
         //TableViewを使う時必ず書く
         categoryTableView.delegate = self
@@ -46,8 +47,8 @@ final class CategoryListController: UIViewController {
             target: nil,
             action: nil
         )
-        
     }
+    
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
@@ -65,7 +66,7 @@ final class CategoryListController: UIViewController {
         loadCategory()
         
         //画面が再び表示された時にviewModelの値を更新（新規メモの反映）するため
-        viewModel = ViewModel()
+        viewModel = OperationMemo()
         
         if categoryTableViewBottom.constant >= CGFloat(0) {
             categoryTableViewHeight.constant = CGFloat(categoryTableView.contentSize.height)
@@ -74,7 +75,7 @@ final class CategoryListController: UIViewController {
         guard memoCategoryList.count == 1 else {return}
         loadCategory()
         //モーダルが閉じられた時にtableViewを更新するためのメソッド
-        viewModel = ViewModel()
+        viewModel = OperationMemo()
         categoryTableView.reloadData()
         
     }
@@ -87,7 +88,7 @@ final class CategoryListController: UIViewController {
     }
     
     //カテゴリーの配列の更新をする関数
-    func loadCategory(){
+    private func loadCategory(){
         if ud.array(forKey: AddMemoChoseCategoryController.categoryStoreKey) != nil{
             
             //取得 またas!でアンラップしているのでnilじゃない時のみ
@@ -121,7 +122,7 @@ extension CategoryListController: UITableViewDelegate {
         
         if viewModel.currentMemos.count != 0 {
             for count in 0...viewModel.currentMemos.count-1 {
-                //  viewModel.currentMemos[count]
+              
                 if memoCategoryList[indexPath.row] == viewModel.currentMemos[count].category {
                     memoIdList.append(viewModel.currentMemos[count].id)
                     
