@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Add Memo Category View Controller-->
+        <scene sceneID="CY6-9Y-SZj">
+            <objects>
+                <viewController storyboardIdentifier="AddMemoChoseCategory" useStoryboardIdentifierAsRestorationIdentifier="YES" id="TXt-2b-sns" customClass="AddMemoCategoryViewController" customModule="Every_Memo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="0lD-7W-eKC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Ohh-Bk-Wl7">
+                                <rect key="frame" x="15" y="59" width="384" height="783"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="783" id="A1Q-SZ-2UQ"/>
+                                </constraints>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="categoryCell" rowHeight="78" id="dKU-IJ-U7t">
+                                        <rect key="frame" x="0.0" y="28" width="384" height="78"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="dKU-IJ-U7t" id="AQM-IP-KhK">
+                                            <rect key="frame" x="0.0" y="0.0" width="384" height="78"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="addCategoryCell" id="gFH-SV-4dm">
+                                        <rect key="frame" x="0.0" y="106" width="384" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="gFH-SV-4dm" id="r9T-7m-Vta">
+                                            <rect key="frame" x="0.0" y="0.0" width="384" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5qy-zf-kxq"/>
+                        <color key="backgroundColor" systemColor="systemGray6Color"/>
+                        <constraints>
+                            <constraint firstItem="5qy-zf-kxq" firstAttribute="trailing" secondItem="Ohh-Bk-Wl7" secondAttribute="trailing" constant="15" id="DEp-y2-czt"/>
+                            <constraint firstItem="Ohh-Bk-Wl7" firstAttribute="leading" secondItem="5qy-zf-kxq" secondAttribute="leading" constant="15" id="QUm-Hn-IiX"/>
+                            <constraint firstItem="5qy-zf-kxq" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="Ohh-Bk-Wl7" secondAttribute="bottom" id="mfs-c5-uk2"/>
+                            <constraint firstItem="Ohh-Bk-Wl7" firstAttribute="top" secondItem="5qy-zf-kxq" secondAttribute="top" constant="15" id="sKb-1j-Mht"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="TLO-Eg-Dhl"/>
+                    <connections>
+                        <outlet property="catagoryTableViewHeight" destination="A1Q-SZ-2UQ" id="nhJ-SU-2RH"/>
+                        <outlet property="categoryTableView" destination="Ohh-Bk-Wl7" id="Kr3-Rk-gWU"/>
+                        <outlet property="categoryTableViewBottom" destination="mfs-c5-uk2" id="aHa-g8-JZO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hAh-v4-yhi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="666.66666666666674" y="1638.6160714285713"/>
+        </scene>
+    </scenes>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGray6Color">
+            <color red="0.94901960784313721" green="0.94901960784313721" blue="0.96862745098039216" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

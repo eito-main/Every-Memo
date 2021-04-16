@@ -1,9 +1,9 @@
 
-//カテゴリーListの画面（最初の画面）
+//カテゴリリスト
 
 import UIKit
 
-final class CategoryListController: UIViewController {
+final class CategoryListViewController: UIViewController {
     
     
     @IBOutlet private weak var categoryTableView: UITableView!
@@ -56,19 +56,20 @@ final class CategoryListController: UIViewController {
 }
 
 
-extension CategoryListController: UITableViewDelegate {
+extension CategoryListViewController: UITableViewDelegate {
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "titleListController") as! TitleListController
+        let storyboard: UIStoryboard = UIStoryboard(name: "TitleList", bundle: nil)
+        let nextVC = storyboard.instantiateViewController(withIdentifier: "titleListController") as! TitleListViewController
         nextVC.category = operationCategory.currentCategorys[indexPath.row]
         self.navigationController?.pushViewController(nextVC, animated: true)
     }
 }
 
 
-extension CategoryListController: UITableViewDataSource {
+extension CategoryListViewController: UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

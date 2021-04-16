@@ -1,9 +1,9 @@
 
-//メモ一覧画面
+//タイトルリスト
 
 import UIKit
 
-final class TitleListController: UIViewController {
+final class TitleListViewController: UIViewController {
     
     
     @IBOutlet weak var titleListTableView: UITableView!
@@ -76,12 +76,13 @@ final class TitleListController: UIViewController {
 }
 
 
-extension TitleListController: UITableViewDelegate {
+extension TitleListViewController: UITableViewDelegate {
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "memoCheckController") as! MemoCheckController
+        let storyboard: UIStoryboard = UIStoryboard(name: "Memo", bundle: nil)
+        let nextVC = storyboard.instantiateViewController(withIdentifier: "memoCheckController") as! MemoViewController
         nextVC.memoData = memoList[indexPath.row]
         self.navigationController?.pushViewController(nextVC, animated: true)
     }
@@ -100,7 +101,7 @@ extension TitleListController: UITableViewDelegate {
 }
 
 
-extension TitleListController: UITableViewDataSource {
+extension TitleListViewController: UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

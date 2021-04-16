@@ -1,9 +1,9 @@
 
-//メモ追加のクラス
+//メモ追加
 
 import UIKit
 
-final class AddMemoController : UIViewController, UITextViewDelegate {
+final class AddMemoViewController : UIViewController, UITextViewDelegate {
     
     
     @IBOutlet weak var date: UILabel!
@@ -34,11 +34,20 @@ final class AddMemoController : UIViewController, UITextViewDelegate {
         self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
     
-    //keyboardの外を押したら、キーボードを閉じる処理
-    override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
+    override func touchesBegan(_ touches: Set<UITouch>,with event: UIEvent?){
         
+        //keyboardの外を押したら、キーボードを閉じる処理
         if (memoText.isFirstResponder) {
             memoText.resignFirstResponder()
+        }
+        
+        if touchedLabel(touches: touches,view: category){
+            
+            let storyboard: UIStoryboard = UIStoryboard(name: "AddMemoCategory", bundle: nil)
+            let nextVC = storyboard.instantiateViewController(withIdentifier: "AddMemoChoseCategory") as! AddMemoCategoryViewController
+            self.present(nextVC, animated: true, completion: nil)
+
+            return
         }
     }
     
@@ -80,5 +89,23 @@ final class AddMemoController : UIViewController, UITextViewDelegate {
         dateFormatter.dateFormat = "yyyy/MM/dd(EEE)"
         dateFormatter.string(from: now)
         date.text = dateFormatter.string(from: now)
+    }
+    
+    func touchedLabel(touches: Set<UITouch>, view:UILabel)->Bool {
+        
+        //全指のタッチについて処理
+        for touch: AnyObject in touches {
+            
+            let t: UITouch = touch as! UITouch
+            
+            if t.view?.tag == view.tag {
+                
+                return true
+            } else {
+                
+                return false
+            }
+        }
+        return false
     }
 }

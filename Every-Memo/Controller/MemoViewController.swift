@@ -1,9 +1,9 @@
 
-//メモ内容変更画面
+//メモ
 
 import UIKit
 
-final class MemoCheckController: UIViewController {
+final class MemoViewController: UIViewController {
     
     
     @IBOutlet weak var categoryLabel: UILabel!
@@ -62,12 +62,12 @@ final class MemoCheckController: UIViewController {
         
         if touchedLabel(touches: touches,view: categoryLabel){
             
-            let storyboard: UIStoryboard = self.storyboard!
             if edit == true {
                 
-                let nextView = storyboard.instantiateViewController(withIdentifier: "AddMemoChoseCategory") as! AddMemoChoseCategoryController
+                let storyboard: UIStoryboard = UIStoryboard(name: "AddMemoCategory", bundle: nil)
+                let nextVC = storyboard.instantiateViewController(withIdentifier: "AddMemoChoseCategory") as! AddMemoCategoryViewController
+                self.present(nextVC, animated: true, completion: nil)
                 
-                self.present(nextView, animated: true, completion: nil)
             }
             return
         }

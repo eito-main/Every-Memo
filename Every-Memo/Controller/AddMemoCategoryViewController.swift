@@ -1,9 +1,9 @@
 
-//メモ追加画面にてカテゴリーを選択する際に使用する画面のクラス
+//カテゴリ選択
 
 import UIKit
 
-final class AddMemoChoseCategoryController: UIViewController {
+final class AddMemoCategoryViewController: UIViewController {
     
     
     @IBOutlet private weak var categoryTableView: UITableView!
@@ -33,7 +33,7 @@ final class AddMemoChoseCategoryController: UIViewController {
 }
 
 
-extension AddMemoChoseCategoryController: UITableViewDelegate {
+extension AddMemoCategoryViewController: UITableViewDelegate {
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -63,25 +63,25 @@ extension AddMemoChoseCategoryController: UITableViewDelegate {
         } else {
             
             //メモ追加画面に選択されたカテゴリー名を渡す
-            if let preVC = presentingViewController as? AddMemoController {
+            if let preVC = presentingViewController as? AddMemoViewController {
                 preVC.category.text = operationCategory.currentCategorys[indexPath.row]
             }
             
             //メモ確認画面（編集中）にカテゴリー名を渡す
             if let preNC = presentingViewController as? CategoryListNavigationController {
-                let preVC = preNC.viewControllers[preNC.viewControllers.count - 1] as! MemoCheckController
+                let preVC = preNC.viewControllers[preNC.viewControllers.count - 1] as! MemoViewController
                 preVC.categoryLabel.text = operationCategory.currentCategorys[indexPath.row]
             }
             
             //メモ確認画面（編集中）にカテゴリー名を渡す(検索画面から遷移)
             if let preNC = presentingViewController as? SearchNavigationController {
-                let preVC = preNC.viewControllers[preNC.viewControllers.count - 1] as! MemoCheckController
+                let preVC = preNC.viewControllers[preNC.viewControllers.count - 1] as! MemoViewController
                 preVC.categoryLabel.text = operationCategory.currentCategorys[indexPath.row]
             }
             
             //メモ確認画面（編集中）にカテゴリー名を渡す(カレンダー画面から遷移)
             if let preNC = presentingViewController as? CalenderNavigationController {
-                let preVC = preNC.viewControllers[preNC.viewControllers.count - 1] as! MemoCheckController
+                let preVC = preNC.viewControllers[preNC.viewControllers.count - 1] as! MemoViewController
                 preVC.categoryLabel.text = operationCategory.currentCategorys[indexPath.row]
             }
             
@@ -91,7 +91,7 @@ extension AddMemoChoseCategoryController: UITableViewDelegate {
 }
 
 
-extension AddMemoChoseCategoryController: UITableViewDataSource {
+extension AddMemoCategoryViewController: UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
