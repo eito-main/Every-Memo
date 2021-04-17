@@ -30,63 +30,71 @@ final class AddMemoCategoryViewController: UIViewController {
         categoryTableView.reloadData()
         catagoryTableViewHeight.constant = CGFloat(categoryTableView.contentSize.height)
     }
+    
+    func alertAction() {
+        
+        UIAlertController
+            .makeAlertWithTextField(title: "カテゴリーを追加", message: nil, textFieldConfig: { $0.placeholder = "新規カテゴリーを入力してください" })
+            
+            .addDefaultActionWithText() { [weak self] text in
+                
+                let newCategory = text.trimmingCharacters(in: .whitespaces)
+                guard !newCategory.isEmpty else { return }
+                
+                if self!.operationCategory.currentCategorys.contains(newCategory) {
+                    
+                    return
+                }
+                
+                self!.operationCategory.add(newCategory: text)
+                self!.categoryTableView.reloadData()
+                self!.catagoryTableViewHeight.constant = CGFloat(self!.categoryTableView.contentSize.height)
+            }
+            .addCancelAction()
+            .present(from: self)
+    }
 }
 
 
 extension AddMemoCategoryViewController: UITableViewDelegate {
     
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         if indexPath.row == operationCategory.currentCategorys.count {
             
-            UIAlertController
-                .makeAlertWithTextField(title: "カテゴリーを追加", message: nil, textFieldConfig: { $0.placeholder = "新規カテゴリーを入力してください" })
-                
-                .addDefaultActionWithText() { [weak self] text in
-                    
-                    let newCategory = text.trimmingCharacters(in: .whitespaces)
-                    guard !newCategory.isEmpty else { return }
-                    
-                    if self!.operationCategory.currentCategorys.contains(newCategory) {
-                        
-                        return
-                    }
-                    
-                    self!.operationCategory.add(newCategory: text)
-                    self!.categoryTableView.reloadData()
-                    self!.catagoryTableViewHeight.constant = CGFloat(self!.categoryTableView.contentSize.height)
-                }
-                .addCancelAction()
-                .present(from: self)
+            alertAction()
             
         } else {
             
-            //メモ追加画面に選択されたカテゴリー名を渡す
-            if let preVC = presentingViewController as? AddMemoViewController {
+            let checkPreVC = presentingViewController
+            
+            switch checkPreVC {
+            
+            case is AddMemoController:
+                let preVC = presentingViewController as! AddMemoController
                 preVC.category.text = operationCategory.currentCategorys[indexPath.row]
-            }
-            
-            //メモ確認画面（編集中）にカテゴリー名を渡す
-            if let preNC = presentingViewController as? CategoryListNavigationController {
-                let preVC = preNC.viewControllers[preNC.viewControllers.count - 1] as! MemoViewController
+                
+            case is CategoryListNavigationController:
+                let preNC = presentingViewController as! CategoryListNavigationController
+                let preVC = preNC.viewControllers[preNC.viewControllers.count - 1] as! MemoCheckController
                 preVC.categoryLabel.text = operationCategory.currentCategorys[indexPath.row]
-            }
-            
-            //メモ確認画面（編集中）にカテゴリー名を渡す(検索画面から遷移)
-            if let preNC = presentingViewController as? SearchNavigationController {
-                let preVC = preNC.viewControllers[preNC.viewControllers.count - 1] as! MemoViewController
+                
+            case is SearchNavigationController:
+                let preNC = presentingViewController as! SearchNavigationController
+                let preVC = preNC.viewControllers[preNC.viewControllers.count - 1] as! MemoCheckController
                 preVC.categoryLabel.text = operationCategory.currentCategorys[indexPath.row]
-            }
-            
-            //メモ確認画面（編集中）にカテゴリー名を渡す(カレンダー画面から遷移)
-            if let preNC = presentingViewController as? CalenderNavigationController {
-                let preVC = preNC.viewControllers[preNC.viewControllers.count - 1] as! MemoViewController
+                
+            case is CalenderNavigationController:
+                let preNC = presentingViewController as! CalenderNavigationController
+                let preVC = preNC.viewControllers[preNC.viewControllers.count - 1] as! MemoCheckController
                 preVC.categoryLabel.text = operationCategory.currentCategorys[indexPath.row]
+                
+            default:
+                break
             }
-            
-            dismiss(animated: true, completion: nil)
         }
+        
+        dismiss(animated: true, completion: nil)
     }
 }
 
