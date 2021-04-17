@@ -1,10 +1,10 @@
 
-//カレンダー表示の画面のクラス
+//カレンダ
 
 import UIKit
 import FSCalendar
 
-final class CalenderController: UIViewController, FSCalendarDelegate, FSCalendarDataSource {
+final class CalenderViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource {
     
     
     @IBOutlet weak var calendarView: FSCalendar!
@@ -103,7 +103,7 @@ final class CalenderController: UIViewController, FSCalendarDelegate, FSCalendar
 }
 
 
-extension CalenderController : UITableViewDelegate, UITableViewDataSource {
+extension CalenderViewController : UITableViewDelegate, UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -121,7 +121,8 @@ extension CalenderController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "memoCheckController") as! MemoCheckController
+        let storyboard: UIStoryboard = UIStoryboard(name: "Memo", bundle: nil)
+        let nextVC = storyboard.instantiateViewController(withIdentifier: "memoCheckController") as! MemoViewController
         nextVC.memoData = displayMemo[indexPath.row]
         self.navigationController?.pushViewController(nextVC, animated: true)
     }

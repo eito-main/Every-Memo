@@ -1,9 +1,9 @@
 
-//メモ追加画面にてカテゴリーを選択する際に使用する画面のクラス
+//カテゴリ選択
 
 import UIKit
 
-final class AddMemoChoseCategoryController: UIViewController {
+final class AddMemoCategoryViewController: UIViewController {
     
     
     @IBOutlet private weak var categoryTableView: UITableView!
@@ -56,7 +56,7 @@ final class AddMemoChoseCategoryController: UIViewController {
 }
 
 
-extension AddMemoChoseCategoryController: UITableViewDelegate {
+extension AddMemoCategoryViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
@@ -91,15 +91,15 @@ extension AddMemoChoseCategoryController: UITableViewDelegate {
                 
             default:
                 break
-                
             }
-            dismiss(animated: true, completion: nil)
         }
+        
+        dismiss(animated: true, completion: nil)
     }
 }
 
 
-extension AddMemoChoseCategoryController: UITableViewDataSource {
+extension AddMemoCategoryViewController: UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

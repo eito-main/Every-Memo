@@ -1,9 +1,9 @@
 
-//検索画面のクラス
+//検索画面
 
 import UIKit
 
-final class SearchController: UIViewController, UISearchBarDelegate {
+final class SearchViewController: UIViewController, UISearchBarDelegate {
     
     
     @IBOutlet weak var searchBar: UISearchBar!
@@ -88,19 +88,20 @@ final class SearchController: UIViewController, UISearchBarDelegate {
 }
 
 
-extension SearchController: UITableViewDelegate {
+extension SearchViewController: UITableViewDelegate {
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        let nextVC = self.storyboard?.instantiateViewController(withIdentifier: "memoCheckController") as! MemoCheckController
+        let storyboard: UIStoryboard = UIStoryboard(name: "Memo", bundle: nil)
+        let nextVC = storyboard.instantiateViewController(withIdentifier: "memoCheckController") as! MemoViewController
         nextVC.memoData = searchResult[indexPath.row]
         self.navigationController?.pushViewController(nextVC, animated: true)
     }
 }
 
 
-extension SearchController: UITableViewDataSource {
+extension SearchViewController: UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
