@@ -35,7 +35,6 @@ final class AddMemoChoseCategoryController: UIViewController {
 
 extension AddMemoChoseCategoryController: UITableViewDelegate {
     
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
         if indexPath.row == operationCategory.currentCategorys.count {
@@ -62,29 +61,33 @@ extension AddMemoChoseCategoryController: UITableViewDelegate {
             
         } else {
             
-            //メモ追加画面に選択されたカテゴリー名を渡す
-            if let preVC = presentingViewController as? AddMemoController {
+            let checkPreVC = presentingViewController
+            
+            switch checkPreVC {
+            
+            case is AddMemoController:
+                let preVC = presentingViewController as! AddMemoController
                 preVC.category.text = operationCategory.currentCategorys[indexPath.row]
-            }
-            
-            //メモ確認画面（編集中）にカテゴリー名を渡す
-            if let preNC = presentingViewController as? CategoryListNavigationController {
+                
+            case is CategoryListNavigationController:
+                let preNC = presentingViewController as! CategoryListNavigationController
                 let preVC = preNC.viewControllers[preNC.viewControllers.count - 1] as! MemoCheckController
                 preVC.categoryLabel.text = operationCategory.currentCategorys[indexPath.row]
-            }
-            
-            //メモ確認画面（編集中）にカテゴリー名を渡す(検索画面から遷移)
-            if let preNC = presentingViewController as? SearchNavigationController {
+                
+            case is SearchNavigationController:
+                let preNC = presentingViewController as! SearchNavigationController
                 let preVC = preNC.viewControllers[preNC.viewControllers.count - 1] as! MemoCheckController
                 preVC.categoryLabel.text = operationCategory.currentCategorys[indexPath.row]
-            }
-            
-            //メモ確認画面（編集中）にカテゴリー名を渡す(カレンダー画面から遷移)
-            if let preNC = presentingViewController as? CalenderNavigationController {
+                
+            case is CalenderNavigationController:
+                let preNC = presentingViewController as! CalenderNavigationController
                 let preVC = preNC.viewControllers[preNC.viewControllers.count - 1] as! MemoCheckController
                 preVC.categoryLabel.text = operationCategory.currentCategorys[indexPath.row]
+                
+            default:
+                break
+                
             }
-            
             dismiss(animated: true, completion: nil)
         }
     }
