@@ -30,6 +30,29 @@ final class AddMemoChoseCategoryController: UIViewController {
         categoryTableView.reloadData()
         catagoryTableViewHeight.constant = CGFloat(categoryTableView.contentSize.height)
     }
+    
+    func alertAction() {
+        
+        UIAlertController
+            .makeAlertWithTextField(title: "カテゴリーを追加", message: nil, textFieldConfig: { $0.placeholder = "新規カテゴリーを入力してください" })
+            
+            .addDefaultActionWithText() { [weak self] text in
+                
+                let newCategory = text.trimmingCharacters(in: .whitespaces)
+                guard !newCategory.isEmpty else { return }
+                
+                if self!.operationCategory.currentCategorys.contains(newCategory) {
+                    
+                    return
+                }
+                
+                self!.operationCategory.add(newCategory: text)
+                self!.categoryTableView.reloadData()
+                self!.catagoryTableViewHeight.constant = CGFloat(self!.categoryTableView.contentSize.height)
+            }
+            .addCancelAction()
+            .present(from: self)
+    }
 }
 
 
@@ -39,25 +62,7 @@ extension AddMemoChoseCategoryController: UITableViewDelegate {
         
         if indexPath.row == operationCategory.currentCategorys.count {
             
-            UIAlertController
-                .makeAlertWithTextField(title: "カテゴリーを追加", message: nil, textFieldConfig: { $0.placeholder = "新規カテゴリーを入力してください" })
-                
-                .addDefaultActionWithText() { [weak self] text in
-                    
-                    let newCategory = text.trimmingCharacters(in: .whitespaces)
-                    guard !newCategory.isEmpty else { return }
-                    
-                    if self!.operationCategory.currentCategorys.contains(newCategory) {
-                        
-                        return
-                    }
-                    
-                    self!.operationCategory.add(newCategory: text)
-                    self!.categoryTableView.reloadData()
-                    self!.catagoryTableViewHeight.constant = CGFloat(self!.categoryTableView.contentSize.height)
-                }
-                .addCancelAction()
-                .present(from: self)
+            alertAction()
             
         } else {
             
