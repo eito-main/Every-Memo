@@ -28,10 +28,12 @@
 		4E0B923025FC8906006BF644 /* SearchNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0B922F25FC8906006BF644 /* SearchNavigationController.swift */; };
 		4E0B923325FC8953006BF644 /* CalenderNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0B923225FC8953006BF644 /* CalenderNavigationController.swift */; };
 		4E5E37A0262522F600BD3F39 /* OperationCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5E379F262522F600BD3F39 /* OperationCategory.swift */; };
-		671DC72C4259F7E0EED669F1 /* Pods_SimpleMemoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 864060A8D17041F0137C5B89 /* Pods_SimpleMemoApp.framework */; };
+		E9AA080A9E118BC7AD342818 /* Pods_Every_Memo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 026CA9E013A2D03A9E190A5C /* Pods_Every_Memo.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		026CA9E013A2D03A9E190A5C /* Pods_Every_Memo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Every_Memo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2527CCD01328731876157CBE /* Pods-Every-Memo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Every-Memo.debug.xcconfig"; path = "Target Support Files/Pods-Every-Memo/Pods-Every-Memo.debug.xcconfig"; sourceTree = "<group>"; };
 		4E0B918E25DAE87E006BF644 /* Every-Memo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Every-Memo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4E0B919125DAE87E006BF644 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		4E0B919325DAE87E006BF644 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -56,7 +58,7 @@
 		4E0B923225FC8953006BF644 /* CalenderNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderNavigationController.swift; sourceTree = "<group>"; };
 		4E5E379F262522F600BD3F39 /* OperationCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationCategory.swift; sourceTree = "<group>"; };
 		5826EE33DBCD0815579DEBDE /* Pods-SimpleMemoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleMemoApp.debug.xcconfig"; path = "Target Support Files/Pods-SimpleMemoApp/Pods-SimpleMemoApp.debug.xcconfig"; sourceTree = "<group>"; };
-		864060A8D17041F0137C5B89 /* Pods_SimpleMemoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleMemoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		8F0EF1086E22D8A219D80563 /* Pods-Every-Memo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Every-Memo.release.xcconfig"; path = "Target Support Files/Pods-Every-Memo/Pods-Every-Memo.release.xcconfig"; sourceTree = "<group>"; };
 		97DBC14F315E8531A4C57EB5 /* Pods-SimpleMemoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleMemoApp.release.xcconfig"; path = "Target Support Files/Pods-SimpleMemoApp/Pods-SimpleMemoApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -65,7 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				671DC72C4259F7E0EED669F1 /* Pods_SimpleMemoApp.framework in Frameworks */,
+				E9AA080A9E118BC7AD342818 /* Pods_Every_Memo.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -154,7 +156,7 @@
 		F6430532E8FC5E404B810FC9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				864060A8D17041F0137C5B89 /* Pods_SimpleMemoApp.framework */,
+				026CA9E013A2D03A9E190A5C /* Pods_Every_Memo.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -164,6 +166,8 @@
 			children = (
 				5826EE33DBCD0815579DEBDE /* Pods-SimpleMemoApp.debug.xcconfig */,
 				97DBC14F315E8531A4C57EB5 /* Pods-SimpleMemoApp.release.xcconfig */,
+				2527CCD01328731876157CBE /* Pods-Every-Memo.debug.xcconfig */,
+				8F0EF1086E22D8A219D80563 /* Pods-Every-Memo.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -251,7 +255,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-SimpleMemoApp-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-Every-Memo-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -264,15 +268,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SimpleMemoApp/Pods-SimpleMemoApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Every-Memo/Pods-Every-Memo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-SimpleMemoApp/Pods-SimpleMemoApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-Every-Memo/Pods-Every-Memo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SimpleMemoApp/Pods-SimpleMemoApp-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Every-Memo/Pods-Every-Memo-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -443,7 +447,7 @@
 		};
 		4E0B91A325DAE87F006BF644 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5826EE33DBCD0815579DEBDE /* Pods-SimpleMemoApp.debug.xcconfig */;
+			baseConfigurationReference = 2527CCD01328731876157CBE /* Pods-Every-Memo.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -463,7 +467,7 @@
 		};
 		4E0B91A425DAE87F006BF644 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 97DBC14F315E8531A4C57EB5 /* Pods-SimpleMemoApp.release.xcconfig */;
+			baseConfigurationReference = 8F0EF1086E22D8A219D80563 /* Pods-Every-Memo.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
