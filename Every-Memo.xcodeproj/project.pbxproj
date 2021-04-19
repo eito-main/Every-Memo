@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B8F51F18DDEB7C398F339E1 /* Pods_Every_Memo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB0A57B0C812D1203512E4B3 /* Pods_Every_Memo.framework */; };
 		4E0B919225DAE87E006BF644 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0B919125DAE87E006BF644 /* AppDelegate.swift */; };
 		4E0B919425DAE87E006BF644 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0B919325DAE87E006BF644 /* SceneDelegate.swift */; };
 		4E0B919625DAE87E006BF644 /* CategoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0B919525DAE87E006BF644 /* CategoryListViewController.swift */; };
@@ -28,17 +29,15 @@
 		4E0B923025FC8906006BF644 /* SearchNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0B922F25FC8906006BF644 /* SearchNavigationController.swift */; };
 		4E0B923325FC8953006BF644 /* CalenderNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0B923225FC8953006BF644 /* CalenderNavigationController.swift */; };
 		4E5E37A0262522F600BD3F39 /* OperationCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5E379F262522F600BD3F39 /* OperationCategory.swift */; };
-<<<<<<< HEAD
+
 		4E85AA8F2627F6E800F81FA9 /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E85AA8E2627F6E800F81FA9 /* Calendar.storyboard */; };
 		4E85AA922627F70500F81FA9 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E85AA912627F70500F81FA9 /* Search.storyboard */; };
 		4E85AA982627F74900F81FA9 /* TitleList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E85AA972627F74900F81FA9 /* TitleList.storyboard */; };
 		4E85AA9B2627F75C00F81FA9 /* Memo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E85AA9A2627F75C00F81FA9 /* Memo.storyboard */; };
 		4E85AA9E2627F79F00F81FA9 /* AddMemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E85AA9D2627F79F00F81FA9 /* AddMemo.storyboard */; };
 		4E85AAA12627F7B800F81FA9 /* AddMemoCategory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E85AAA02627F7B800F81FA9 /* AddMemoCategory.storyboard */; };
-		671DC72C4259F7E0EED669F1 /* Pods_SimpleMemoApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 864060A8D17041F0137C5B89 /* Pods_SimpleMemoApp.framework */; };
-=======
 		E9AA080A9E118BC7AD342818 /* Pods_Every_Memo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 026CA9E013A2D03A9E190A5C /* Pods_Every_Memo.framework */; };
->>>>>>> develop
+
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,8 +73,12 @@
 		4E85AA9D2627F79F00F81FA9 /* AddMemo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddMemo.storyboard; sourceTree = "<group>"; };
 		4E85AAA02627F7B800F81FA9 /* AddMemoCategory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddMemoCategory.storyboard; sourceTree = "<group>"; };
 		5826EE33DBCD0815579DEBDE /* Pods-SimpleMemoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleMemoApp.debug.xcconfig"; path = "Target Support Files/Pods-SimpleMemoApp/Pods-SimpleMemoApp.debug.xcconfig"; sourceTree = "<group>"; };
+
 		8F0EF1086E22D8A219D80563 /* Pods-Every-Memo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Every-Memo.release.xcconfig"; path = "Target Support Files/Pods-Every-Memo/Pods-Every-Memo.release.xcconfig"; sourceTree = "<group>"; };
+
 		97DBC14F315E8531A4C57EB5 /* Pods-SimpleMemoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleMemoApp.release.xcconfig"; path = "Target Support Files/Pods-SimpleMemoApp/Pods-SimpleMemoApp.release.xcconfig"; sourceTree = "<group>"; };
+		D04414653AE8BFA48A1F4511 /* Pods-Every-Memo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Every-Memo.debug.xcconfig"; path = "Target Support Files/Pods-Every-Memo/Pods-Every-Memo.debug.xcconfig"; sourceTree = "<group>"; };
+		DB0A57B0C812D1203512E4B3 /* Pods_Every_Memo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Every_Memo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,7 +86,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+
 				E9AA080A9E118BC7AD342818 /* Pods_Every_Memo.framework in Frameworks */,
+
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -178,7 +183,9 @@
 		F6430532E8FC5E404B810FC9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+
 				026CA9E013A2D03A9E190A5C /* Pods_Every_Memo.framework */,
+
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -188,8 +195,10 @@
 			children = (
 				5826EE33DBCD0815579DEBDE /* Pods-SimpleMemoApp.debug.xcconfig */,
 				97DBC14F315E8531A4C57EB5 /* Pods-SimpleMemoApp.release.xcconfig */,
+
 				2527CCD01328731876157CBE /* Pods-Every-Memo.debug.xcconfig */,
 				8F0EF1086E22D8A219D80563 /* Pods-Every-Memo.release.xcconfig */,
+
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -475,7 +484,9 @@
 		};
 		4E0B91A325DAE87F006BF644 /* Debug */ = {
 			isa = XCBuildConfiguration;
+
 			baseConfigurationReference = 2527CCD01328731876157CBE /* Pods-Every-Memo.debug.xcconfig */;
+
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -495,7 +506,9 @@
 		};
 		4E0B91A425DAE87F006BF644 /* Release */ = {
 			isa = XCBuildConfiguration;
+
 			baseConfigurationReference = 8F0EF1086E22D8A219D80563 /* Pods-Every-Memo.release.xcconfig */;
+
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
