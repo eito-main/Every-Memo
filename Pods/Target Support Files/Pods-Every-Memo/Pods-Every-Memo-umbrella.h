@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_SimpleMemoAppVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_SimpleMemoAppVersionString[];
+FOUNDATION_EXPORT double Pods_Every_MemoVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_Every_MemoVersionString[];
 

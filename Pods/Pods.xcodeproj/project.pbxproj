@@ -20,11 +20,9 @@
 		2126BAE2A3A69461E8B00562CFF6D67C /* FSCalendar-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F0425E6F3747433A0E5BD49459A63DAD /* FSCalendar-dummy.m */; };
 		2358B57B83BE526AED64799C6892B2CE /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 251D60A893F479C33123291FB0EED416 /* QuartzCore.framework */; };
 		259D6FC80BCFE785471F743B1F533970 /* IQNSArray+Sort.swift in Sources */ = {isa = PBXBuildFile; fileRef = A6A56611E57C322727B77AB51A102A01 /* IQNSArray+Sort.swift */; };
-		28502976807AAAA6AA29D75B90DAF7FF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 316612CB60866F3952D1AEFFE9E409E7 /* Foundation.framework */; };
 		2E5EC07CFD18A132E57569D00117C703 /* FSCalendarConstants.m in Sources */ = {isa = PBXBuildFile; fileRef = 7EBA28FCBF91C3519FE6D04DD80A3911 /* FSCalendarConstants.m */; };
 		33483C1C427390BED308CBAB3EEEE277 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F00BEE59DC7EC91BB1C827BEF78C6A7 /* CoreGraphics.framework */; };
 		38EE0727B33503FD20E1363988E46AB2 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DF9E080A9A1ED9063D387790E4AE632 /* UIKit.framework */; };
-		3B74732BA26AD323B8A1AD58AD9F2CC1 /* Pods-SimpleMemoApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EB3C50CA5EDF31E9A24F818AAF0D6CA1 /* Pods-SimpleMemoApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3F091C427A3E96117C902E8EA143729E /* IQKeyboardManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC8F0AAC16C5EF57C5A59351AA91A2C4 /* IQKeyboardManager.swift */; };
 		3F0F6CEFD0801BEA64D1A265AE92FC05 /* FSCalendarWeekdayView.m in Sources */ = {isa = PBXBuildFile; fileRef = CDB7D4C800951A5FC345CECA9D3E6F39 /* FSCalendarWeekdayView.m */; };
 		4737103B10A1C40C5301D0512B9310E4 /* IQKeyboardReturnKeyHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1078241E943EA2E64674CB97534C9EC7 /* IQKeyboardReturnKeyHandler.swift */; };
@@ -48,10 +46,11 @@
 		8B439A47AA5FDEF67AD63BDDB808AC5A /* IQUIView+Hierarchy.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADFF0411D2C54C03706CD9F9F54FA7D5 /* IQUIView+Hierarchy.swift */; };
 		919B72E0CE7743838A947288D10AAEA3 /* FSCalendarDynamicHeader.h in Headers */ = {isa = PBXBuildFile; fileRef = 3CF3B3F540F45EE6503CC699FB095F13 /* FSCalendarDynamicHeader.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		91A96B98AD78AAD881AB6389B1368405 /* FSCalendarWeekdayView.h in Headers */ = {isa = PBXBuildFile; fileRef = C4D94CEBA8F3EC5AB880EA0DCE800341 /* FSCalendarWeekdayView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		920F3A5066B87159EC34B57A5BAF4FF7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 316612CB60866F3952D1AEFFE9E409E7 /* Foundation.framework */; };
 		93D3B2EC7BAD20C4F2269A79F8FF972B /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6DF9E080A9A1ED9063D387790E4AE632 /* UIKit.framework */; };
 		980E5594F8DBCE362764AEDC2F086E36 /* IQToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 316D0E0A5A328918101046F58F06FBCE /* IQToolbar.swift */; };
 		AE3B246482DCD60BA846EA3CE983A1FB /* IQUIView+IQKeyboardToolbar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2F7CCD79186E93459EAFF1E26388DB51 /* IQUIView+IQKeyboardToolbar.swift */; };
-		B43506D347BABA689CFCC790DAD27818 /* Pods-SimpleMemoApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 15FC8E95CB5E5EA68597ED13E0664521 /* Pods-SimpleMemoApp-dummy.m */; };
+		B0FDBFD705D75E78EC003B4A0442CA0D /* Pods-Every-Memo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 7617BF9D998D7B756A7CC4DE7C02D100 /* Pods-Every-Memo-dummy.m */; };
 		B98378C55379E1B92897F11A22E38443 /* IQKeyboardManagerSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F48BE3664C04D9A168BFD2B8DEC329B0 /* IQKeyboardManagerSwift-dummy.m */; };
 		BA4618552515686F83F7873D094EB189 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 251D60A893F479C33123291FB0EED416 /* QuartzCore.framework */; };
 		BADEDF3F5C6B8ECA687B3061C65C7E5D /* FSCalendarHeaderView.h in Headers */ = {isa = PBXBuildFile; fileRef = 15A308ED3382EBAE6CD920968C3750C9 /* FSCalendarHeaderView.h */; settings = {ATTRIBUTES = (Public, ); }; };
@@ -64,6 +63,7 @@
 		DDE417BA9D13D2BB98316DF0512A1944 /* IQBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C7F0A27726E4356CBB4C378E92E1CF6 /* IQBarButtonItem.swift */; };
 		DEA8746B8ACC9D6CE9EBDEA8F8CB2E27 /* FSCalendarCollectionView.h in Headers */ = {isa = PBXBuildFile; fileRef = 4AF851AB8514F2A4341D6FE3155CE154 /* FSCalendarCollectionView.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		E56AE3ED48D8E87D1CD9718291E0B5E5 /* FSCalendarCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = FB5D2C789B1CFC4994F3A32778A19AB0 /* FSCalendarCollectionView.m */; };
+		E7FE62D3BF106320BC3342116F77538C /* Pods-Every-Memo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = EE62A9550DB7CC28A4DE5AC5C18B7E73 /* Pods-Every-Memo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		EEF066616EFE6EBC57541C1B92C6770A /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 316612CB60866F3952D1AEFFE9E409E7 /* Foundation.framework */; };
 		F390EE3F6501EA735B348A94C0416E8E /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 316612CB60866F3952D1AEFFE9E409E7 /* Foundation.framework */; };
 		FDB26845AA353936661B049BA64ABD25 /* FSCalendarCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 9E3908FCACBB08C5FA424468EB14BC19 /* FSCalendarCalculator.m */; };
@@ -71,32 +71,29 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		655A193EC1790982CB6D3EA320F140E0 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 13285D54682BEAD805960F9E6EEB9949;
-			remoteInfo = FSCalendar;
-		};
-		CE789279C85C969B58C9C67FC81C6ABD /* PBXContainerItemProxy */ = {
+		8EDAD91031188A808DC1DFE551F91AA6 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = B490E7485944099E16C9CBD79119D1D4;
 			remoteInfo = IQKeyboardManagerSwift;
 		};
+		E309EE233AD67D91FD9F71062B86F319 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 13285D54682BEAD805960F9E6EEB9949;
+			remoteInfo = FSCalendar;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		017998588326F0181F3E4634F5958645 /* FSCalendar.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSCalendar.m; path = FSCalendar/FSCalendar.m; sourceTree = "<group>"; };
-		034397090F163E201526AB2A548D32AB /* Pods_SimpleMemoApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SimpleMemoApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1078241E943EA2E64674CB97534C9EC7 /* IQKeyboardReturnKeyHandler.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQKeyboardReturnKeyHandler.swift; path = IQKeyboardManagerSwift/IQKeyboardReturnKeyHandler.swift; sourceTree = "<group>"; };
 		11F5697CF172C9E263775A357EE6059A /* FSCalendarAppearance.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSCalendarAppearance.h; path = FSCalendar/FSCalendarAppearance.h; sourceTree = "<group>"; };
 		12070D19FE563A7FD9FF7D9CC0498D25 /* IQUITextFieldView+Additions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQUITextFieldView+Additions.swift"; path = "IQKeyboardManagerSwift/Categories/IQUITextFieldView+Additions.swift"; sourceTree = "<group>"; };
 		122F071B93C7E9F3E52655C07EB8BCD2 /* FSCalendarCalculator.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSCalendarCalculator.h; path = FSCalendar/FSCalendarCalculator.h; sourceTree = "<group>"; };
-		1241EBE43825BDC405B32CA6371CFDB2 /* Pods-SimpleMemoApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-SimpleMemoApp-acknowledgements.markdown"; sourceTree = "<group>"; };
 		15A308ED3382EBAE6CD920968C3750C9 /* FSCalendarHeaderView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSCalendarHeaderView.h; path = FSCalendar/FSCalendarHeaderView.h; sourceTree = "<group>"; };
-		15FC8E95CB5E5EA68597ED13E0664521 /* Pods-SimpleMemoApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-SimpleMemoApp-dummy.m"; sourceTree = "<group>"; };
 		1DF6759D4BA58EE9873F318696175CD3 /* FSCalendar-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "FSCalendar-Info.plist"; sourceTree = "<group>"; };
 		251D60A893F479C33123291FB0EED416 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/QuartzCore.framework; sourceTree = DEVELOPER_DIR; };
 		2C7F0A27726E4356CBB4C378E92E1CF6 /* IQBarButtonItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQBarButtonItem.swift; path = IQKeyboardManagerSwift/IQToolbar/IQBarButtonItem.swift; sourceTree = "<group>"; };
@@ -116,25 +113,29 @@
 		5150DCFD34954A9932602EACC0019BDF /* FSCalendarDelegationFactory.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSCalendarDelegationFactory.h; path = FSCalendar/FSCalendarDelegationFactory.h; sourceTree = "<group>"; };
 		5A33A193B1B42681B8CB62272881C8B8 /* FSCalendar.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSCalendar.h; path = FSCalendar/FSCalendar.h; sourceTree = "<group>"; };
 		5A354C2D792F6FE236613ADA741A04C4 /* IQTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQTextView.swift; path = IQKeyboardManagerSwift/IQTextView/IQTextView.swift; sourceTree = "<group>"; };
-		613EAA5F5B8CB253984A839BA9B2D207 /* Pods-SimpleMemoApp-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SimpleMemoApp-Info.plist"; sourceTree = "<group>"; };
 		67741B58230304486353A2F2926F2A57 /* FSCalendarTransitionCoordinator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSCalendarTransitionCoordinator.m; path = FSCalendar/FSCalendarTransitionCoordinator.m; sourceTree = "<group>"; };
 		686D386CA49A82F14CE97A81E6AE507E /* FSCalendarDelegationFactory.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSCalendarDelegationFactory.m; path = FSCalendar/FSCalendarDelegationFactory.m; sourceTree = "<group>"; };
+		698396403BADC98C97B9DA3E601266D8 /* Pods-Every-Memo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Every-Memo.debug.xcconfig"; sourceTree = "<group>"; };
 		6BF2B8657A365555CD6970456ECB818F /* IQKeyboardManagerSwift.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IQKeyboardManagerSwift.xcconfig; sourceTree = "<group>"; };
 		6DF9E080A9A1ED9063D387790E4AE632 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		6F3BA37983E82ED21A8DA3F85ED3B41C /* Pods-SimpleMemoApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SimpleMemoApp-acknowledgements.plist"; sourceTree = "<group>"; };
 		732D54EDF7751EB72029C632FDBE2B30 /* FSCalendar-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FSCalendar-umbrella.h"; sourceTree = "<group>"; };
 		7450F193BDB4E460CC28AD83505FBE4B /* IQKeyboardManagerSwift-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IQKeyboardManagerSwift-prefix.pch"; sourceTree = "<group>"; };
+		7617BF9D998D7B756A7CC4DE7C02D100 /* Pods-Every-Memo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Every-Memo-dummy.m"; sourceTree = "<group>"; };
 		7AE1CDC33BF2FCECE5DE1544822E8D5F /* FSCalendarDelegationProxy.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSCalendarDelegationProxy.h; path = FSCalendar/FSCalendarDelegationProxy.h; sourceTree = "<group>"; };
 		7EBA28FCBF91C3519FE6D04DD80A3911 /* FSCalendarConstants.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSCalendarConstants.m; path = FSCalendar/FSCalendarConstants.m; sourceTree = "<group>"; };
 		7FA84EB58729D47A864FC2E9AF1DA12C /* FSCalendar.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = FSCalendar.xcconfig; sourceTree = "<group>"; };
+		82F5013EB2BB5F11FCEAE694A3CD9F0C /* Pods-Every-Memo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Every-Memo-frameworks.sh"; sourceTree = "<group>"; };
+		85191226FD21453808345D10CDFBAE25 /* Pods-Every-Memo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Every-Memo.release.xcconfig"; sourceTree = "<group>"; };
 		8A2D31090525E2D96541EA405F1C1C34 /* FSCalendar-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "FSCalendar-prefix.pch"; sourceTree = "<group>"; };
 		8E376F152F9F49E8785FCE129C822E37 /* IQKeyboardManagerSwift.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = IQKeyboardManagerSwift.modulemap; sourceTree = "<group>"; };
 		92428E2CEA142E999E6A9165C06DD052 /* FSCalendarSeparatorDecorationView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSCalendarSeparatorDecorationView.m; path = FSCalendar/FSCalendarSeparatorDecorationView.m; sourceTree = "<group>"; };
 		95209B8BB966524BC76543F99C75F5FE /* FSCalendar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = FSCalendar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		99EAB249FEA71CD63ECE65B4021200DD /* Pods-SimpleMemoApp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-SimpleMemoApp-frameworks.sh"; sourceTree = "<group>"; };
+		97D661B31E4023EFB170F0C87B647115 /* Pods-Every-Memo-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Every-Memo-Info.plist"; sourceTree = "<group>"; };
 		9D16FF21079DA9124C6944E7F4D536CB /* FSCalendarStickyHeader.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSCalendarStickyHeader.m; path = FSCalendar/FSCalendarStickyHeader.m; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9E3908FCACBB08C5FA424468EB14BC19 /* FSCalendarCalculator.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSCalendarCalculator.m; path = FSCalendar/FSCalendarCalculator.m; sourceTree = "<group>"; };
+		A00FB6BC23A8415A0A5BC6C84AC21037 /* Pods-Every-Memo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Every-Memo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		A570A036C64FE563B22AE143D9BD0804 /* Pods_Every_Memo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Every_Memo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A6A56611E57C322727B77AB51A102A01 /* IQNSArray+Sort.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQNSArray+Sort.swift"; path = "IQKeyboardManagerSwift/Categories/IQNSArray+Sort.swift"; sourceTree = "<group>"; };
 		A8E950A16D00F649C54FFB30F81D7842 /* IQKeyboardManagerSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IQKeyboardManagerSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A97C1FC620FCAC9F10D9D6BA56A99330 /* FSCalendarCollectionViewLayout.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSCalendarCollectionViewLayout.h; path = FSCalendar/FSCalendarCollectionViewLayout.h; sourceTree = "<group>"; };
@@ -142,6 +143,7 @@
 		ADFF0411D2C54C03706CD9F9F54FA7D5 /* IQUIView+Hierarchy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQUIView+Hierarchy.swift"; path = "IQKeyboardManagerSwift/Categories/IQUIView+Hierarchy.swift"; sourceTree = "<group>"; };
 		B1EE6781ED4D4B2C3F241D7E7635967A /* FSCalendarCell.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSCalendarCell.m; path = FSCalendar/FSCalendarCell.m; sourceTree = "<group>"; };
 		B40CBCDC2594C60BF1FC176E2CA70983 /* IQTitleBarButtonItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQTitleBarButtonItem.swift; path = IQKeyboardManagerSwift/IQToolbar/IQTitleBarButtonItem.swift; sourceTree = "<group>"; };
+		B6CD95115DA04F18054F8901C86A9F6D /* Pods-Every-Memo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Every-Memo.modulemap"; sourceTree = "<group>"; };
 		B8F941031728E4F833DD16F4EB45DD7D /* IQPreviousNextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQPreviousNextView.swift; path = IQKeyboardManagerSwift/IQToolbar/IQPreviousNextView.swift; sourceTree = "<group>"; };
 		BDD554536B8A1D5985DD4CFA46962B2F /* IQKeyboardManagerConstants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQKeyboardManagerConstants.swift; path = IQKeyboardManagerSwift/Constants/IQKeyboardManagerConstants.swift; sourceTree = "<group>"; };
 		BF9C6FC932C0B36BC2EE7B00D2B0DBC1 /* FSCalendarDelegationProxy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSCalendarDelegationProxy.m; path = FSCalendar/FSCalendarDelegationProxy.m; sourceTree = "<group>"; };
@@ -149,32 +151,22 @@
 		C4D94CEBA8F3EC5AB880EA0DCE800341 /* FSCalendarWeekdayView.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSCalendarWeekdayView.h; path = FSCalendar/FSCalendarWeekdayView.h; sourceTree = "<group>"; };
 		C90CC4B25C22F1E7A084E734E9080224 /* FSCalendarCell.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSCalendarCell.h; path = FSCalendar/FSCalendarCell.h; sourceTree = "<group>"; };
 		CB68E6F2D9E9D2A5F3A68243DDC33886 /* IQInvocation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQInvocation.swift; path = IQKeyboardManagerSwift/IQToolbar/IQInvocation.swift; sourceTree = "<group>"; };
-		CC48AF7C924CA1E36AD1B46FBC317106 /* Pods-SimpleMemoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SimpleMemoApp.debug.xcconfig"; sourceTree = "<group>"; };
 		CDB7D4C800951A5FC345CECA9D3E6F39 /* FSCalendarWeekdayView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSCalendarWeekdayView.m; path = FSCalendar/FSCalendarWeekdayView.m; sourceTree = "<group>"; };
 		CEDEB513F81775A72BA49EBA62104400 /* FSCalendarExtensions.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSCalendarExtensions.m; path = FSCalendar/FSCalendarExtensions.m; sourceTree = "<group>"; };
+		D4B14A9E7C2D5CFC759FCA9F9D80E0B8 /* Pods-Every-Memo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Every-Memo-acknowledgements.plist"; sourceTree = "<group>"; };
 		DD57FDC43158927D59CBBCC6E6691719 /* FSCalendarExtensions.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSCalendarExtensions.h; path = FSCalendar/FSCalendarExtensions.h; sourceTree = "<group>"; };
-		DEA8CAE5535F4D7446AE6FB3F3502C54 /* Pods-SimpleMemoApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-SimpleMemoApp.modulemap"; sourceTree = "<group>"; };
 		E671B0FE55A03C60F6BBA942129BD007 /* FSCalendarConstants.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = FSCalendarConstants.h; path = FSCalendar/FSCalendarConstants.h; sourceTree = "<group>"; };
-		EB3C50CA5EDF31E9A24F818AAF0D6CA1 /* Pods-SimpleMemoApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SimpleMemoApp-umbrella.h"; sourceTree = "<group>"; };
 		EE4FC3909E0F3548E7B3E6A36ED7C004 /* FSCalendarHeaderView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSCalendarHeaderView.m; path = FSCalendar/FSCalendarHeaderView.m; sourceTree = "<group>"; };
+		EE62A9550DB7CC28A4DE5AC5C18B7E73 /* Pods-Every-Memo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Every-Memo-umbrella.h"; sourceTree = "<group>"; };
 		EEE6616ED8E066C5751AD96A6F85C87D /* IQKeyboardManagerConstantsInternal.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = IQKeyboardManagerConstantsInternal.swift; path = IQKeyboardManagerSwift/Constants/IQKeyboardManagerConstantsInternal.swift; sourceTree = "<group>"; };
 		F0425E6F3747433A0E5BD49459A63DAD /* FSCalendar-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "FSCalendar-dummy.m"; sourceTree = "<group>"; };
 		F48BE3664C04D9A168BFD2B8DEC329B0 /* IQKeyboardManagerSwift-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "IQKeyboardManagerSwift-dummy.m"; sourceTree = "<group>"; };
-		F7F4F4899C8BD5A40375FFC52379DBEF /* Pods-SimpleMemoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SimpleMemoApp.release.xcconfig"; sourceTree = "<group>"; };
 		F8A3BF012E7125687A2D348FF0724E49 /* IQUIScrollView+Additions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IQUIScrollView+Additions.swift"; path = "IQKeyboardManagerSwift/Categories/IQUIScrollView+Additions.swift"; sourceTree = "<group>"; };
 		FB5D2C789B1CFC4994F3A32778A19AB0 /* FSCalendarCollectionView.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = FSCalendarCollectionView.m; path = FSCalendar/FSCalendarCollectionView.m; sourceTree = "<group>"; };
 		FFC4DA5B559A55AAC9CABC34C99A7B5C /* FSCalendar.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = FSCalendar.modulemap; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		034163EE754D648744772507D4E32B44 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				28502976807AAAA6AA29D75B90DAF7FF /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		2C2292E431F316076553538B7FBB63C3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -183,6 +175,14 @@
 				EEF066616EFE6EBC57541C1B92C6770A /* Foundation.framework in Frameworks */,
 				2358B57B83BE526AED64799C6892B2CE /* QuartzCore.framework in Frameworks */,
 				38EE0727B33503FD20E1363988E46AB2 /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		93B95E66F09E5A8F70B9C36376DD0A12 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				920F3A5066B87159EC34B57A5BAF4FF7 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -227,12 +227,14 @@
 			path = "../Target Support Files/FSCalendar";
 			sourceTree = "<group>";
 		};
-		9C3EAE119B867515A84A53B269C635BF /* Targets Support Files */ = {
+		80A8F0CDB0671557BC5B2FB959DFE678 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				D45F8C5CC23E2DF07F5717B814D47DD9 /* Pods-SimpleMemoApp */,
+				95209B8BB966524BC76543F99C75F5FE /* FSCalendar.framework */,
+				A8E950A16D00F649C54FFB30F81D7842 /* IQKeyboardManagerSwift.framework */,
+				A570A036C64FE563B22AE143D9BD0804 /* Pods_Every_Memo.framework */,
 			);
-			name = "Targets Support Files";
+			name = Products;
 			sourceTree = "<group>";
 		};
 		9D85AD3EA0B1B99E9DBBAC33C4A7B513 /* IQKeyboardManagerSwift */ = {
@@ -276,42 +278,40 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		C985B5D71B17B4BD0FA946EFA0DCCA35 /* Pods-Every-Memo */ = {
+			isa = PBXGroup;
+			children = (
+				B6CD95115DA04F18054F8901C86A9F6D /* Pods-Every-Memo.modulemap */,
+				A00FB6BC23A8415A0A5BC6C84AC21037 /* Pods-Every-Memo-acknowledgements.markdown */,
+				D4B14A9E7C2D5CFC759FCA9F9D80E0B8 /* Pods-Every-Memo-acknowledgements.plist */,
+				7617BF9D998D7B756A7CC4DE7C02D100 /* Pods-Every-Memo-dummy.m */,
+				82F5013EB2BB5F11FCEAE694A3CD9F0C /* Pods-Every-Memo-frameworks.sh */,
+				97D661B31E4023EFB170F0C87B647115 /* Pods-Every-Memo-Info.plist */,
+				EE62A9550DB7CC28A4DE5AC5C18B7E73 /* Pods-Every-Memo-umbrella.h */,
+				698396403BADC98C97B9DA3E601266D8 /* Pods-Every-Memo.debug.xcconfig */,
+				85191226FD21453808345D10CDFBAE25 /* Pods-Every-Memo.release.xcconfig */,
+			);
+			name = "Pods-Every-Memo";
+			path = "Target Support Files/Pods-Every-Memo";
+			sourceTree = "<group>";
+		};
+		CCB99DC8AD93DC76F0E3BEC67133CB66 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				C985B5D71B17B4BD0FA946EFA0DCCA35 /* Pods-Every-Memo */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
 		CF1408CF629C7361332E53B88F7BD30C = {
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				BA4F31F07263C99FC76E66D632A59F09 /* Frameworks */,
 				A328AFD555056C72E5F4F3F3CCB3B5F8 /* Pods */,
-				D89D7EBDBFA5B53BD319FEF577077259 /* Products */,
-				9C3EAE119B867515A84A53B269C635BF /* Targets Support Files */,
+				80A8F0CDB0671557BC5B2FB959DFE678 /* Products */,
+				CCB99DC8AD93DC76F0E3BEC67133CB66 /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		D45F8C5CC23E2DF07F5717B814D47DD9 /* Pods-SimpleMemoApp */ = {
-			isa = PBXGroup;
-			children = (
-				DEA8CAE5535F4D7446AE6FB3F3502C54 /* Pods-SimpleMemoApp.modulemap */,
-				1241EBE43825BDC405B32CA6371CFDB2 /* Pods-SimpleMemoApp-acknowledgements.markdown */,
-				6F3BA37983E82ED21A8DA3F85ED3B41C /* Pods-SimpleMemoApp-acknowledgements.plist */,
-				15FC8E95CB5E5EA68597ED13E0664521 /* Pods-SimpleMemoApp-dummy.m */,
-				99EAB249FEA71CD63ECE65B4021200DD /* Pods-SimpleMemoApp-frameworks.sh */,
-				613EAA5F5B8CB253984A839BA9B2D207 /* Pods-SimpleMemoApp-Info.plist */,
-				EB3C50CA5EDF31E9A24F818AAF0D6CA1 /* Pods-SimpleMemoApp-umbrella.h */,
-				CC48AF7C924CA1E36AD1B46FBC317106 /* Pods-SimpleMemoApp.debug.xcconfig */,
-				F7F4F4899C8BD5A40375FFC52379DBEF /* Pods-SimpleMemoApp.release.xcconfig */,
-			);
-			name = "Pods-SimpleMemoApp";
-			path = "Target Support Files/Pods-SimpleMemoApp";
-			sourceTree = "<group>";
-		};
-		D89D7EBDBFA5B53BD319FEF577077259 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				95209B8BB966524BC76543F99C75F5FE /* FSCalendar.framework */,
-				A8E950A16D00F649C54FFB30F81D7842 /* IQKeyboardManagerSwift.framework */,
-				034397090F163E201526AB2A548D32AB /* Pods_SimpleMemoApp.framework */,
-			);
-			name = Products;
 			sourceTree = "<group>";
 		};
 		EB0E3A0897B38211D65ACB5E48640571 /* iOS */ = {
@@ -367,11 +367,11 @@
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		470E640F1D175E07B11DB80EB300430A /* Headers */ = {
+		26AAF0029AD2C8524632F26EDC814F4A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3B74732BA26AD323B8A1AD58AD9F2CC1 /* Pods-SimpleMemoApp-umbrella.h in Headers */,
+				E7FE62D3BF106320BC3342116F77538C /* Pods-Every-Memo-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -428,26 +428,6 @@
 			productReference = 95209B8BB966524BC76543F99C75F5FE /* FSCalendar.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		596F48BA62DD4FF5FC478392B56557BD /* Pods-SimpleMemoApp */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 2CB1F4D3707789899AF3EA9878458840 /* Build configuration list for PBXNativeTarget "Pods-SimpleMemoApp" */;
-			buildPhases = (
-				470E640F1D175E07B11DB80EB300430A /* Headers */,
-				8B61FF00DE64A26E7B2E692D17210B64 /* Sources */,
-				034163EE754D648744772507D4E32B44 /* Frameworks */,
-				7FD941C1C3D516DD0D570D89FE1393D9 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				7FDFD695EA4CDB305B05BA5E02F7E90A /* PBXTargetDependency */,
-				B38FAA6BF7E24A6C79CA74379FD7A85F /* PBXTargetDependency */,
-			);
-			name = "Pods-SimpleMemoApp";
-			productName = "Pods-SimpleMemoApp";
-			productReference = 034397090F163E201526AB2A548D32AB /* Pods_SimpleMemoApp.framework */;
-			productType = "com.apple.product-type.framework";
-		};
 		B490E7485944099E16C9CBD79119D1D4 /* IQKeyboardManagerSwift */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = A7155AE59A19533F60ECE3B4045B01F0 /* Build configuration list for PBXNativeTarget "IQKeyboardManagerSwift" */;
@@ -464,6 +444,26 @@
 			name = IQKeyboardManagerSwift;
 			productName = IQKeyboardManagerSwift;
 			productReference = A8E950A16D00F649C54FFB30F81D7842 /* IQKeyboardManagerSwift.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		E98DF99DD21D365503E8BE2BD9D65AE0 /* Pods-Every-Memo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3C5AEE4534C821ED602284096F744151 /* Build configuration list for PBXNativeTarget "Pods-Every-Memo" */;
+			buildPhases = (
+				26AAF0029AD2C8524632F26EDC814F4A /* Headers */,
+				968936CF2EFDC3CE1522D6565B3BE14A /* Sources */,
+				93B95E66F09E5A8F70B9C36376DD0A12 /* Frameworks */,
+				6DD486212B23CCBDAFEAD31A2CA3E659 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				B12978F302CA70F7E944BFFC5CD4E52F /* PBXTargetDependency */,
+				371839C159F791B841E149FFC2A980D0 /* PBXTargetDependency */,
+			);
+			name = "Pods-Every-Memo";
+			productName = "Pods-Every-Memo";
+			productReference = A570A036C64FE563B22AE143D9BD0804 /* Pods_Every_Memo.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -484,19 +484,19 @@
 				Base,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = D89D7EBDBFA5B53BD319FEF577077259 /* Products */;
+			productRefGroup = 80A8F0CDB0671557BC5B2FB959DFE678 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				13285D54682BEAD805960F9E6EEB9949 /* FSCalendar */,
 				B490E7485944099E16C9CBD79119D1D4 /* IQKeyboardManagerSwift */,
-				596F48BA62DD4FF5FC478392B56557BD /* Pods-SimpleMemoApp */,
+				E98DF99DD21D365503E8BE2BD9D65AE0 /* Pods-Every-Memo */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		7FD941C1C3D516DD0D570D89FE1393D9 /* Resources */ = {
+		6DD486212B23CCBDAFEAD31A2CA3E659 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -567,28 +567,28 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		8B61FF00DE64A26E7B2E692D17210B64 /* Sources */ = {
+		968936CF2EFDC3CE1522D6565B3BE14A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B43506D347BABA689CFCC790DAD27818 /* Pods-SimpleMemoApp-dummy.m in Sources */,
+				B0FDBFD705D75E78EC003B4A0442CA0D /* Pods-Every-Memo-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		7FDFD695EA4CDB305B05BA5E02F7E90A /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = FSCalendar;
-			target = 13285D54682BEAD805960F9E6EEB9949 /* FSCalendar */;
-			targetProxy = 655A193EC1790982CB6D3EA320F140E0 /* PBXContainerItemProxy */;
-		};
-		B38FAA6BF7E24A6C79CA74379FD7A85F /* PBXTargetDependency */ = {
+		371839C159F791B841E149FFC2A980D0 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = IQKeyboardManagerSwift;
 			target = B490E7485944099E16C9CBD79119D1D4 /* IQKeyboardManagerSwift */;
-			targetProxy = CE789279C85C969B58C9C67FC81C6ABD /* PBXContainerItemProxy */;
+			targetProxy = 8EDAD91031188A808DC1DFE551F91AA6 /* PBXContainerItemProxy */;
+		};
+		B12978F302CA70F7E944BFFC5CD4E52F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = FSCalendar;
+			target = 13285D54682BEAD805960F9E6EEB9949 /* FSCalendar */;
+			targetProxy = E309EE233AD67D91FD9F71062B86F319 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -663,44 +663,6 @@
 			};
 			name = Release;
 		};
-		206FAF4929BB2331DC899C30C07A2776 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = F7F4F4899C8BD5A40375FFC52379DBEF /* Pods-SimpleMemoApp.release.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-SimpleMemoApp/Pods-SimpleMemoApp-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-SimpleMemoApp/Pods-SimpleMemoApp.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
 		26FB8B20EBDB8652C452DE0BB392EC5A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -766,9 +728,9 @@
 			};
 			name = Debug;
 		};
-		84D807719C74CDB0920844F256F324C0 /* Debug */ = {
+		545AE13535A04FBB6CBC4CEC3C3006AB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = CC48AF7C924CA1E36AD1B46FBC317106 /* Pods-SimpleMemoApp.debug.xcconfig */;
+			baseConfigurationReference = 85191226FD21453808345D10CDFBAE25 /* Pods-Every-Memo.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -780,7 +742,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-SimpleMemoApp/Pods-SimpleMemoApp-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-Every-Memo/Pods-Every-Memo-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -789,7 +751,7 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-SimpleMemoApp/Pods-SimpleMemoApp.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-Every-Memo/Pods-Every-Memo.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -798,10 +760,11 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Debug;
+			name = Release;
 		};
 		A3B97134147B359ACC94E1BC139242BC /* Release */ = {
 			isa = XCBuildConfiguration;
@@ -932,6 +895,43 @@
 			};
 			name = Debug;
 		};
+		EECF53C507FB9BD2E3423196D72D8BD0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 698396403BADC98C97B9DA3E601266D8 /* Pods-Every-Memo.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-Every-Memo/Pods-Every-Memo-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Every-Memo/Pods-Every-Memo.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -944,11 +944,11 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		2CB1F4D3707789899AF3EA9878458840 /* Build configuration list for PBXNativeTarget "Pods-SimpleMemoApp" */ = {
+		3C5AEE4534C821ED602284096F744151 /* Build configuration list for PBXNativeTarget "Pods-Every-Memo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				84D807719C74CDB0920844F256F324C0 /* Debug */,
-				206FAF4929BB2331DC899C30C07A2776 /* Release */,
+				EECF53C507FB9BD2E3423196D72D8BD0 /* Debug */,
+				545AE13535A04FBB6CBC4CEC3C3006AB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
