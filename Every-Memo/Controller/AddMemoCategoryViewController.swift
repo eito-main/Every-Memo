@@ -107,17 +107,15 @@ extension AddMemoCategoryViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        if indexPath.row == operationCategory.currentCategorys.count {
+        guard indexPath.row != operationCategory.currentCategorys.count else {
             
             let cell = tableView.dequeueReusableCell(withIdentifier: addCellId, for: indexPath)
             cell.textLabel?.text = "+"
             return cell
-            
-        } else {
+        }
             
             let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
             cell.textLabel?.text = "\(operationCategory.currentCategorys[indexPath.row])"
             return cell
         }
-    }
 }
