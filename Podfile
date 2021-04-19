@@ -5,7 +5,7 @@ target 'Every-Memo' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for SimpleMemoApp
+  # Pods for Every-Memo
 pod 'FSCalendar'
 pod 'IQKeyboardManagerSwift'
 

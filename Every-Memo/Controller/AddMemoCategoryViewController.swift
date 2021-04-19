@@ -70,23 +70,23 @@ extension AddMemoCategoryViewController: UITableViewDelegate {
             
             switch checkPreVC {
             
-            case is AddMemoController:
-                let preVC = presentingViewController as! AddMemoController
+            case is AddMemoViewController:
+                let preVC = presentingViewController as! AddMemoViewController
                 preVC.category.text = operationCategory.currentCategorys[indexPath.row]
                 
             case is CategoryListNavigationController:
                 let preNC = presentingViewController as! CategoryListNavigationController
-                let preVC = preNC.viewControllers[preNC.viewControllers.count - 1] as! MemoCheckController
+                let preVC = preNC.viewControllers[preNC.viewControllers.count - 1] as! MemoViewController
                 preVC.categoryLabel.text = operationCategory.currentCategorys[indexPath.row]
                 
             case is SearchNavigationController:
                 let preNC = presentingViewController as! SearchNavigationController
-                let preVC = preNC.viewControllers[preNC.viewControllers.count - 1] as! MemoCheckController
+                let preVC = preNC.viewControllers[preNC.viewControllers.count - 1] as! MemoViewController
                 preVC.categoryLabel.text = operationCategory.currentCategorys[indexPath.row]
                 
             case is CalenderNavigationController:
                 let preNC = presentingViewController as! CalenderNavigationController
-                let preVC = preNC.viewControllers[preNC.viewControllers.count - 1] as! MemoCheckController
+                let preVC = preNC.viewControllers[preNC.viewControllers.count - 1] as! MemoViewController
                 preVC.categoryLabel.text = operationCategory.currentCategorys[indexPath.row]
                 
             default:
