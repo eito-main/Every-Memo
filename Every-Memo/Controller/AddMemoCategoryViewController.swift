@@ -60,11 +60,11 @@ extension AddMemoCategoryViewController: UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
-        if indexPath.row == operationCategory.currentCategorys.count {
+        guard indexPath.row != operationCategory.currentCategorys.count else {
             
             alertAction()
-            
-        } else {
+            return
+        }
             
             let checkPreVC = presentingViewController
             
@@ -92,8 +92,6 @@ extension AddMemoCategoryViewController: UITableViewDelegate {
             default:
                 break
             }
-        }
-        
         dismiss(animated: true, completion: nil)
     }
 }
