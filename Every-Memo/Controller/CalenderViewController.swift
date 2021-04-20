@@ -31,10 +31,13 @@ final class CalenderViewController: UIViewController, FSCalendarDelegate, FSCale
         
         operationFormatter(date: now)
         
-        darkMode()
         navigationSetUp()
         calendarView.select(now)
         displayMemoChange()
+        
+        if (UITraitCollection.current.userInterfaceStyle == .dark) {
+            darkMode()
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -60,11 +63,8 @@ final class CalenderViewController: UIViewController, FSCalendarDelegate, FSCale
     
     //ダークモード対応
     private func darkMode() {
-        
-        if (UITraitCollection.current.userInterfaceStyle == .dark) {
             
             calendarView.appearance.titleDefaultColor = UIColor.white
-        }
     }
     
     private func operationFormatter(date: Date) {

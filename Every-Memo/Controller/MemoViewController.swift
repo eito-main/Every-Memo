@@ -24,7 +24,9 @@ final class MemoViewController: UIViewController {
         
         layout()
         setMemo()
+        if (UITraitCollection.current.userInterfaceStyle == .dark) {
         darkMode()
+        }
     }
     
     @objc func editButtonTapped(_ sender: UIBarButtonItem) {
@@ -98,13 +100,10 @@ final class MemoViewController: UIViewController {
     
     //ダークモード対応
     private func darkMode() {
-        
-        if (UITraitCollection.current.userInterfaceStyle == .dark) {
             
             categoryLabel.backgroundColor = .black
             dateLabel.backgroundColor = .black
             titleLabel.backgroundColor = .black
-        }
     }
     
     func touchedLabel(touches: Set<UITouch>, view:UILabel)->Bool {

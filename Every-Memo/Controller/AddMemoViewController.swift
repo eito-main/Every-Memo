@@ -19,8 +19,10 @@ final class AddMemoViewController : UIViewController, UITextViewDelegate {
         
         operationMemo = OperationMemo()
         
-        darkMode()
         getDate()
+        if (UITraitCollection.current.userInterfaceStyle == .dark) {
+            darkMode()
+        }
         
         memoTitle.placeholder = "タイトルを入力"
         category.text = "カテゴリー未指定"
@@ -72,13 +74,10 @@ final class AddMemoViewController : UIViewController, UITextViewDelegate {
     
     //ダークモード対応
     func darkMode(){
-        
-        if (UITraitCollection.current.userInterfaceStyle == .dark) {
             
             category.backgroundColor = .black
             date.backgroundColor = .black
             memoTitle.backgroundColor = .black
-        }
     }
     
     func getDate() {
