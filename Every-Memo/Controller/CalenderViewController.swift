@@ -77,10 +77,11 @@ final class CalenderViewController: UIViewController, FSCalendarDelegate, FSCale
     private func displayMemoChange() {
         
         displayMemo = [MemoData]()
+        let currentMemosIndexNumber = operationMemo.currentMemos.count-1
         
         if operationMemo.currentMemos.count == 0 {return}
         
-        for count in 0...operationMemo.currentMemos.count-1 {
+        for count in 0...currentMemosIndexNumber {
             
             if operationMemo.currentMemos[count].date == selectedDate {
                 displayMemo.append(operationMemo.currentMemos[count])

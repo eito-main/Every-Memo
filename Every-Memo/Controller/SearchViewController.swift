@@ -48,13 +48,15 @@ final class SearchViewController: UIViewController, UISearchBarDelegate {
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         
         searchBar.endEditing(true)
+        let currentMemosIndexNumber = operationMemo.currentMemos.count-1
+        
         if operationMemo.currentMemos.count == 0 {return}
         
         if(searchBar.text != nil) {
             
             searchResult.removeAll()
             
-            for count in 0...operationMemo.currentMemos.count-1 {
+            for count in 0...currentMemosIndexNumber {
                 
                 if operationMemo.currentMemos[count].title.contains(searchBar.text!) {
                     searchResult.append(operationMemo.currentMemos[count])
