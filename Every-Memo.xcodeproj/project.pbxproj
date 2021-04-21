@@ -1,0 +1,553 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0B8F51F18DDEB7C398F339E1 /* Pods_Every_Memo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB0A57B0C812D1203512E4B3 /* Pods_Every_Memo.framework */; };
+		4E0B919225DAE87E006BF644 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0B919125DAE87E006BF644 /* AppDelegate.swift */; };
+		4E0B919425DAE87E006BF644 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0B919325DAE87E006BF644 /* SceneDelegate.swift */; };
+		4E0B919625DAE87E006BF644 /* CategoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0B919525DAE87E006BF644 /* CategoryListViewController.swift */; };
+		4E0B919925DAE87E006BF644 /* CategoryList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E0B919725DAE87E006BF644 /* CategoryList.storyboard */; };
+		4E0B919B25DAE87F006BF644 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4E0B919A25DAE87F006BF644 /* Assets.xcassets */; };
+		4E0B919E25DAE87F006BF644 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E0B919C25DAE87F006BF644 /* LaunchScreen.storyboard */; };
+		4E0B91A825DC2EC3006BF644 /* TitleListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0B91A725DC2EC3006BF644 /* TitleListViewController.swift */; };
+		4E0B91AB25DC2FB8006BF644 /* MemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0B91AA25DC2FB8006BF644 /* MemoViewController.swift */; };
+		4E0B91B025DC32FA006BF644 /* MemoData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0B91AF25DC32FA006BF644 /* MemoData.swift */; };
+		4E0B91BA25DC8BF1006BF644 /* CategoryListButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0B91B925DC8BF1006BF644 /* CategoryListButtonViewController.swift */; };
+		4E0B91BE25DD0554006BF644 /* CalenderViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0B91BD25DD0554006BF644 /* CalenderViewController.swift */; };
+		4E0B91C325DD09E0006BF644 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0B91C225DD09E0006BF644 /* SearchViewController.swift */; };
+		4E0B91C725DD0A26006BF644 /* AddMemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0B91C625DD0A26006BF644 /* AddMemoViewController.swift */; };
+		4E0B91CD25DD21B0006BF644 /* AddMemoCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0B91CC25DD21B0006BF644 /* AddMemoCategoryViewController.swift */; };
+		4E0B91EC25E965F4006BF644 /* SaveMemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0B91EB25E965F4006BF644 /* SaveMemo.swift */; };
+		4E0B91EF25E967C4006BF644 /* OperationMemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0B91EE25E967C4006BF644 /* OperationMemo.swift */; };
+		4E0B921E25EE359D006BF644 /* ExtensionAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0B921D25EE359D006BF644 /* ExtensionAlertController.swift */; };
+		4E0B922D25F866FF006BF644 /* CategoryListNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0B922C25F866FF006BF644 /* CategoryListNavigationController.swift */; };
+		4E0B923025FC8906006BF644 /* SearchNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0B922F25FC8906006BF644 /* SearchNavigationController.swift */; };
+		4E0B923325FC8953006BF644 /* CalenderNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0B923225FC8953006BF644 /* CalenderNavigationController.swift */; };
+		4E5E37A0262522F600BD3F39 /* OperationCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5E379F262522F600BD3F39 /* OperationCategory.swift */; };
+
+		4E85AA8F2627F6E800F81FA9 /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E85AA8E2627F6E800F81FA9 /* Calendar.storyboard */; };
+		4E85AA922627F70500F81FA9 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E85AA912627F70500F81FA9 /* Search.storyboard */; };
+		4E85AA982627F74900F81FA9 /* TitleList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E85AA972627F74900F81FA9 /* TitleList.storyboard */; };
+		4E85AA9B2627F75C00F81FA9 /* Memo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E85AA9A2627F75C00F81FA9 /* Memo.storyboard */; };
+		4E85AA9E2627F79F00F81FA9 /* AddMemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E85AA9D2627F79F00F81FA9 /* AddMemo.storyboard */; };
+		4E85AAA12627F7B800F81FA9 /* AddMemoCategory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E85AAA02627F7B800F81FA9 /* AddMemoCategory.storyboard */; };
+		E9AA080A9E118BC7AD342818 /* Pods_Every_Memo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 026CA9E013A2D03A9E190A5C /* Pods_Every_Memo.framework */; };
+
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		026CA9E013A2D03A9E190A5C /* Pods_Every_Memo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Every_Memo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		2527CCD01328731876157CBE /* Pods-Every-Memo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Every-Memo.debug.xcconfig"; path = "Target Support Files/Pods-Every-Memo/Pods-Every-Memo.debug.xcconfig"; sourceTree = "<group>"; };
+		4E0B918E25DAE87E006BF644 /* Every-Memo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Every-Memo.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4E0B919125DAE87E006BF644 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		4E0B919325DAE87E006BF644 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		4E0B919525DAE87E006BF644 /* CategoryListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListViewController.swift; sourceTree = "<group>"; };
+		4E0B919825DAE87E006BF644 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/CategoryList.storyboard; sourceTree = "<group>"; };
+		4E0B919A25DAE87F006BF644 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4E0B919D25DAE87F006BF644 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4E0B919F25DAE87F006BF644 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E0B91A725DC2EC3006BF644 /* TitleListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleListViewController.swift; sourceTree = "<group>"; };
+		4E0B91AA25DC2FB8006BF644 /* MemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoViewController.swift; sourceTree = "<group>"; };
+		4E0B91AF25DC32FA006BF644 /* MemoData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoData.swift; sourceTree = "<group>"; };
+		4E0B91B925DC8BF1006BF644 /* CategoryListButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListButtonViewController.swift; sourceTree = "<group>"; };
+		4E0B91BD25DD0554006BF644 /* CalenderViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderViewController.swift; sourceTree = "<group>"; };
+		4E0B91C225DD09E0006BF644 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		4E0B91C625DD0A26006BF644 /* AddMemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemoViewController.swift; sourceTree = "<group>"; };
+		4E0B91CC25DD21B0006BF644 /* AddMemoCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemoCategoryViewController.swift; sourceTree = "<group>"; };
+		4E0B91EB25E965F4006BF644 /* SaveMemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveMemo.swift; sourceTree = "<group>"; };
+		4E0B91EE25E967C4006BF644 /* OperationMemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationMemo.swift; sourceTree = "<group>"; };
+		4E0B921D25EE359D006BF644 /* ExtensionAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionAlertController.swift; sourceTree = "<group>"; };
+		4E0B922C25F866FF006BF644 /* CategoryListNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListNavigationController.swift; sourceTree = "<group>"; };
+		4E0B922F25FC8906006BF644 /* SearchNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNavigationController.swift; sourceTree = "<group>"; };
+		4E0B923225FC8953006BF644 /* CalenderNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderNavigationController.swift; sourceTree = "<group>"; };
+		4E5E379F262522F600BD3F39 /* OperationCategory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationCategory.swift; sourceTree = "<group>"; };
+		4E85AA8E2627F6E800F81FA9 /* Calendar.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Calendar.storyboard; sourceTree = "<group>"; };
+		4E85AA912627F70500F81FA9 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
+		4E85AA972627F74900F81FA9 /* TitleList.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = TitleList.storyboard; sourceTree = "<group>"; };
+		4E85AA9A2627F75C00F81FA9 /* Memo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Memo.storyboard; sourceTree = "<group>"; };
+		4E85AA9D2627F79F00F81FA9 /* AddMemo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddMemo.storyboard; sourceTree = "<group>"; };
+		4E85AAA02627F7B800F81FA9 /* AddMemoCategory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddMemoCategory.storyboard; sourceTree = "<group>"; };
+		5826EE33DBCD0815579DEBDE /* Pods-SimpleMemoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleMemoApp.debug.xcconfig"; path = "Target Support Files/Pods-SimpleMemoApp/Pods-SimpleMemoApp.debug.xcconfig"; sourceTree = "<group>"; };
+
+		8F0EF1086E22D8A219D80563 /* Pods-Every-Memo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Every-Memo.release.xcconfig"; path = "Target Support Files/Pods-Every-Memo/Pods-Every-Memo.release.xcconfig"; sourceTree = "<group>"; };
+
+		97DBC14F315E8531A4C57EB5 /* Pods-SimpleMemoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleMemoApp.release.xcconfig"; path = "Target Support Files/Pods-SimpleMemoApp/Pods-SimpleMemoApp.release.xcconfig"; sourceTree = "<group>"; };
+		D04414653AE8BFA48A1F4511 /* Pods-Every-Memo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Every-Memo.debug.xcconfig"; path = "Target Support Files/Pods-Every-Memo/Pods-Every-Memo.debug.xcconfig"; sourceTree = "<group>"; };
+		DB0A57B0C812D1203512E4B3 /* Pods_Every_Memo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Every_Memo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4E0B918B25DAE87E006BF644 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+
+				E9AA080A9E118BC7AD342818 /* Pods_Every_Memo.framework in Frameworks */,
+
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4E0B918525DAE87E006BF644 = {
+			isa = PBXGroup;
+			children = (
+				4E0B919025DAE87E006BF644 /* Every-Memo */,
+				4E0B918F25DAE87E006BF644 /* Products */,
+				F71F9CC9E41619B1A35B6DC6 /* Pods */,
+				F6430532E8FC5E404B810FC9 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4E0B918F25DAE87E006BF644 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4E0B918E25DAE87E006BF644 /* Every-Memo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4E0B919025DAE87E006BF644 /* Every-Memo */ = {
+			isa = PBXGroup;
+			children = (
+				4EFA9740261C75FB00655626 /* Model */,
+				4EFA9741261C760600655626 /* View */,
+				4EFA9742261C760F00655626 /* Controller */,
+				4E5E37A526266B9900BD3F39 /* Extension */,
+				4E0B919C25DAE87F006BF644 /* LaunchScreen.storyboard */,
+				4E0B919F25DAE87F006BF644 /* Info.plist */,
+			);
+			path = "Every-Memo";
+			sourceTree = "<group>";
+		};
+		4E5E37A526266B9900BD3F39 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				4E0B921D25EE359D006BF644 /* ExtensionAlertController.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		4EFA9740261C75FB00655626 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4E0B91AF25DC32FA006BF644 /* MemoData.swift */,
+				4E0B91EB25E965F4006BF644 /* SaveMemo.swift */,
+				4E0B91EE25E967C4006BF644 /* OperationMemo.swift */,
+				4E5E379F262522F600BD3F39 /* OperationCategory.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4EFA9741261C760600655626 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4E85AA8E2627F6E800F81FA9 /* Calendar.storyboard */,
+				4E85AA912627F70500F81FA9 /* Search.storyboard */,
+				4E0B919725DAE87E006BF644 /* CategoryList.storyboard */,
+				4E85AA972627F74900F81FA9 /* TitleList.storyboard */,
+				4E85AA9A2627F75C00F81FA9 /* Memo.storyboard */,
+				4E85AA9D2627F79F00F81FA9 /* AddMemo.storyboard */,
+				4E85AAA02627F7B800F81FA9 /* AddMemoCategory.storyboard */,
+				4E0B919A25DAE87F006BF644 /* Assets.xcassets */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4EFA9742261C760F00655626 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4E0B922C25F866FF006BF644 /* CategoryListNavigationController.swift */,
+				4E0B923225FC8953006BF644 /* CalenderNavigationController.swift */,
+				4E0B922F25FC8906006BF644 /* SearchNavigationController.swift */,
+				4E0B91C625DD0A26006BF644 /* AddMemoViewController.swift */,
+				4E0B91CC25DD21B0006BF644 /* AddMemoCategoryViewController.swift */,
+				4E0B91BD25DD0554006BF644 /* CalenderViewController.swift */,
+				4E0B91C225DD09E0006BF644 /* SearchViewController.swift */,
+				4E0B919525DAE87E006BF644 /* CategoryListViewController.swift */,
+				4E0B91B925DC8BF1006BF644 /* CategoryListButtonViewController.swift */,
+				4E0B91A725DC2EC3006BF644 /* TitleListViewController.swift */,
+				4E0B91AA25DC2FB8006BF644 /* MemoViewController.swift */,
+				4E0B919125DAE87E006BF644 /* AppDelegate.swift */,
+				4E0B919325DAE87E006BF644 /* SceneDelegate.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F6430532E8FC5E404B810FC9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+
+				026CA9E013A2D03A9E190A5C /* Pods_Every_Memo.framework */,
+
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F71F9CC9E41619B1A35B6DC6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5826EE33DBCD0815579DEBDE /* Pods-SimpleMemoApp.debug.xcconfig */,
+				97DBC14F315E8531A4C57EB5 /* Pods-SimpleMemoApp.release.xcconfig */,
+
+				2527CCD01328731876157CBE /* Pods-Every-Memo.debug.xcconfig */,
+				8F0EF1086E22D8A219D80563 /* Pods-Every-Memo.release.xcconfig */,
+
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4E0B918D25DAE87E006BF644 /* Every-Memo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4E0B91A225DAE87F006BF644 /* Build configuration list for PBXNativeTarget "Every-Memo" */;
+			buildPhases = (
+				866A0DA5F35B8B31884CC256 /* [CP] Check Pods Manifest.lock */,
+				4E0B918A25DAE87E006BF644 /* Sources */,
+				4E0B918B25DAE87E006BF644 /* Frameworks */,
+				4E0B918C25DAE87E006BF644 /* Resources */,
+				BAB83D9CFF0E0CB59C1045F7 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Every-Memo";
+			productName = SimpleMemoApp;
+			productReference = 4E0B918E25DAE87E006BF644 /* Every-Memo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4E0B918625DAE87E006BF644 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+				TargetAttributes = {
+					4E0B918D25DAE87E006BF644 = {
+						CreatedOnToolsVersion = 12.4;
+					};
+				};
+			};
+			buildConfigurationList = 4E0B918925DAE87E006BF644 /* Build configuration list for PBXProject "Every-Memo" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4E0B918525DAE87E006BF644;
+			productRefGroup = 4E0B918F25DAE87E006BF644 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4E0B918D25DAE87E006BF644 /* Every-Memo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4E0B918C25DAE87E006BF644 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E85AA8F2627F6E800F81FA9 /* Calendar.storyboard in Resources */,
+				4E85AA9E2627F79F00F81FA9 /* AddMemo.storyboard in Resources */,
+				4E85AAA12627F7B800F81FA9 /* AddMemoCategory.storyboard in Resources */,
+				4E0B919E25DAE87F006BF644 /* LaunchScreen.storyboard in Resources */,
+				4E0B919B25DAE87F006BF644 /* Assets.xcassets in Resources */,
+				4E85AA9B2627F75C00F81FA9 /* Memo.storyboard in Resources */,
+				4E0B919925DAE87E006BF644 /* CategoryList.storyboard in Resources */,
+				4E85AA922627F70500F81FA9 /* Search.storyboard in Resources */,
+				4E85AA982627F74900F81FA9 /* TitleList.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		866A0DA5F35B8B31884CC256 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Every-Memo-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BAB83D9CFF0E0CB59C1045F7 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Every-Memo/Pods-Every-Memo-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Every-Memo/Pods-Every-Memo-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Every-Memo/Pods-Every-Memo-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4E0B918A25DAE87E006BF644 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E0B91C325DD09E0006BF644 /* SearchViewController.swift in Sources */,
+				4E0B91A825DC2EC3006BF644 /* TitleListViewController.swift in Sources */,
+				4E0B923325FC8953006BF644 /* CalenderNavigationController.swift in Sources */,
+				4E0B921E25EE359D006BF644 /* ExtensionAlertController.swift in Sources */,
+				4E0B919625DAE87E006BF644 /* CategoryListViewController.swift in Sources */,
+				4E0B91CD25DD21B0006BF644 /* AddMemoCategoryViewController.swift in Sources */,
+				4E0B91BE25DD0554006BF644 /* CalenderViewController.swift in Sources */,
+				4E0B923025FC8906006BF644 /* SearchNavigationController.swift in Sources */,
+				4E0B91AB25DC2FB8006BF644 /* MemoViewController.swift in Sources */,
+				4E0B91B025DC32FA006BF644 /* MemoData.swift in Sources */,
+				4E0B922D25F866FF006BF644 /* CategoryListNavigationController.swift in Sources */,
+				4E0B91C725DD0A26006BF644 /* AddMemoViewController.swift in Sources */,
+				4E0B91EF25E967C4006BF644 /* OperationMemo.swift in Sources */,
+				4E0B919225DAE87E006BF644 /* AppDelegate.swift in Sources */,
+				4E0B919425DAE87E006BF644 /* SceneDelegate.swift in Sources */,
+				4E0B91BA25DC8BF1006BF644 /* CategoryListButtonViewController.swift in Sources */,
+				4E5E37A0262522F600BD3F39 /* OperationCategory.swift in Sources */,
+				4E0B91EC25E965F4006BF644 /* SaveMemo.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		4E0B919725DAE87E006BF644 /* CategoryList.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4E0B919825DAE87E006BF644 /* Base */,
+			);
+			name = CategoryList.storyboard;
+			sourceTree = "<group>";
+		};
+		4E0B919C25DAE87F006BF644 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4E0B919D25DAE87F006BF644 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4E0B91A025DAE87F006BF644 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4E0B91A125DAE87F006BF644 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4E0B91A325DAE87F006BF644 /* Debug */ = {
+			isa = XCBuildConfiguration;
+
+			baseConfigurationReference = 2527CCD01328731876157CBE /* Pods-Every-Memo.debug.xcconfig */;
+
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MV3LUBK879;
+				INFOPLIST_FILE = "Every-Memo/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gmail.gjmptw.aab.Every-Memo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		4E0B91A425DAE87F006BF644 /* Release */ = {
+			isa = XCBuildConfiguration;
+
+			baseConfigurationReference = 8F0EF1086E22D8A219D80563 /* Pods-Every-Memo.release.xcconfig */;
+
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MV3LUBK879;
+				INFOPLIST_FILE = "Every-Memo/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gmail.gjmptw.aab.Every-Memo";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4E0B918925DAE87E006BF644 /* Build configuration list for PBXProject "Every-Memo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E0B91A025DAE87F006BF644 /* Debug */,
+				4E0B91A125DAE87F006BF644 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4E0B91A225DAE87F006BF644 /* Build configuration list for PBXNativeTarget "Every-Memo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4E0B91A325DAE87F006BF644 /* Debug */,
+				4E0B91A425DAE87F006BF644 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4E0B918625DAE87E006BF644 /* Project object */;
+}
