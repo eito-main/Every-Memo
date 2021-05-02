@@ -6,8 +6,8 @@ import UIKit
 final class AddMemoViewController : UIViewController, UITextViewDelegate {
     
     
-    @IBOutlet weak var date: UILabel!
-    @IBOutlet weak var category: UILabel!
+    @IBOutlet weak var memoDate: UILabel!
+    @IBOutlet weak var memoCategory: UILabel!
     @IBOutlet weak var memoTitle: UITextField!
     @IBOutlet weak var memoText: UITextView!
     
@@ -25,7 +25,7 @@ final class AddMemoViewController : UIViewController, UITextViewDelegate {
         }
         
         memoTitle.placeholder = "タイトルを入力"
-        category.text = "カテゴリー未指定"
+        memoCategory.text = "カテゴリー未指定"
         
         self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
@@ -43,7 +43,7 @@ final class AddMemoViewController : UIViewController, UITextViewDelegate {
             memoText.resignFirstResponder()
         }
         
-        if touchedLabel(touches: touches,view: category){
+        if touchedLabel(touches: touches,view: memoCategory){
             
             let storyboard: UIStoryboard = UIStoryboard(name: "AddMemoCategory", bundle: nil)
             let nextVC = storyboard.instantiateViewController(withIdentifier: "AddMemoChoseCategory") as! AddMemoCategoryViewController
@@ -55,14 +55,14 @@ final class AddMemoViewController : UIViewController, UITextViewDelegate {
     
     @IBAction func saveMemo(_ sender: Any) {
         
-        guard memoTitle.text != nil && memoText.text != nil && date.text != nil else { return }
+        guard memoTitle.text != nil && memoText.text != nil && memoDate.text != nil else { return }
         
         let inputTitle = memoTitle.text!.trimmingCharacters(in: .whitespaces)
         let inputText = memoText.text!.trimmingCharacters(in: .whitespaces)
         
         guard !inputText.isEmpty && !inputTitle.isEmpty else { return }
         
-        operationMemo.add(memo: MemoData(category: category.text!, date: date.text!, title: inputTitle, text: inputText))
+        operationMemo.add(memo: MemoData(category: memoCategory.text!, date: memoDate.text!, title: inputTitle, text: inputText))
         
         self.dismiss(animated: true, completion: nil)
     }
@@ -75,8 +75,8 @@ final class AddMemoViewController : UIViewController, UITextViewDelegate {
     //ダークモード対応
     func darkMode(){
             
-            category.backgroundColor = .black
-            date.backgroundColor = .black
+            memoCategory.backgroundColor = .black
+            memoDate.backgroundColor = .black
             memoTitle.backgroundColor = .black
     }
     
@@ -87,7 +87,7 @@ final class AddMemoViewController : UIViewController, UITextViewDelegate {
         dateFormatter.locale = Locale(identifier: "en_JP")
         dateFormatter.dateFormat = "yyyy/MM/dd(EEE)"
         dateFormatter.string(from: now)
-        date.text = dateFormatter.string(from: now)
+        memoDate.text = dateFormatter.string(from: now)
     }
     
     func touchedLabel(touches: Set<UITouch>, view:UILabel)->Bool {

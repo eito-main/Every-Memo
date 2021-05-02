@@ -6,10 +6,10 @@ import UIKit
 final class MemoViewController: UIViewController {
     
     
-    @IBOutlet weak var categoryLabel: UILabel!
-    @IBOutlet weak var titleLabel: UITextField!
-    @IBOutlet weak var dateLabel: UILabel!
-    @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var memoCategory: UILabel!
+    @IBOutlet weak var memoTitle: UITextField!
+    @IBOutlet weak var memoDate: UILabel!
+    @IBOutlet weak var memoText: UITextView!
     
     var memoData: MemoData!
     var category: String?
@@ -36,33 +36,33 @@ final class MemoViewController: UIViewController {
             edit = true
             editButton.title = "完了"
             
-            titleLabel.isEnabled = true
-            textView.isEditable = true
+            memoTitle.isEnabled = true
+            memoText.isEditable = true
             self.navigationItem.hidesBackButton = true
             isModalInPresentation = true
             
         } else {
             
-            guard textView.text != nil && titleLabel.text != nil else {return}
+            guard memoText.text != nil && memoTitle.text != nil else {return}
             
             edit = false
             editButton.title = "編集"
             
-            titleLabel.isEnabled = false
-            textView.isEditable = false
+            memoTitle.isEnabled = false
+            memoText.isEditable = false
             self.navigationItem.hidesBackButton = false
             isModalInPresentation = false
             
-            memoData.category = categoryLabel.text!
-            memoData.title = titleLabel.text!
-            memoData.text = textView.text!
+            memoData.category = memoCategory.text!
+            memoData.title = memoTitle.text!
+            memoData.text = memoText.text!
             operationMemo.updateMemo(for: memoData.id, to: memoData)
         }
     }
     
     override func touchesBegan(_ touches: Set<UITouch>,with event: UIEvent?){
         
-        if touchedLabel(touches: touches,view: categoryLabel){
+        if touchedLabel(touches: touches,view: memoCategory){
             
             if edit == true {
                 
@@ -77,21 +77,21 @@ final class MemoViewController: UIViewController {
     
     private func setMemo() {
         
-        categoryLabel.text = memoData.category
-        titleLabel.text = memoData.title
-        dateLabel.text = memoData.date
-        textView.text = memoData.text
+        memoCategory.text = memoData.category
+        memoTitle.text = memoData.title
+        memoDate.text = memoData.date
+        memoText.text = memoData.text
     }
     
     private func layout(){
         
         self.navigationItem.title = "メモ"
         
-        categoryLabel.layer.cornerRadius = 15
-        categoryLabel.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
+        memoCategory.layer.cornerRadius = 15
+        memoCategory.layer.maskedCorners = [.layerMinXMinYCorner, .layerMaxXMinYCorner]
         
-        textView.layer.cornerRadius = 15
-        textView.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
+        memoText.layer.cornerRadius = 15
+        memoText.layer.maskedCorners = [.layerMaxXMaxYCorner, .layerMinXMaxYCorner]
         
         editButton = UIBarButtonItem(title: "編集", style: .done, target: self, action: #selector(editButtonTapped(_:)))
         
@@ -101,9 +101,9 @@ final class MemoViewController: UIViewController {
     //ダークモード対応
     private func darkMode() {
             
-            categoryLabel.backgroundColor = .black
-            dateLabel.backgroundColor = .black
-            titleLabel.backgroundColor = .black
+            memoCategory.backgroundColor = .black
+            memoDate.backgroundColor = .black
+            memoTitle.backgroundColor = .black
     }
     
     func touchedLabel(touches: Set<UITouch>, view:UILabel)->Bool {

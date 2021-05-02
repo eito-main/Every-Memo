@@ -7,14 +7,24 @@ import FSCalendar
 final class CalenderViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource {
     
     
+    @IBOutlet weak var viewHeight: NSLayoutConstraint!
+    @IBOutlet weak var viewWidth: NSLayoutConstraint!
+    @IBOutlet weak var scrollViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var scrollViewWidth: NSLayoutConstraint!
+    @IBOutlet weak var calendarHeight: NSLayoutConstraint!
+    @IBOutlet weak var calendarWidth: NSLayoutConstraint!
+    
     @IBOutlet weak var calendarView: FSCalendar!
-    @IBOutlet weak var calenderTableView: UITableView!
-    @IBOutlet weak var calenderTableHeight: NSLayoutConstraint!
-    @IBOutlet weak var calendertableBottom: NSLayoutConstraint!
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var tableViewWidth: NSLayoutConstraint!
     
     private var operationMemo: OperationMemo!
     private var displayMemo = [MemoData]()
     private let cellId = "calenderTableViewCell"
+    
+    private var cellHeight: CGFloat!
+    
     var selectedDate = String()
     var now: Date!
     
@@ -26,8 +36,8 @@ final class CalenderViewController: UIViewController, FSCalendarDelegate, FSCale
         
         self.calendarView.delegate = self
         self.calendarView.dataSource = self
-        calenderTableView.delegate = self
-        calenderTableView.dataSource = self
+        tableView.delegate = self
+        tableView.dataSource = self
         
         operationFormatter(date: now)
         
@@ -38,10 +48,11 @@ final class CalenderViewController: UIViewController, FSCalendarDelegate, FSCale
         if (UITraitCollection.current.userInterfaceStyle == .dark) {
             darkMode()
         }
+        self.tableView.register(UINib(nibName: "TitleCell", bundle: nil), forCellReuseIdentifier: cellId )
     }
     
     override func viewWillAppear(_ animated: Bool) {
-           super.viewWillAppear(animated)
+        super.viewWillAppear(animated)
         
         operationMemo = OperationMemo()
         
@@ -50,21 +61,34 @@ final class CalenderViewController: UIViewController, FSCalendarDelegate, FSCale
         displayMemoChange()
     }
     
-    private func navigationSetUp() {
+    override func viewWillLayoutSubviews(){
+        super.viewWillLayoutSubviews()
         
-        self.navigationItem.title = "カレンダー"
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(
-                    title: "",
-                    style: .plain,
-                    target: nil,
-                    action: nil
-                )
+        let safeAreaBottom = self.view.safeAreaInsets.bottom
+        
+        viewHeight.constant = (self.view.frame.height - safeAreaBottom) / 2
+        viewWidth.constant = self.view.frame.width
+        scrollViewHeight.constant = viewHeight.constant
+        scrollViewWidth.constant = viewWidth.constant
+        calendarHeight.constant = viewHeight.constant
+        calendarWidth.constant = viewWidth.constant
+        
+        cellHeight = viewHeight.constant / 8
+        
+        tableViewHeight.constant = cellHeight * CGFloat(displayMemo.count) - 1
+        tableViewWidth.constant = viewWidth.constant
+        
+        tableView.reloadData()
     }
+}
+
+
+extension CalenderViewController {
     
-    //ダークモード対応
+    
     private func darkMode() {
-            
-            calendarView.appearance.titleDefaultColor = UIColor.white
+        
+        calendarView.appearance.titleDefaultColor = UIColor.white
     }
     
     private func operationFormatter(date: Date) {
@@ -87,25 +111,41 @@ final class CalenderViewController: UIViewController, FSCalendarDelegate, FSCale
                 displayMemo.append(operationMemo.currentMemos[count])
             }
         }
-        calenderTableView.reloadData()
+        tableView.reloadData()
         
-        if calendertableBottom.constant >= CGFloat(0) {
+        if let cellHeight = cellHeight {
+            tableViewHeight.constant = cellHeight * CGFloat(displayMemo.count) - 1
             
-        calenderTableHeight.constant = CGFloat(calenderTableView.contentSize.height)
+            tableView.reloadData()
         }
     }
     
-    //カレンダー上で日付が選択されたときの処理
     func calendar(_ calendar: FSCalendar, didSelect date: Date, at monthPosition: FSCalendarMonthPosition) {
         
         operationFormatter(date: date)
         displayMemoChange()
+    }
+    
+    private func navigationSetUp() {
+        
+        self.navigationItem.title = "カレンダー"
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(
+            title: "",
+            style: .plain,
+            target: nil,
+            action: nil
+        )
     }
 }
 
 
 extension CalenderViewController : UITableViewDelegate, UITableViewDataSource {
     
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        return cellHeight
+    }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -114,10 +154,10 @@ extension CalenderViewController : UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
-        cell.textLabel?.text = displayMemo[indexPath.row].title
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as? TitleCell
+        cell?.titleLabel.text = "\(displayMemo[indexPath.row].title)"
         
-        return cell
+        return cell!
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

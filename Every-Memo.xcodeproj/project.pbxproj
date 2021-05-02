@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0B8F51F18DDEB7C398F339E1 /* Pods_Every_Memo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DB0A57B0C812D1203512E4B3 /* Pods_Every_Memo.framework */; };
 		4E0B919225DAE87E006BF644 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0B919125DAE87E006BF644 /* AppDelegate.swift */; };
 		4E0B919425DAE87E006BF644 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0B919325DAE87E006BF644 /* SceneDelegate.swift */; };
 		4E0B919625DAE87E006BF644 /* CategoryListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0B919525DAE87E006BF644 /* CategoryListViewController.swift */; };
@@ -29,15 +28,17 @@
 		4E0B923025FC8906006BF644 /* SearchNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0B922F25FC8906006BF644 /* SearchNavigationController.swift */; };
 		4E0B923325FC8953006BF644 /* CalenderNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0B923225FC8953006BF644 /* CalenderNavigationController.swift */; };
 		4E5E37A0262522F600BD3F39 /* OperationCategory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E5E379F262522F600BD3F39 /* OperationCategory.swift */; };
-
 		4E85AA8F2627F6E800F81FA9 /* Calendar.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E85AA8E2627F6E800F81FA9 /* Calendar.storyboard */; };
 		4E85AA922627F70500F81FA9 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E85AA912627F70500F81FA9 /* Search.storyboard */; };
 		4E85AA982627F74900F81FA9 /* TitleList.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E85AA972627F74900F81FA9 /* TitleList.storyboard */; };
 		4E85AA9B2627F75C00F81FA9 /* Memo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E85AA9A2627F75C00F81FA9 /* Memo.storyboard */; };
 		4E85AA9E2627F79F00F81FA9 /* AddMemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E85AA9D2627F79F00F81FA9 /* AddMemo.storyboard */; };
 		4E85AAA12627F7B800F81FA9 /* AddMemoCategory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E85AAA02627F7B800F81FA9 /* AddMemoCategory.storyboard */; };
+		4EEA0514263A8E3300E74C57 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEA0512263A8E3300E74C57 /* CategoryCell.swift */; };
+		4EEA0515263A8E3300E74C57 /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EEA0513263A8E3300E74C57 /* CategoryCell.xib */; };
+		4EEA0519263D97B800E74C57 /* TitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEA0517263D97B800E74C57 /* TitleCell.swift */; };
+		4EEA051A263D97B800E74C57 /* TitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EEA0518263D97B800E74C57 /* TitleCell.xib */; };
 		E9AA080A9E118BC7AD342818 /* Pods_Every_Memo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 026CA9E013A2D03A9E190A5C /* Pods_Every_Memo.framework */; };
-
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,13 +73,13 @@
 		4E85AA9A2627F75C00F81FA9 /* Memo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Memo.storyboard; sourceTree = "<group>"; };
 		4E85AA9D2627F79F00F81FA9 /* AddMemo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddMemo.storyboard; sourceTree = "<group>"; };
 		4E85AAA02627F7B800F81FA9 /* AddMemoCategory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddMemoCategory.storyboard; sourceTree = "<group>"; };
+		4EEA0512263A8E3300E74C57 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		4EEA0513263A8E3300E74C57 /* CategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
+		4EEA0517263D97B800E74C57 /* TitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCell.swift; sourceTree = "<group>"; };
+		4EEA0518263D97B800E74C57 /* TitleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleCell.xib; sourceTree = "<group>"; };
 		5826EE33DBCD0815579DEBDE /* Pods-SimpleMemoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleMemoApp.debug.xcconfig"; path = "Target Support Files/Pods-SimpleMemoApp/Pods-SimpleMemoApp.debug.xcconfig"; sourceTree = "<group>"; };
-
 		8F0EF1086E22D8A219D80563 /* Pods-Every-Memo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Every-Memo.release.xcconfig"; path = "Target Support Files/Pods-Every-Memo/Pods-Every-Memo.release.xcconfig"; sourceTree = "<group>"; };
-
 		97DBC14F315E8531A4C57EB5 /* Pods-SimpleMemoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleMemoApp.release.xcconfig"; path = "Target Support Files/Pods-SimpleMemoApp/Pods-SimpleMemoApp.release.xcconfig"; sourceTree = "<group>"; };
-		D04414653AE8BFA48A1F4511 /* Pods-Every-Memo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Every-Memo.debug.xcconfig"; path = "Target Support Files/Pods-Every-Memo/Pods-Every-Memo.debug.xcconfig"; sourceTree = "<group>"; };
-		DB0A57B0C812D1203512E4B3 /* Pods_Every_Memo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Every_Memo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,9 +87,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-
 				E9AA080A9E118BC7AD342818 /* Pods_Every_Memo.framework in Frameworks */,
-
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -156,6 +155,10 @@
 				4E85AA9D2627F79F00F81FA9 /* AddMemo.storyboard */,
 				4E85AAA02627F7B800F81FA9 /* AddMemoCategory.storyboard */,
 				4E0B919A25DAE87F006BF644 /* Assets.xcassets */,
+				4EEA0512263A8E3300E74C57 /* CategoryCell.swift */,
+				4EEA0513263A8E3300E74C57 /* CategoryCell.xib */,
+				4EEA0517263D97B800E74C57 /* TitleCell.swift */,
+				4EEA0518263D97B800E74C57 /* TitleCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -183,9 +186,7 @@
 		F6430532E8FC5E404B810FC9 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-
 				026CA9E013A2D03A9E190A5C /* Pods_Every_Memo.framework */,
-
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -195,10 +196,8 @@
 			children = (
 				5826EE33DBCD0815579DEBDE /* Pods-SimpleMemoApp.debug.xcconfig */,
 				97DBC14F315E8531A4C57EB5 /* Pods-SimpleMemoApp.release.xcconfig */,
-
 				2527CCD01328731876157CBE /* Pods-Every-Memo.debug.xcconfig */,
 				8F0EF1086E22D8A219D80563 /* Pods-Every-Memo.release.xcconfig */,
-
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -267,7 +266,9 @@
 				4E85AAA12627F7B800F81FA9 /* AddMemoCategory.storyboard in Resources */,
 				4E0B919E25DAE87F006BF644 /* LaunchScreen.storyboard in Resources */,
 				4E0B919B25DAE87F006BF644 /* Assets.xcassets in Resources */,
+				4EEA0515263A8E3300E74C57 /* CategoryCell.xib in Resources */,
 				4E85AA9B2627F75C00F81FA9 /* Memo.storyboard in Resources */,
+				4EEA051A263D97B800E74C57 /* TitleCell.xib in Resources */,
 				4E0B919925DAE87E006BF644 /* CategoryList.storyboard in Resources */,
 				4E85AA922627F70500F81FA9 /* Search.storyboard in Resources */,
 				4E85AA982627F74900F81FA9 /* TitleList.storyboard in Resources */,
@@ -324,6 +325,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E0B91C325DD09E0006BF644 /* SearchViewController.swift in Sources */,
+				4EEA0514263A8E3300E74C57 /* CategoryCell.swift in Sources */,
 				4E0B91A825DC2EC3006BF644 /* TitleListViewController.swift in Sources */,
 				4E0B923325FC8953006BF644 /* CalenderNavigationController.swift in Sources */,
 				4E0B921E25EE359D006BF644 /* ExtensionAlertController.swift in Sources */,
@@ -334,6 +336,7 @@
 				4E0B91AB25DC2FB8006BF644 /* MemoViewController.swift in Sources */,
 				4E0B91B025DC32FA006BF644 /* MemoData.swift in Sources */,
 				4E0B922D25F866FF006BF644 /* CategoryListNavigationController.swift in Sources */,
+				4EEA0519263D97B800E74C57 /* TitleCell.swift in Sources */,
 				4E0B91C725DD0A26006BF644 /* AddMemoViewController.swift in Sources */,
 				4E0B91EF25E967C4006BF644 /* OperationMemo.swift in Sources */,
 				4E0B919225DAE87E006BF644 /* AppDelegate.swift in Sources */,
@@ -484,9 +487,7 @@
 		};
 		4E0B91A325DAE87F006BF644 /* Debug */ = {
 			isa = XCBuildConfiguration;
-
 			baseConfigurationReference = 2527CCD01328731876157CBE /* Pods-Every-Memo.debug.xcconfig */;
-
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -497,18 +498,17 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.gmail.gjmptw.aab.Every-Memo";
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.gjmptw.aab.SimpleMemoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
 		4E0B91A425DAE87F006BF644 /* Release */ = {
 			isa = XCBuildConfiguration;
-
 			baseConfigurationReference = 8F0EF1086E22D8A219D80563 /* Pods-Every-Memo.release.xcconfig */;
-
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -519,10 +519,11 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.gmail.gjmptw.aab.Every-Memo";
+				MARKETING_VERSION = 1.1;
+				PRODUCT_BUNDLE_IDENTIFIER = com.gmail.gjmptw.aab.SimpleMemoApp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = 1;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

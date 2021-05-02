@@ -1,35 +1,51 @@
 
-//カテゴリ選択
+//カテゴリー選択
 
 import UIKit
 
 final class AddMemoCategoryViewController: UIViewController {
     
     
-    @IBOutlet private weak var categoryTableView: UITableView!
-    @IBOutlet private weak var catagoryTableViewHeight: NSLayoutConstraint!
-    @IBOutlet private weak var categoryTableViewBottom: NSLayoutConstraint!
+    @IBOutlet weak var scrollView: UIScrollView!
+    
+    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var tableViewHeight: NSLayoutConstraint!
+    @IBOutlet private weak var tableViewWidth: NSLayoutConstraint!
     
     private let cellId = "categoryCell"
     private let addCellId = "addCategoryCell"
     private var operationCategory: OperationCategory!
+    private var cellHeight: CGFloat!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         operationCategory = OperationCategory()
         
-        categoryTableView.delegate = self
-        categoryTableView.dataSource = self
+        tableView.delegate = self
+        tableView.dataSource = self
         
-        if categoryTableViewBottom.constant >= CGFloat(0) {
-            
-            catagoryTableViewHeight.constant = CGFloat(categoryTableView.contentSize.height)
-        }
+        tableView.reloadData()
         
-        categoryTableView.reloadData()
-        catagoryTableViewHeight.constant = CGFloat(categoryTableView.contentSize.height)
+        self.tableView.register(UINib(nibName: "CategoryCell", bundle: nil), forCellReuseIdentifier: cellId )
     }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        
+        
+        cellHeight = scrollView.bounds.size.height / 15
+ 
+        tableViewHeight.constant = cellHeight * CGFloat(operationCategory.currentCategorys.count + 1) - 1
+        tableViewWidth.constant = self.view.frame.width
+        
+        tableView.reloadData()
+    }
+}
+
+
+extension AddMemoCategoryViewController {
+    
     
     func alertAction() {
         
@@ -47,8 +63,8 @@ final class AddMemoCategoryViewController: UIViewController {
                 }
                 
                 self!.operationCategory.add(newCategory: text)
-                self!.categoryTableView.reloadData()
-                self!.catagoryTableViewHeight.constant = CGFloat(self!.categoryTableView.contentSize.height)
+                self!.tableView.reloadData()
+                self!.tableViewHeight.constant = self!.cellHeight * CGFloat(self!.operationCategory.currentCategorys.count + 1) - 1
             }
             .addCancelAction()
             .present(from: self)
@@ -56,49 +72,13 @@ final class AddMemoCategoryViewController: UIViewController {
 }
 
 
-extension AddMemoCategoryViewController: UITableViewDelegate {
+extension AddMemoCategoryViewController: UITableViewDataSource, UITableViewDelegate {
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        guard indexPath.row != operationCategory.currentCategorys.count else {
-            
-            alertAction()
-            return
-        }
-            
-            let checkPreVC = presentingViewController
-            
-            switch checkPreVC {
-            
-            case is AddMemoViewController:
-                let preVC = presentingViewController as! AddMemoViewController
-                preVC.category.text = operationCategory.currentCategorys[indexPath.row]
-                
-            case is CategoryListNavigationController:
-                let preNC = presentingViewController as! CategoryListNavigationController
-                let preVC = preNC.viewControllers[preNC.viewControllers.count - 1] as! MemoViewController
-                preVC.categoryLabel.text = operationCategory.currentCategorys[indexPath.row]
-                
-            case is SearchNavigationController:
-                let preNC = presentingViewController as! SearchNavigationController
-                let preVC = preNC.viewControllers[preNC.viewControllers.count - 1] as! MemoViewController
-                preVC.categoryLabel.text = operationCategory.currentCategorys[indexPath.row]
-                
-            case is CalenderNavigationController:
-                let preNC = presentingViewController as! CalenderNavigationController
-                let preVC = preNC.viewControllers[preNC.viewControllers.count - 1] as! MemoViewController
-                preVC.categoryLabel.text = operationCategory.currentCategorys[indexPath.row]
-                
-            default:
-                break
-            }
-        dismiss(animated: true, completion: nil)
+        return cellHeight
     }
-}
-
-
-extension AddMemoCategoryViewController: UITableViewDataSource {
-    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -114,8 +94,47 @@ extension AddMemoCategoryViewController: UITableViewDataSource {
             return cell
         }
             
-            let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
-            cell.textLabel?.text = "\(operationCategory.currentCategorys[indexPath.row])"
-            return cell
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as? CategoryCell
+        cell?.categoryName.text = "\(operationCategory.currentCategorys[indexPath.row])"
+        cell?.categoryCount.text = ""
+        
+        return cell!
         }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        guard indexPath.row != operationCategory.currentCategorys.count else {
+            
+            alertAction()
+            return
+        }
+            
+            let checkPreVC = presentingViewController
+            
+            switch checkPreVC {
+            
+            case is AddMemoViewController:
+                let preVC = presentingViewController as! AddMemoViewController
+                preVC.memoCategory.text = operationCategory.currentCategorys[indexPath.row]
+                
+            case is CategoryListNavigationController:
+                let preNC = presentingViewController as! CategoryListNavigationController
+                let preVC = preNC.viewControllers[preNC.viewControllers.count - 1] as! MemoViewController
+                preVC.memoCategory.text = operationCategory.currentCategorys[indexPath.row]
+                
+            case is SearchNavigationController:
+                let preNC = presentingViewController as! SearchNavigationController
+                let preVC = preNC.viewControllers[preNC.viewControllers.count - 1] as! MemoViewController
+                preVC.memoCategory.text = operationCategory.currentCategorys[indexPath.row]
+                
+            case is CalenderNavigationController:
+                let preNC = presentingViewController as! CalenderNavigationController
+                let preVC = preNC.viewControllers[preNC.viewControllers.count - 1] as! MemoViewController
+                preVC.memoCategory.text = operationCategory.currentCategorys[indexPath.row]
+                
+            default:
+                break
+            }
+        dismiss(animated: true, completion: nil)
+    }
 }

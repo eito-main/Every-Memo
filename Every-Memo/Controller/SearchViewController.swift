@@ -7,12 +7,19 @@ final class SearchViewController: UIViewController, UISearchBarDelegate {
     
     
     @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var searchResultTableView: UITableView!
-    @IBOutlet weak var searchTableViewHeight: NSLayoutConstraint!
-    @IBOutlet weak var searchTableViewBottom: NSLayoutConstraint!
+    @IBOutlet weak var viewUnderScroll: UIView!
+    
+    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var scrollViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var scrollViewWidth: NSLayoutConstraint!
+    
+    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableViewHeight: NSLayoutConstraint!
+    @IBOutlet weak var tableViewWidth: NSLayoutConstraint!
     
     private var operationMemo: OperationMemo!
     private var searchResult:[MemoData] = []
+    private var cellHeight: CGFloat! = 0
     private let cellId = "searchResultTableViewCellId"
     
     override func viewDidLoad() {
@@ -21,14 +28,12 @@ final class SearchViewController: UIViewController, UISearchBarDelegate {
         operationMemo = OperationMemo()
         
         searchBar.delegate = self
-        searchResultTableView.delegate = self
-        searchResultTableView.dataSource = self
+        tableView.delegate = self
+        tableView.dataSource = self
         
         setSearchBar()
         
-        if searchTableViewBottom.constant >= CGFloat(0) {
-            searchTableViewHeight.constant = CGFloat(searchResultTableView.contentSize.height)
-        }
+        self.tableView.register(UINib(nibName: "TitleCell", bundle: nil), forCellReuseIdentifier: cellId )
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -38,12 +43,28 @@ final class SearchViewController: UIViewController, UISearchBarDelegate {
         
         searchBar.text = ""
         searchResult.removeAll()
-        searchResultTableView.reloadData()
+        tableView.reloadData()
         
-        if searchTableViewBottom.constant >= CGFloat(0) {
-            searchTableViewHeight.constant = CGFloat(searchResultTableView.contentSize.height)
+        if cellHeight != 0  {
+            tableViewHeight.constant = cellHeight * CGFloat(searchResult.count) - 1
         }
     }
+    
+    override func viewWillLayoutSubviews(){
+        super.viewWillLayoutSubviews()
+        
+        cellHeight = viewUnderScroll.frame.height / 12
+        scrollViewHeight.constant = viewUnderScroll.frame.height
+        scrollViewWidth.constant = viewUnderScroll.frame.width
+        if cellHeight != 0  {
+            tableViewHeight.constant = cellHeight * CGFloat(searchResult.count) - 1
+        }
+    }
+}
+
+
+extension SearchViewController {
+    
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         
@@ -62,10 +83,10 @@ final class SearchViewController: UIViewController, UISearchBarDelegate {
                     searchResult.append(operationMemo.currentMemos[count])
                 }
             }
-            searchResultTableView.reloadData()
-            if searchTableViewBottom.constant >= CGFloat(0) {
-                
-                searchTableViewHeight.constant = CGFloat(searchResultTableView.contentSize.height)
+            tableView.reloadData()
+            
+            if cellHeight != 0  {
+                tableViewHeight.constant = cellHeight * CGFloat(searchResult.count) - 1
             }
         }
     }
@@ -90,21 +111,13 @@ final class SearchViewController: UIViewController, UISearchBarDelegate {
 }
 
 
-extension SearchViewController: UITableViewDelegate {
+extension SearchViewController: UITableViewDelegate, UITableViewDataSource {
     
     
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        let storyboard: UIStoryboard = UIStoryboard(name: "Memo", bundle: nil)
-        let nextVC = storyboard.instantiateViewController(withIdentifier: "memoCheckController") as! MemoViewController
-        nextVC.memoData = searchResult[indexPath.row]
-        self.navigationController?.pushViewController(nextVC, animated: true)
+        return cellHeight
     }
-}
-
-
-extension SearchViewController: UITableViewDataSource {
-    
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         searchResult.count
@@ -112,9 +125,17 @@ extension SearchViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = searchResultTableView.dequeueReusableCell(withIdentifier: cellId,for: indexPath)
-        cell.textLabel?.text = searchResult[indexPath.row].title
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as? TitleCell
+        cell?.titleLabel.text = "\(searchResult[indexPath.row].title)"
         
-        return cell
+        return cell!
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
+        let storyboard: UIStoryboard = UIStoryboard(name: "Memo", bundle: nil)
+        let nextVC = storyboard.instantiateViewController(withIdentifier: "memoCheckController") as! MemoViewController
+        nextVC.memoData = searchResult[indexPath.row]
+        self.navigationController?.pushViewController(nextVC, animated: true)
     }
 }

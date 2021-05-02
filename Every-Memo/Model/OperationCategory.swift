@@ -32,4 +32,19 @@ final class OperationCategory {
         
         currentCategorys.append(newCategory)
     }
+    
+    func categoryCount(currentMemo: [MemoData], category: String) -> Int {
+        
+        var categoryCount: Int = 0
+        
+        if currentMemo.count != 0 {
+            for count in 0...currentMemo.count - 1 {
+                
+                if category == currentMemo[count].category {
+                    categoryCount += 1
+                }
+            }
+        }
+        return categoryCount
+    }
 }
