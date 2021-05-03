@@ -7,8 +7,8 @@ final class CategoryListViewController: UIViewController {
     
     
     @IBOutlet private weak var tableView: UITableView!
-    @IBOutlet weak var tableViewHeight: NSLayoutConstraint!
-    @IBOutlet weak var tableViewWidth: NSLayoutConstraint!
+    @IBOutlet private weak var tableViewHeight: NSLayoutConstraint!
+    @IBOutlet private weak var tableViewWidth: NSLayoutConstraint!
     @IBOutlet private weak var scrollView: UIScrollView!
     
     private var operationCategory: OperationCategory!
@@ -22,12 +22,8 @@ final class CategoryListViewController: UIViewController {
         operationMemo = OperationMemo()
         operationCategory = OperationCategory()
         
-        tableView.delegate = self
-        tableView.dataSource = self
-        
         navigationSetUp()
-        
-        self.tableView.register(UINib(nibName: "CategoryCell", bundle: nil), forCellReuseIdentifier: cellId )
+        settingTableView()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -58,6 +54,13 @@ final class CategoryListViewController: UIViewController {
 
 extension CategoryListViewController {
     
+    
+    private func settingTableView() {
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        self.tableView.register(UINib(nibName: "CategoryCell", bundle: nil), forCellReuseIdentifier: cellId )
+    }
     
     private func navigationSetUp() {
         

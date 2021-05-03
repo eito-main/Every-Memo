@@ -6,10 +6,10 @@ import UIKit
 final class MemoViewController: UIViewController {
     
     
-    @IBOutlet weak var memoCategory: UILabel!
-    @IBOutlet weak var memoTitle: UITextField!
-    @IBOutlet weak var memoDate: UILabel!
-    @IBOutlet weak var memoText: UITextView!
+    @IBOutlet private weak var memoCategory: UILabel!
+    @IBOutlet private weak var memoTitle: UITextField!
+    @IBOutlet private weak var memoDate: UILabel!
+    @IBOutlet private weak var memoText: UITextView!
     
     var memoData: MemoData!
     var category: String?
@@ -25,9 +25,14 @@ final class MemoViewController: UIViewController {
         layout()
         setMemo()
         if (UITraitCollection.current.userInterfaceStyle == .dark) {
-        darkMode()
+            darkMode()
         }
     }
+}
+
+
+extension MemoViewController {
+    
     
     @objc func editButtonTapped(_ sender: UIBarButtonItem) {
         
@@ -68,6 +73,8 @@ final class MemoViewController: UIViewController {
                 
                 let storyboard: UIStoryboard = UIStoryboard(name: "AddMemoCategory", bundle: nil)
                 let nextVC = storyboard.instantiateViewController(withIdentifier: "AddMemoChoseCategory") as! AddMemoCategoryViewController
+                
+                nextVC.delegate = self
                 self.present(nextVC, animated: true, completion: nil)
                 
             }
@@ -98,17 +105,15 @@ final class MemoViewController: UIViewController {
         self.navigationItem.rightBarButtonItems = [editButton]
     }
     
-    //ダークモード対応
     private func darkMode() {
-            
-            memoCategory.backgroundColor = .black
-            memoDate.backgroundColor = .black
-            memoTitle.backgroundColor = .black
+        
+        memoCategory.backgroundColor = .black
+        memoDate.backgroundColor = .black
+        memoTitle.backgroundColor = .black
     }
     
     func touchedLabel(touches: Set<UITouch>, view:UILabel)->Bool {
         
-        //全指のタッチについて処理
         for touch: AnyObject in touches {
             
             let t: UITouch = touch as! UITouch
@@ -122,5 +127,14 @@ final class MemoViewController: UIViewController {
             }
         }
         return false
+    }
+}
+
+
+extension MemoViewController: AddMemoCategoryViewControllerDelegate {
+    
+    
+    func getCategoryName(category: String) {
+        memoCategory.text = category
     }
 }

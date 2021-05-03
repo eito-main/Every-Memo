@@ -6,9 +6,9 @@ import UIKit
 final class CategoryListButtonViewController: UIViewController {
     
     
-    @IBOutlet weak var memoButton: UIButton!
-    @IBOutlet weak var searchButton: UIButton!
-    @IBOutlet weak var calendarButton: UIButton!
+    @IBOutlet private weak var memoButton: UIButton!
+    @IBOutlet private weak var searchButton: UIButton!
+    @IBOutlet private weak var calendarButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()

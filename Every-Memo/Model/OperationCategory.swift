@@ -38,7 +38,7 @@ final class OperationCategory {
         var categoryCount: Int = 0
         
         if currentMemo.count != 0 {
-            for count in 0...currentMemo.count - 1 {
+            for count in 0..<currentMemo.count {
                 
                 if category == currentMemo[count].category {
                     categoryCount += 1

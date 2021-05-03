@@ -6,16 +6,16 @@ import UIKit
 final class SearchViewController: UIViewController, UISearchBarDelegate {
     
     
-    @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var viewUnderScroll: UIView!
+    @IBOutlet private weak var searchBar: UISearchBar!
+    @IBOutlet private weak var viewUnderScroll: UIView!
     
-    @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var scrollViewHeight: NSLayoutConstraint!
-    @IBOutlet weak var scrollViewWidth: NSLayoutConstraint!
+    @IBOutlet private weak var scrollView: UIScrollView!
+    @IBOutlet private weak var scrollViewHeight: NSLayoutConstraint!
+    @IBOutlet private weak var scrollViewWidth: NSLayoutConstraint!
     
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var tableViewHeight: NSLayoutConstraint!
-    @IBOutlet weak var tableViewWidth: NSLayoutConstraint!
+    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var tableViewHeight: NSLayoutConstraint!
+    @IBOutlet private weak var tableViewWidth: NSLayoutConstraint!
     
     private var operationMemo: OperationMemo!
     private var searchResult:[MemoData] = []
@@ -28,12 +28,9 @@ final class SearchViewController: UIViewController, UISearchBarDelegate {
         operationMemo = OperationMemo()
         
         searchBar.delegate = self
-        tableView.delegate = self
-        tableView.dataSource = self
         
+        settingTableView()
         setSearchBar()
-        
-        self.tableView.register(UINib(nibName: "TitleCell", bundle: nil), forCellReuseIdentifier: cellId )
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -65,6 +62,13 @@ final class SearchViewController: UIViewController, UISearchBarDelegate {
 
 extension SearchViewController {
     
+    
+    private func settingTableView() {
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        self.tableView.register(UINib(nibName: "TitleCell", bundle: nil), forCellReuseIdentifier: cellId )
+    }
     
     func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         

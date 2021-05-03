@@ -7,17 +7,17 @@ import FSCalendar
 final class CalenderViewController: UIViewController, FSCalendarDelegate, FSCalendarDataSource {
     
     
-    @IBOutlet weak var viewHeight: NSLayoutConstraint!
-    @IBOutlet weak var viewWidth: NSLayoutConstraint!
-    @IBOutlet weak var scrollViewHeight: NSLayoutConstraint!
-    @IBOutlet weak var scrollViewWidth: NSLayoutConstraint!
-    @IBOutlet weak var calendarHeight: NSLayoutConstraint!
-    @IBOutlet weak var calendarWidth: NSLayoutConstraint!
+    @IBOutlet private weak var viewHeight: NSLayoutConstraint!
+    @IBOutlet private weak var viewWidth: NSLayoutConstraint!
+    @IBOutlet private weak var scrollViewHeight: NSLayoutConstraint!
+    @IBOutlet private weak var scrollViewWidth: NSLayoutConstraint!
+    @IBOutlet private weak var calendarHeight: NSLayoutConstraint!
+    @IBOutlet private weak var calendarWidth: NSLayoutConstraint!
     
-    @IBOutlet weak var calendarView: FSCalendar!
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var tableViewHeight: NSLayoutConstraint!
-    @IBOutlet weak var tableViewWidth: NSLayoutConstraint!
+    @IBOutlet private weak var calendarView: FSCalendar!
+    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var tableViewHeight: NSLayoutConstraint!
+    @IBOutlet private weak var tableViewWidth: NSLayoutConstraint!
     
     private var operationMemo: OperationMemo!
     private var displayMemo = [MemoData]()
@@ -36,11 +36,9 @@ final class CalenderViewController: UIViewController, FSCalendarDelegate, FSCale
         
         self.calendarView.delegate = self
         self.calendarView.dataSource = self
-        tableView.delegate = self
-        tableView.dataSource = self
         
+        settingTableView()
         operationFormatter(date: now)
-        
         navigationSetUp()
         calendarView.select(now)
         displayMemoChange()
@@ -48,7 +46,6 @@ final class CalenderViewController: UIViewController, FSCalendarDelegate, FSCale
         if (UITraitCollection.current.userInterfaceStyle == .dark) {
             darkMode()
         }
-        self.tableView.register(UINib(nibName: "TitleCell", bundle: nil), forCellReuseIdentifier: cellId )
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -85,6 +82,14 @@ final class CalenderViewController: UIViewController, FSCalendarDelegate, FSCale
 
 extension CalenderViewController {
     
+    
+    private func settingTableView() {
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        
+        self.tableView.register(UINib(nibName: "TitleCell", bundle: nil), forCellReuseIdentifier: cellId )
+    }
     
     private func darkMode() {
         

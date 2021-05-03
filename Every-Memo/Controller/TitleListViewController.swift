@@ -6,10 +6,10 @@ import UIKit
 final class TitleListViewController: UIViewController {
     
     
-    @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var tableViewHeight: NSLayoutConstraint!
-    @IBOutlet weak var tableViewWidth: NSLayoutConstraint!
-    @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var tableViewHeight: NSLayoutConstraint!
+    @IBOutlet private weak var tableViewWidth: NSLayoutConstraint!
+    @IBOutlet private weak var scrollView: UIScrollView!
     
     private var operationMemo: OperationMemo!
     private var cellHeight: CGFloat!
@@ -21,14 +21,10 @@ final class TitleListViewController: UIViewController {
         super.viewDidLoad()
         
         operationMemo = OperationMemo()
-
-        tableView.delegate = self
-        tableView.dataSource = self
         
+        settingTableView()
         memoListUpdate()
         navigationSetUp()
-        
-        self.tableView.register(UINib(nibName: "TitleCell", bundle: nil), forCellReuseIdentifier: cellId )
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -59,6 +55,13 @@ final class TitleListViewController: UIViewController {
 
 extension TitleListViewController {
     
+    
+    private func settingTableView() {
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        self.tableView.register(UINib(nibName: "TitleCell", bundle: nil), forCellReuseIdentifier: cellId )
+    }
     
     private func navigationSetUp() {
         

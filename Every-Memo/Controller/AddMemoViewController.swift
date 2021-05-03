@@ -6,10 +6,10 @@ import UIKit
 final class AddMemoViewController : UIViewController, UITextViewDelegate {
     
     
-    @IBOutlet weak var memoDate: UILabel!
-    @IBOutlet weak var memoCategory: UILabel!
-    @IBOutlet weak var memoTitle: UITextField!
-    @IBOutlet weak var memoText: UITextView!
+    @IBOutlet private weak var memoDate: UILabel!
+    @IBOutlet private weak var memoCategory: UILabel!
+    @IBOutlet private weak var memoTitle: UITextField!
+    @IBOutlet private weak var memoText: UITextView!
     
     var categoryName : String?
     private var operationMemo: OperationMemo!
@@ -47,6 +47,8 @@ final class AddMemoViewController : UIViewController, UITextViewDelegate {
             
             let storyboard: UIStoryboard = UIStoryboard(name: "AddMemoCategory", bundle: nil)
             let nextVC = storyboard.instantiateViewController(withIdentifier: "AddMemoChoseCategory") as! AddMemoCategoryViewController
+            
+            nextVC.delegate = self
             self.present(nextVC, animated: true, completion: nil)
 
             return
@@ -106,5 +108,14 @@ final class AddMemoViewController : UIViewController, UITextViewDelegate {
             }
         }
         return false
+    }
+}
+
+
+extension AddMemoViewController: AddMemoCategoryViewControllerDelegate {
+    
+    
+    func getCategoryName(category: String) {
+        memoCategory.text = category
     }
 }
