@@ -149,8 +149,8 @@
                     </view>
                     <navigationItem key="navigationItem" id="S5j-m7-yis"/>
                     <connections>
-                        <outlet property="category" destination="Ckm-Ik-7Ec" id="ELM-cy-0u2"/>
-                        <outlet property="date" destination="RTx-ge-g9X" id="y72-yj-3rw"/>
+                        <outlet property="memoCategory" destination="Ckm-Ik-7Ec" id="ELM-cy-0u2"/>
+                        <outlet property="memoDate" destination="RTx-ge-g9X" id="y72-yj-3rw"/>
                         <outlet property="memoText" destination="GBm-3i-RA7" id="8jL-qJ-fHP"/>
                         <outlet property="memoTitle" destination="e07-JV-vKe" id="DYA-Lc-Meb"/>
                     </connections>

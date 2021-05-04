@@ -6,12 +6,13 @@ import UIKit
 final class TitleListViewController: UIViewController {
     
     
-    @IBOutlet weak var titleListTableView: UITableView!
-    @IBOutlet weak var titleListTableViewHeight: NSLayoutConstraint!
-    @IBOutlet weak var titleListTableViewBottom: NSLayoutConstraint!
+    @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var tableViewHeight: NSLayoutConstraint!
+    @IBOutlet private weak var tableViewWidth: NSLayoutConstraint!
+    @IBOutlet private weak var scrollView: UIScrollView!
     
-    private var operationCategory: OperationCategory!
     private var operationMemo: OperationMemo!
+    private var cellHeight: CGFloat!
     private let cellId = "titleListCellId"
     private var memoList = [MemoData]()
     var category = String()
@@ -20,33 +21,46 @@ final class TitleListViewController: UIViewController {
         super.viewDidLoad()
         
         operationMemo = OperationMemo()
-        operationCategory = OperationCategory()
         
-        titleListTableView.delegate = self
-        titleListTableView.dataSource = self
-        
+        settingTableView()
         memoListUpdate()
         navigationSetUp()
-        
-        if titleListTableViewBottom.constant >= CGFloat(0) {
-            
-            titleListTableViewHeight.constant = CGFloat(titleListTableView.contentSize.height)
-        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         operationMemo = OperationMemo()
-        operationCategory = OperationCategory()
-        
+
         memoListUpdate()
-        titleListTableView.reloadData()
+        tableView.reloadData()
         
-        if titleListTableViewBottom.constant >= CGFloat(0) {
-            
-            titleListTableViewHeight.constant = CGFloat(titleListTableView.contentSize.height)
+        if let cellHeight = cellHeight {
+            tableViewHeight.constant = cellHeight * CGFloat(memoList.count) - 1
         }
+    }
+    
+    override func viewWillLayoutSubviews() {
+        super.viewWillLayoutSubviews()
+        
+        cellHeight = scrollView.bounds.size.height / 15
+        
+        tableView.reloadData()
+ 
+        tableViewHeight.constant = cellHeight * CGFloat(memoList.count) - 1
+        tableViewWidth.constant = self.view.frame.width
+    }
+}
+
+
+extension TitleListViewController {
+    
+    
+    private func settingTableView() {
+        
+        tableView.delegate = self
+        tableView.dataSource = self
+        self.tableView.register(UINib(nibName: "TitleCell", bundle: nil), forCellReuseIdentifier: cellId )
     }
     
     private func navigationSetUp() {
@@ -78,8 +92,26 @@ final class TitleListViewController: UIViewController {
 }
 
 
-extension TitleListViewController: UITableViewDelegate {
+extension TitleListViewController: UITableViewDelegate, UITableViewDataSource {
     
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        
+        return cellHeight
+    }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        memoList.count
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as? TitleCell
+        cell?.titleLabel.text = "\(memoList[indexPath.row].title)"
+        
+        return cell!
+    }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         
@@ -93,35 +125,9 @@ extension TitleListViewController: UITableViewDelegate {
         
         operationMemo.deleteMemo(for: memoList[indexPath.row].id)
         memoList.remove(at: indexPath.row)
-        titleListTableView.reloadData()
+        tableView.reloadData()
         
-        if titleListTableViewBottom.constant >= CGFloat(0) {
-            
-            titleListTableViewHeight.constant = CGFloat(titleListTableView.contentSize.height)
-        }
+        tableViewHeight.constant = cellHeight * CGFloat(memoList.count) - 1
+        tableViewWidth.constant = self.view.frame.width
     }
 }
-
-
-extension TitleListViewController: UITableViewDataSource {
-    
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        memoList.count
-    }
-    
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        let cell: UITableViewCell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath)
-        cell.textLabel?.text = memoList[indexPath.row].title
-        
-        return cell
-    }
-}
-
-
-
-
-
-
