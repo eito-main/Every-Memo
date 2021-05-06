@@ -76,8 +76,7 @@ extension AddMemoCategoryViewController {
             
         }
         
-        let cancel = UIAlertAction(title: "キャンセル", style: .cancel) { (acrion) in
-        }
+        let cancel = UIAlertAction(title: "キャンセル", style: .cancel) 
             
         alert.addAction(ok)
         alert.addAction(cancel)
