@@ -73,6 +73,40 @@ extension CategoryListViewController {
             action: nil
         )
     }
+    
+    private func alertSetting(category: String, categoryNum: Int) {
+        
+        let alert = UIAlertController(title: "カテゴリー削除", message: "”\(category)”に含まれるメモは全て”カテゴリー未指定”に移されますがよろしいですか？", preferredStyle: .alert)
+        
+        let ok = UIAlertAction(title: "OK", style: .default) { (action) in
+            
+            self.operationCategory.delete(num: categoryNum)
+            self.tableView.reloadData()
+            
+            self.tableViewHeight.constant = self.cellHeight * CGFloat(self.operationCategory.currentCategorys.count) - 1
+            self.tableViewWidth.constant = self.view.frame.width
+            
+            for count in 0..<self.operationMemo.currentMemos.count {
+                
+                if self.operationMemo.currentMemos[count].category == category {
+                    
+                    var changeMemo = self.operationMemo.currentMemos[count]
+                    changeMemo.category = "カテゴリー未指定"
+                    self.operationMemo.updateMemo(for: changeMemo.id, to: changeMemo)
+                }
+            }
+            self.dismiss(animated: true, completion: nil)
+        }
+        
+        let cancel = UIAlertAction(title: "キャンセル", style: .cancel) { (acrion) in
+            self.dismiss(animated: true, completion: nil)
+        }
+            
+        alert.addAction(ok)
+        alert.addAction(cancel)
+        
+        present(alert, animated: true, completion: nil)
+    }
 }
 
 
@@ -104,5 +138,27 @@ extension CategoryListViewController: UITableViewDelegate, UITableViewDataSource
         let nextVC = storyboard.instantiateViewController(withIdentifier: "titleListController") as! TitleListViewController
         nextVC.category = operationCategory.currentCategorys[indexPath.row]
         self.navigationController?.pushViewController(nextVC, animated: true)
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        if operationCategory.categoryCount(currentMemo: operationMemo.currentMemos, category: operationCategory.currentCategorys[indexPath.row]) == 0 {
+            
+            self.operationCategory.delete(num: indexPath.row)
+            self.tableView.reloadData()
+            
+            self.tableViewHeight.constant = self.cellHeight * CGFloat(self.operationCategory.currentCategorys.count) - 1
+            self.tableViewWidth.constant = self.view.frame.width
+            
+            self.dismiss(animated: true, completion: nil)
+            
+            return
+        }
+        alertSetting(category: operationCategory.currentCategorys[indexPath.row], categoryNum: indexPath.row)
+    }
+    
+    func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {
+        if indexPath.row == 0 { return false }
+        return true
     }
 }
