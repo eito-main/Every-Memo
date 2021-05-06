@@ -57,27 +57,32 @@ extension AddMemoCategoryViewController {
         self.tableView.register(UINib(nibName: "CategoryCell", bundle: nil), forCellReuseIdentifier: cellId )
     }
     
-    func alertAction() {
+    private func alertSetting() {
         
-        UIAlertController
-            .makeAlertWithTextField(title: "カテゴリーを追加", message: nil, textFieldConfig: { $0.placeholder = "新規カテゴリーを入力してください" })
+        let alert = UIAlertController(title: "カテゴリーを追加", message: nil, preferredStyle: .alert)
+        
+        let ok = UIAlertAction(title: "追加", style: .default) { (action) in
             
-            .addDefaultActionWithText() { [weak self] text in
-                
-                let newCategory = text.trimmingCharacters(in: .whitespaces)
-                guard !newCategory.isEmpty else { return }
-                
-                if self!.operationCategory.currentCategorys.contains(newCategory) {
-                    
-                    return
-                }
-                
-                self!.operationCategory.add(newCategory: text)
-                self!.tableView.reloadData()
-                self!.tableViewHeight.constant = self!.cellHeight * CGFloat(self!.operationCategory.currentCategorys.count + self!.addCategory.count) - 1
+            let text = alert.textFields?.first?.text
+            let newCategory = text!.trimmingCharacters(in: .whitespaces)
+            
+            if self.operationCategory.currentCategorys.contains(newCategory) {
+                return
             }
-            .addCancelAction()
-            .present(from: self)
+            
+            self.operationCategory.add(newCategory: text!)
+            self.tableView.reloadData()
+            self.tableViewHeight.constant = self.cellHeight * CGFloat(self.operationCategory.currentCategorys.count + self.addCategory.count) - 1
+            
+        }
+        
+        let cancel = UIAlertAction(title: "キャンセル", style: .cancel) 
+            
+        alert.addAction(ok)
+        alert.addAction(cancel)
+        alert.addTextField(configurationHandler: { $0.placeholder = "新規カテゴリー名を入力してください" })
+        
+        present(alert, animated: true, completion: nil)
     }
 }
 
@@ -115,7 +120,7 @@ extension AddMemoCategoryViewController: UITableViewDataSource, UITableViewDeleg
         
         guard indexPath.row != operationCategory.currentCategorys.count else {
             
-            alertAction()
+            alertSetting()
             return
         }
         

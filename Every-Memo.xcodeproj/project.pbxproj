@@ -23,7 +23,6 @@
 		4E0B91CD25DD21B0006BF644 /* AddMemoCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0B91CC25DD21B0006BF644 /* AddMemoCategoryViewController.swift */; };
 		4E0B91EC25E965F4006BF644 /* SaveMemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0B91EB25E965F4006BF644 /* SaveMemo.swift */; };
 		4E0B91EF25E967C4006BF644 /* OperationMemo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0B91EE25E967C4006BF644 /* OperationMemo.swift */; };
-		4E0B921E25EE359D006BF644 /* ExtensionAlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0B921D25EE359D006BF644 /* ExtensionAlertController.swift */; };
 		4E0B922D25F866FF006BF644 /* CategoryListNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0B922C25F866FF006BF644 /* CategoryListNavigationController.swift */; };
 		4E0B923025FC8906006BF644 /* SearchNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0B922F25FC8906006BF644 /* SearchNavigationController.swift */; };
 		4E0B923325FC8953006BF644 /* CalenderNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0B923225FC8953006BF644 /* CalenderNavigationController.swift */; };
@@ -62,7 +61,6 @@
 		4E0B91CC25DD21B0006BF644 /* AddMemoCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemoCategoryViewController.swift; sourceTree = "<group>"; };
 		4E0B91EB25E965F4006BF644 /* SaveMemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SaveMemo.swift; sourceTree = "<group>"; };
 		4E0B91EE25E967C4006BF644 /* OperationMemo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationMemo.swift; sourceTree = "<group>"; };
-		4E0B921D25EE359D006BF644 /* ExtensionAlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExtensionAlertController.swift; sourceTree = "<group>"; };
 		4E0B922C25F866FF006BF644 /* CategoryListNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryListNavigationController.swift; sourceTree = "<group>"; };
 		4E0B922F25FC8906006BF644 /* SearchNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchNavigationController.swift; sourceTree = "<group>"; };
 		4E0B923225FC8953006BF644 /* CalenderNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalenderNavigationController.swift; sourceTree = "<group>"; };
@@ -118,19 +116,10 @@
 				4EFA9740261C75FB00655626 /* Model */,
 				4EFA9741261C760600655626 /* View */,
 				4EFA9742261C760F00655626 /* Controller */,
-				4E5E37A526266B9900BD3F39 /* Extension */,
 				4E0B919C25DAE87F006BF644 /* LaunchScreen.storyboard */,
 				4E0B919F25DAE87F006BF644 /* Info.plist */,
 			);
 			path = "Every-Memo";
-			sourceTree = "<group>";
-		};
-		4E5E37A526266B9900BD3F39 /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				4E0B921D25EE359D006BF644 /* ExtensionAlertController.swift */,
-			);
-			path = Extension;
 			sourceTree = "<group>";
 		};
 		4EFA9740261C75FB00655626 /* Model */ = {
@@ -328,7 +317,6 @@
 				4EEA0514263A8E3300E74C57 /* CategoryCell.swift in Sources */,
 				4E0B91A825DC2EC3006BF644 /* TitleListViewController.swift in Sources */,
 				4E0B923325FC8953006BF644 /* CalenderNavigationController.swift in Sources */,
-				4E0B921E25EE359D006BF644 /* ExtensionAlertController.swift in Sources */,
 				4E0B919625DAE87E006BF644 /* CategoryListViewController.swift in Sources */,
 				4E0B91CD25DD21B0006BF644 /* AddMemoCategoryViewController.swift in Sources */,
 				4E0B91BE25DD0554006BF644 /* CalenderViewController.swift in Sources */,
