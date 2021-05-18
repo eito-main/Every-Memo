@@ -8,6 +8,7 @@ protocol AddMemoCategoryViewControllerDelegate {
     func getCategoryName(category: String)
 }
 
+
 final class AddMemoCategoryViewController: UIViewController {
     
     
@@ -21,8 +22,7 @@ final class AddMemoCategoryViewController: UIViewController {
     private let addCategory = "+"
     private var operationCategory: OperationCategory!
     private var cellHeight: CGFloat!
-    
-    var delegate: AddMemoCategoryViewControllerDelegate?
+    internal var delegate: AddMemoCategoryViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,12 +35,7 @@ final class AddMemoCategoryViewController: UIViewController {
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         
-        
-        cellHeight = scrollView.bounds.size.height / 15
-        
-        tableViewHeight.constant = cellHeight * CGFloat(operationCategory.currentCategorys.count + addCategory.count) - 1
-        tableViewWidth.constant = self.view.frame.width
-        
+        settingLayout()
         tableView.reloadData()
     }
 }
@@ -57,7 +52,15 @@ extension AddMemoCategoryViewController {
         self.tableView.register(UINib(nibName: "CategoryCell", bundle: nil), forCellReuseIdentifier: cellId )
     }
     
-    private func alertSetting() {
+    private func settingLayout() {
+        
+        cellHeight = scrollView.bounds.size.height / 15
+        
+        tableViewHeight.constant = cellHeight * CGFloat(operationCategory.currentCategorys.count + addCategory.count) - 1
+        tableViewWidth.constant = self.view.frame.width
+    }
+    
+    private func settingAlert() {
         
         let alert = UIAlertController(title: "カテゴリーを追加", message: nil, preferredStyle: .alert)
         
@@ -120,7 +123,7 @@ extension AddMemoCategoryViewController: UITableViewDataSource, UITableViewDeleg
         
         guard indexPath.row != operationCategory.currentCategorys.count else {
             
-            alertSetting()
+            settingAlert()
             return
         }
         

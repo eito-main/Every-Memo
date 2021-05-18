@@ -22,7 +22,7 @@ final class CategoryListViewController: UIViewController {
         operationMemo = OperationMemo()
         operationCategory = OperationCategory()
         
-        navigationSetUp()
+        settingNavigation()
         settingTableView()
     }
     
@@ -32,11 +32,7 @@ final class CategoryListViewController: UIViewController {
         operationMemo = OperationMemo()
         operationCategory = OperationCategory()
         
-        if let cellHeight = cellHeight {
-        tableViewHeight.constant = cellHeight * CGFloat(operationCategory.currentCategorys.count) - 1
-        
-        tableView.reloadData()
-        }
+        settingLayout()
     }
     
     override func viewWillLayoutSubviews() {
@@ -54,7 +50,14 @@ final class CategoryListViewController: UIViewController {
 
 extension CategoryListViewController {
     
-    
+    private func settingLayout() {
+        
+        if let cellHeight = cellHeight {
+        tableViewHeight.constant = cellHeight * CGFloat(operationCategory.currentCategorys.count) - 1
+        
+        tableView.reloadData()
+        }
+    }
     private func settingTableView() {
         
         tableView.delegate = self
@@ -62,7 +65,7 @@ extension CategoryListViewController {
         self.tableView.register(UINib(nibName: "CategoryCell", bundle: nil), forCellReuseIdentifier: cellId )
     }
     
-    private func navigationSetUp() {
+    private func settingNavigation() {
         
         self.navigationItem.title = "カテゴリー"
         
@@ -74,7 +77,7 @@ extension CategoryListViewController {
         )
     }
     
-    private func alertSetting(category: String, categoryNum: Int) {
+    private func settingAlert(category: String, categoryNum: Int) {
         
         let alert = UIAlertController(title: "カテゴリー削除", message: "”\(category)”に含まれるメモは全て”カテゴリー未指定”に移されますがよろしいですか？", preferredStyle: .alert)
         
@@ -154,7 +157,7 @@ extension CategoryListViewController: UITableViewDelegate, UITableViewDataSource
             
             return
         }
-        alertSetting(category: operationCategory.currentCategorys[indexPath.row], categoryNum: indexPath.row)
+        settingAlert(category: operationCategory.currentCategorys[indexPath.row], categoryNum: indexPath.row)
     }
     
     func tableView(_ tableView: UITableView, canEditRowAt indexPath: IndexPath) -> Bool {

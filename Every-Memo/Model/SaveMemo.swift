@@ -11,7 +11,7 @@ final class SaveMemo {
     private let jsonDecoder = JSONDecoder()
     
     //userDefaultsに保存してあるデータをデコードして取得する関数
-    func allMemos() -> [MemoData] {
+    internal func allMemos() -> [MemoData] {
         
         guard let data = userDefaults.data(forKey: MemoData.storeKey),
               let Memos = try? jsonDecoder.decode([MemoData].self, from: data) else {
@@ -23,7 +23,7 @@ final class SaveMemo {
     }
     
     //新たなデータをエンコードしてuserDefaultsに保存する関数
-    func save(memos: [MemoData]) {
+    internal func save(memos: [MemoData]) {
         
         guard let data = try? jsonEncoder.encode(memos) else {
             

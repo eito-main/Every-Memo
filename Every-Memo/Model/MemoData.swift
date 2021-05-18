@@ -6,13 +6,13 @@ import Foundation
 struct MemoData: Equatable, Codable {
     
     
-    static let storeKey = "Memo"
+    internal static let storeKey = "Memo"
     
-    let id: String
-    var category: String
-    var date: String
-    var title: String
-    var text: String
+    internal let id: String
+    internal var category: String
+    internal var date: String
+    internal var title: String
+    internal var text: String
     
     init(id: String = UUID().uuidString, category: String, date: String, title: String, text: String) {
     

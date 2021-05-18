@@ -23,17 +23,17 @@ final class OperationCategory {
         currentCategorys = ud.array(forKey: OperationCategory.categoryStoreKey) as! [String]
     }
     
-    func delete(num: Int) {
+    internal func delete(num: Int) {
         
         currentCategorys.remove(at: num)
     }
     
-    func add(newCategory: String) {
+    internal func add(newCategory: String) {
         
         currentCategorys.append(newCategory)
     }
     
-    func categoryCount(currentMemo: [MemoData], category: String) -> Int {
+    internal func categoryCount(currentMemo: [MemoData], category: String) -> Int {
         
         var categoryCount: Int = 0
         

@@ -8,6 +8,7 @@ final class OperationMemo {
     
     private let saveMemo: SaveMemo
     private(set) var currentMemos: [MemoData] {
+        
         didSet {
             saveMemo.save(memos: currentMemos)
         }
@@ -19,12 +20,12 @@ final class OperationMemo {
         currentMemos = saveMemo.allMemos()
     }
     
-    func add(memo: MemoData) {
+    internal func add(memo: MemoData) {
         
         currentMemos.append(memo)
     }
     
-    func deleteMemo(for id: String) {
+    internal func deleteMemo(for id: String) {
         
         guard let index = currentMemos.firstIndex(where: { $0.id == id }) else {
             
@@ -33,7 +34,7 @@ final class OperationMemo {
         currentMemos.remove(at: index)
     }
     
-    func updateMemo(for id: String, to newMemo: MemoData) {
+    internal func updateMemo(for id: String, to newMemo: MemoData) {
         
         guard let index = currentMemos.firstIndex(where: { $0.id == id }) else {
             
