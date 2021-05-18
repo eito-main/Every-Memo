@@ -30,7 +30,7 @@ final class SearchViewController: UIViewController, UISearchBarDelegate {
         searchBar.delegate = self
         
         settingTableView()
-        setSearchBar()
+        settingSearchBar()
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -38,24 +38,14 @@ final class SearchViewController: UIViewController, UISearchBarDelegate {
         
         operationMemo = OperationMemo()
         
-        searchBar.text = ""
-        searchResult.removeAll()
+        resetSearchBar()
         tableView.reloadData()
-        
-        if cellHeight != 0  {
-            tableViewHeight.constant = cellHeight * CGFloat(searchResult.count) - 1
-        }
     }
     
     override func viewWillLayoutSubviews(){
         super.viewWillLayoutSubviews()
         
-        cellHeight = viewUnderScroll.frame.height / 12
-        scrollViewHeight.constant = viewUnderScroll.frame.height
-        scrollViewWidth.constant = viewUnderScroll.frame.width
-        if cellHeight != 0  {
-            tableViewHeight.constant = cellHeight * CGFloat(searchResult.count) - 1
-        }
+        settingLayout()
     }
 }
 
@@ -70,7 +60,41 @@ extension SearchViewController {
         self.tableView.register(UINib(nibName: "TitleCell", bundle: nil), forCellReuseIdentifier: cellId )
     }
     
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
+    private func resetSearchBar() {
+        
+        searchBar.text = ""
+        searchResult.removeAll()
+    }
+    
+    private func settingLayout() {
+        
+        cellHeight = viewUnderScroll.frame.height / 12
+        scrollViewHeight.constant = viewUnderScroll.frame.height
+        scrollViewWidth.constant = viewUnderScroll.frame.width
+        if cellHeight != 0  {
+            tableViewHeight.constant = cellHeight * CGFloat(searchResult.count) - 1
+        }
+    }
+
+private func settingSearchBar() {
+        
+        searchBar.backgroundImage = UIImage()
+        self.navigationItem.title = "検索"
+        searchBar.placeholder = "タイトル検索"
+        searchBar.autocapitalizationType = UITextAutocapitalizationType.none
+    }
+    
+    private func settingNavigation() {
+        
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(
+            title: "",
+            style: .plain,
+            target: nil,
+            action: nil
+        )
+    }
+    
+    internal func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         
         searchBar.endEditing(true)
         let currentMemosIndexNumber = operationMemo.currentMemos.count-1
@@ -93,24 +117,6 @@ extension SearchViewController {
                 tableViewHeight.constant = cellHeight * CGFloat(searchResult.count) - 1
             }
         }
-    }
-    
-    private func setSearchBar() {
-        
-        searchBar.backgroundImage = UIImage()
-        self.navigationItem.title = "検索"
-        searchBar.placeholder = "タイトル検索"
-        searchBar.autocapitalizationType = UITextAutocapitalizationType.none
-    }
-    
-    private func navigationSetUp() {
-        
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(
-            title: "",
-            style: .plain,
-            target: nil,
-            action: nil
-        )
     }
 }
 

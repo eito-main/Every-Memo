@@ -11,21 +11,22 @@ final class AddMemoViewController : UIViewController, UITextViewDelegate {
     @IBOutlet private weak var memoTitle: UITextField!
     @IBOutlet private weak var memoText: UITextView!
     
-    var categoryName : String?
     private var operationMemo: OperationMemo!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         operationMemo = OperationMemo()
-        
         getDate()
-        if (UITraitCollection.current.userInterfaceStyle == .dark) {
-            darkMode()
-        }
+        settingLayout()
         
-        memoTitle.placeholder = "タイトルを入力"
-        memoCategory.text = "カテゴリー未指定"
+        if #available(iOS 13.0, *) {
+            if (UITraitCollection.current.userInterfaceStyle == .dark) {
+                settingDarkMode()
+            }
+        } else {
+            // Fallback on earlier versions
+        }
         
         self.navigationController?.setNavigationBarHidden(true, animated: true)
     }
@@ -35,6 +36,11 @@ final class AddMemoViewController : UIViewController, UITextViewDelegate {
         
         self.navigationController?.setNavigationBarHidden(false, animated: true)
     }
+}
+
+
+extension AddMemoViewController {
+    
     
     override func touchesBegan(_ touches: Set<UITouch>,with event: UIEvent?){
         
@@ -50,7 +56,7 @@ final class AddMemoViewController : UIViewController, UITextViewDelegate {
             
             nextVC.delegate = self
             self.present(nextVC, animated: true, completion: nil)
-
+            
             return
         }
     }
@@ -74,15 +80,20 @@ final class AddMemoViewController : UIViewController, UITextViewDelegate {
         self.dismiss(animated: true, completion: nil)
     }
     
-    //ダークモード対応
-    func darkMode(){
-            
-            memoCategory.backgroundColor = .black
-            memoDate.backgroundColor = .black
-            memoTitle.backgroundColor = .black
+    private func settingDarkMode() {
+        
+        memoCategory.backgroundColor = .black
+        memoDate.backgroundColor = .black
+        memoTitle.backgroundColor = .black
     }
     
-    func getDate() {
+    private func settingLayout() {
+        
+        memoTitle.placeholder = "タイトルを入力"
+        memoCategory.text = "カテゴリー未指定"
+    }
+    
+    internal func getDate() {
         
         let now = Date()
         let dateFormatter = DateFormatter()
@@ -92,7 +103,7 @@ final class AddMemoViewController : UIViewController, UITextViewDelegate {
         memoDate.text = dateFormatter.string(from: now)
     }
     
-    func touchedLabel(touches: Set<UITouch>, view:UILabel)->Bool {
+    internal func touchedLabel(touches: Set<UITouch>, view:UILabel) -> Bool {
         
         //全指のタッチについて処理
         for touch: AnyObject in touches {
@@ -115,7 +126,7 @@ final class AddMemoViewController : UIViewController, UITextViewDelegate {
 extension AddMemoViewController: AddMemoCategoryViewControllerDelegate {
     
     
-    func getCategoryName(category: String) {
+    internal func getCategoryName(category: String) {
         memoCategory.text = category
     }
 }

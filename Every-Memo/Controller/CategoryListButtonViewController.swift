@@ -13,34 +13,14 @@ final class CategoryListButtonViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        navigationSetUp()
-        buttonSetUp()
+        settingNavigation()
+        settingButton()
     }
+}
+
+
+extension CategoryListButtonViewController {
     
-    func navigationSetUp() {
-        
-        self.navigationItem.title = "カテゴリー"
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(
-            
-            title: "",
-            style: .plain,
-            target: nil,
-            action: nil
-        )
-    }
-    
-    func buttonSetUp() {
-        
-        memoButton.layer.cornerRadius = 25.0
-        memoButton.layer.borderWidth = 0.5
-        memoButton.layer.borderColor = UIColor.black.cgColor
-        searchButton.layer.cornerRadius = 25.0
-        searchButton.layer.borderWidth = 0.5
-        searchButton.layer.borderColor = UIColor.black.cgColor
-        calendarButton.layer.cornerRadius = 25.0
-        calendarButton.layer.borderWidth = 0.5
-        calendarButton.layer.borderColor = UIColor.black.cgColor
-    }
     
     @IBAction func displayCalendar(_ sender: Any) {
         
@@ -62,5 +42,30 @@ final class CategoryListButtonViewController: UIViewController {
         let nextVC = storyboard.instantiateViewController(withIdentifier: "addMemo") as! AddMemoViewController
         nextVC.modalPresentationStyle = .fullScreen
         self.present(nextVC, animated: true, completion: nil)
+    }
+    
+    private func settingNavigation() {
+        
+        self.navigationItem.title = "カテゴリー"
+        self.navigationItem.backBarButtonItem = UIBarButtonItem(
+            
+            title: "",
+            style: .plain,
+            target: nil,
+            action: nil
+        )
+    }
+    
+    private func settingButton() {
+        
+        memoButton.layer.cornerRadius = 25.0
+        memoButton.layer.borderWidth = 0.5
+        memoButton.layer.borderColor = UIColor.black.cgColor
+        searchButton.layer.cornerRadius = 25.0
+        searchButton.layer.borderWidth = 0.5
+        searchButton.layer.borderColor = UIColor.black.cgColor
+        calendarButton.layer.cornerRadius = 25.0
+        calendarButton.layer.borderWidth = 0.5
+        calendarButton.layer.borderColor = UIColor.black.cgColor
     }
 }

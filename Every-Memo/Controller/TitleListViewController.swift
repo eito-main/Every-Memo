@@ -15,7 +15,7 @@ final class TitleListViewController: UIViewController {
     private var cellHeight: CGFloat!
     private let cellId = "titleListCellId"
     private var memoList = [MemoData]()
-    var category = String()
+    internal var category = String()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -24,27 +24,26 @@ final class TitleListViewController: UIViewController {
         
         settingTableView()
         memoListUpdate()
-        navigationSetUp()
+        settingNvigation()
     }
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
         operationMemo = OperationMemo()
-
         memoListUpdate()
+        
+        cellHeight = scrollView.bounds.size.height / 15
         tableView.reloadData()
         
-        if let cellHeight = cellHeight {
-            tableViewHeight.constant = cellHeight * CGFloat(memoList.count) - 1
-        }
+        tableViewHeight.constant = cellHeight * CGFloat(memoList.count) - 1
+        tableViewWidth.constant = self.view.frame.width
     }
     
     override func viewWillLayoutSubviews() {
         super.viewWillLayoutSubviews()
         
         cellHeight = scrollView.bounds.size.height / 15
-        
         tableView.reloadData()
  
         tableViewHeight.constant = cellHeight * CGFloat(memoList.count) - 1
@@ -63,7 +62,7 @@ extension TitleListViewController {
         self.tableView.register(UINib(nibName: "TitleCell", bundle: nil), forCellReuseIdentifier: cellId )
     }
     
-    private func navigationSetUp() {
+    private func settingNvigation() {
         
         self.navigationItem.title = "タイトル"
         self.navigationItem.backBarButtonItem = UIBarButtonItem(
@@ -77,11 +76,10 @@ extension TitleListViewController {
     private func memoListUpdate() {
         
         memoList = [MemoData]()
-        let currentMemosIndexNumber = operationMemo.currentMemos.count-1
         
         if operationMemo.currentMemos.count == 0 {return}
         
-        for count in 0...currentMemosIndexNumber {
+        for count in 0..<operationMemo.currentMemos.count {
             
                 if operationMemo.currentMemos[count].category == category {
                     

@@ -37,8 +37,19 @@
 		4EEA0515263A8E3300E74C57 /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EEA0513263A8E3300E74C57 /* CategoryCell.xib */; };
 		4EEA0519263D97B800E74C57 /* TitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEA0517263D97B800E74C57 /* TitleCell.swift */; };
 		4EEA051A263D97B800E74C57 /* TitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4EEA0518263D97B800E74C57 /* TitleCell.xib */; };
+		4EEA05362646916500E74C57 /* Every_MemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEA05352646916500E74C57 /* Every_MemoTests.swift */; };
 		E9AA080A9E118BC7AD342818 /* Pods_Every_Memo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 026CA9E013A2D03A9E190A5C /* Pods_Every_Memo.framework */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4EEA05382646916500E74C57 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4E0B918625DAE87E006BF644 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4E0B918D25DAE87E006BF644;
+			remoteInfo = "Every-Memo";
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		026CA9E013A2D03A9E190A5C /* Pods_Every_Memo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Every_Memo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -75,6 +86,9 @@
 		4EEA0513263A8E3300E74C57 /* CategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
 		4EEA0517263D97B800E74C57 /* TitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCell.swift; sourceTree = "<group>"; };
 		4EEA0518263D97B800E74C57 /* TitleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleCell.xib; sourceTree = "<group>"; };
+		4EEA05332646916500E74C57 /* Every-MemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Every-MemoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EEA05352646916500E74C57 /* Every_MemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Every_MemoTests.swift; sourceTree = "<group>"; };
+		4EEA05372646916500E74C57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5826EE33DBCD0815579DEBDE /* Pods-SimpleMemoApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleMemoApp.debug.xcconfig"; path = "Target Support Files/Pods-SimpleMemoApp/Pods-SimpleMemoApp.debug.xcconfig"; sourceTree = "<group>"; };
 		8F0EF1086E22D8A219D80563 /* Pods-Every-Memo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Every-Memo.release.xcconfig"; path = "Target Support Files/Pods-Every-Memo/Pods-Every-Memo.release.xcconfig"; sourceTree = "<group>"; };
 		97DBC14F315E8531A4C57EB5 /* Pods-SimpleMemoApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SimpleMemoApp.release.xcconfig"; path = "Target Support Files/Pods-SimpleMemoApp/Pods-SimpleMemoApp.release.xcconfig"; sourceTree = "<group>"; };
@@ -89,6 +103,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4EEA05302646916500E74C57 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -96,6 +117,7 @@
 			isa = PBXGroup;
 			children = (
 				4E0B919025DAE87E006BF644 /* Every-Memo */,
+				4EEA05342646916500E74C57 /* Every-MemoTests */,
 				4E0B918F25DAE87E006BF644 /* Products */,
 				F71F9CC9E41619B1A35B6DC6 /* Pods */,
 				F6430532E8FC5E404B810FC9 /* Frameworks */,
@@ -106,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				4E0B918E25DAE87E006BF644 /* Every-Memo.app */,
+				4EEA05332646916500E74C57 /* Every-MemoTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -120,6 +143,15 @@
 				4E0B919F25DAE87F006BF644 /* Info.plist */,
 			);
 			path = "Every-Memo";
+			sourceTree = "<group>";
+		};
+		4EEA05342646916500E74C57 /* Every-MemoTests */ = {
+			isa = PBXGroup;
+			children = (
+				4EEA05352646916500E74C57 /* Every_MemoTests.swift */,
+				4EEA05372646916500E74C57 /* Info.plist */,
+			);
+			path = "Every-MemoTests";
 			sourceTree = "<group>";
 		};
 		4EFA9740261C75FB00655626 /* Model */ = {
@@ -143,11 +175,11 @@
 				4E85AA9A2627F75C00F81FA9 /* Memo.storyboard */,
 				4E85AA9D2627F79F00F81FA9 /* AddMemo.storyboard */,
 				4E85AAA02627F7B800F81FA9 /* AddMemoCategory.storyboard */,
-				4E0B919A25DAE87F006BF644 /* Assets.xcassets */,
 				4EEA0512263A8E3300E74C57 /* CategoryCell.swift */,
 				4EEA0513263A8E3300E74C57 /* CategoryCell.xib */,
 				4EEA0517263D97B800E74C57 /* TitleCell.swift */,
 				4EEA0518263D97B800E74C57 /* TitleCell.xib */,
+				4E0B919A25DAE87F006BF644 /* Assets.xcassets */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -213,6 +245,24 @@
 			productReference = 4E0B918E25DAE87E006BF644 /* Every-Memo.app */;
 			productType = "com.apple.product-type.application";
 		};
+		4EEA05322646916500E74C57 /* Every-MemoTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4EEA053C2646916500E74C57 /* Build configuration list for PBXNativeTarget "Every-MemoTests" */;
+			buildPhases = (
+				4EEA052F2646916500E74C57 /* Sources */,
+				4EEA05302646916500E74C57 /* Frameworks */,
+				4EEA05312646916500E74C57 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4EEA05392646916500E74C57 /* PBXTargetDependency */,
+			);
+			name = "Every-MemoTests";
+			productName = "Every-MemoTests";
+			productReference = 4EEA05332646916500E74C57 /* Every-MemoTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -224,6 +274,10 @@
 				TargetAttributes = {
 					4E0B918D25DAE87E006BF644 = {
 						CreatedOnToolsVersion = 12.4;
+					};
+					4EEA05322646916500E74C57 = {
+						CreatedOnToolsVersion = 12.4;
+						TestTargetID = 4E0B918D25DAE87E006BF644;
 					};
 				};
 			};
@@ -241,6 +295,7 @@
 			projectRoot = "";
 			targets = (
 				4E0B918D25DAE87E006BF644 /* Every-Memo */,
+				4EEA05322646916500E74C57 /* Every-MemoTests */,
 			);
 		};
 /* End PBXProject section */
@@ -261,6 +316,13 @@
 				4E0B919925DAE87E006BF644 /* CategoryList.storyboard in Resources */,
 				4E85AA922627F70500F81FA9 /* Search.storyboard in Resources */,
 				4E85AA982627F74900F81FA9 /* TitleList.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EEA05312646916500E74C57 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -335,7 +397,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4EEA052F2646916500E74C57 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EEA05362646916500E74C57 /* Every_MemoTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4EEA05392646916500E74C57 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4E0B918D25DAE87E006BF644 /* Every-Memo */;
+			targetProxy = 4EEA05382646916500E74C57 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		4E0B919725DAE87E006BF644 /* CategoryList.storyboard */ = {
@@ -482,6 +560,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MV3LUBK879;
 				INFOPLIST_FILE = "Every-Memo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -503,6 +582,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = MV3LUBK879;
 				INFOPLIST_FILE = "Every-Memo/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -512,6 +592,46 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4EEA053A2646916500E74C57 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MV3LUBK879;
+				INFOPLIST_FILE = "Every-MemoTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gmail.gjmptw.aab.Every-MemoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Every-Memo.app/Every-Memo";
+			};
+			name = Debug;
+		};
+		4EEA053B2646916500E74C57 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = MV3LUBK879;
+				INFOPLIST_FILE = "Every-MemoTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.gmail.gjmptw.aab.Every-MemoTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Every-Memo.app/Every-Memo";
 			};
 			name = Release;
 		};
@@ -532,6 +652,15 @@
 			buildConfigurations = (
 				4E0B91A325DAE87F006BF644 /* Debug */,
 				4E0B91A425DAE87F006BF644 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4EEA053C2646916500E74C57 /* Build configuration list for PBXNativeTarget "Every-MemoTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EEA053A2646916500E74C57 /* Debug */,
+				4EEA053B2646916500E74C57 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

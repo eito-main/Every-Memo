@@ -11,8 +11,7 @@ final class MemoViewController: UIViewController {
     @IBOutlet private weak var memoDate: UILabel!
     @IBOutlet private weak var memoText: UITextView!
     
-    var memoData: MemoData!
-    var category: String?
+    internal var memoData: MemoData!
     private var editButton: UIBarButtonItem!
     private var operationMemo: OperationMemo!
     private var edit = false
@@ -22,10 +21,15 @@ final class MemoViewController: UIViewController {
         
         operationMemo = OperationMemo()
         
-        layout()
-        setMemo()
-        if (UITraitCollection.current.userInterfaceStyle == .dark) {
-            darkMode()
+        settingLayout()
+        settingMemo()
+        
+        if #available(iOS 13.0, *) {
+            if (UITraitCollection.current.userInterfaceStyle == .dark) {
+                settingDarkMode()
+            }
+        } else {
+            // Fallback on earlier versions
         }
     }
 }
@@ -33,37 +37,6 @@ final class MemoViewController: UIViewController {
 
 extension MemoViewController {
     
-    
-    @objc func editButtonTapped(_ sender: UIBarButtonItem) {
-        
-        if edit == false {
-            
-            edit = true
-            editButton.title = "完了"
-            
-            memoTitle.isEnabled = true
-            memoText.isEditable = true
-            self.navigationItem.hidesBackButton = true
-            isModalInPresentation = true
-            
-        } else {
-            
-            guard memoText.text != nil && memoTitle.text != nil else {return}
-            
-            edit = false
-            editButton.title = "編集"
-            
-            memoTitle.isEnabled = false
-            memoText.isEditable = false
-            self.navigationItem.hidesBackButton = false
-            isModalInPresentation = false
-            
-            memoData.category = memoCategory.text!
-            memoData.title = memoTitle.text!
-            memoData.text = memoText.text!
-            operationMemo.updateMemo(for: memoData.id, to: memoData)
-        }
-    }
     
     override func touchesBegan(_ touches: Set<UITouch>,with event: UIEvent?){
         
@@ -82,7 +55,46 @@ extension MemoViewController {
         }
     }
     
-    private func setMemo() {
+    @objc internal func editButtonTapped(_ sender: UIBarButtonItem) {
+        
+        if edit == false {
+            
+            edit = true
+            editButton.title = "完了"
+            
+            memoTitle.isEnabled = true
+            memoText.isEditable = true
+            self.navigationItem.hidesBackButton = true
+            if #available(iOS 13.0, *) {
+                isModalInPresentation = true
+            } else {
+                // Fallback on earlier versions
+            }
+            
+        } else {
+            
+            guard memoText.text != nil && memoTitle.text != nil else {return}
+            
+            edit = false
+            editButton.title = "編集"
+            
+            memoTitle.isEnabled = false
+            memoText.isEditable = false
+            self.navigationItem.hidesBackButton = false
+            if #available(iOS 13.0, *) {
+                isModalInPresentation = false
+            } else {
+                // Fallback on earlier versions
+            }
+            
+            memoData.category = memoCategory.text!
+            memoData.title = memoTitle.text!
+            memoData.text = memoText.text!
+            operationMemo.updateMemo(for: memoData.id, to: memoData)
+        }
+    }
+    
+    private func settingMemo() {
         
         memoCategory.text = memoData.category
         memoTitle.text = memoData.title
@@ -90,7 +102,7 @@ extension MemoViewController {
         memoText.text = memoData.text
     }
     
-    private func layout(){
+    private func settingLayout(){
         
         self.navigationItem.title = "メモ"
         
@@ -105,14 +117,14 @@ extension MemoViewController {
         self.navigationItem.rightBarButtonItems = [editButton]
     }
     
-    private func darkMode() {
+    private func settingDarkMode() {
         
         memoCategory.backgroundColor = .black
         memoDate.backgroundColor = .black
         memoTitle.backgroundColor = .black
     }
     
-    func touchedLabel(touches: Set<UITouch>, view:UILabel)->Bool {
+    internal func touchedLabel(touches: Set<UITouch>, view:UILabel) -> Bool {
         
         for touch: AnyObject in touches {
             
@@ -134,7 +146,7 @@ extension MemoViewController {
 extension MemoViewController: AddMemoCategoryViewControllerDelegate {
     
     
-    func getCategoryName(category: String) {
+    internal func getCategoryName(category: String) {
         memoCategory.text = category
     }
 }
