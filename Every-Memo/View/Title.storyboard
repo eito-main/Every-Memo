@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="iPA-sO-sfv">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="OuY-pD-djM">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
@@ -9,32 +9,32 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Add Memo View Controller-->
-        <scene sceneID="a1g-HC-sqr">
+        <!--Title View Controller-->
+        <scene sceneID="5tU-pv-F4T">
             <objects>
-                <viewController storyboardIdentifier="AddMemo" useStoryboardIdentifierAsRestorationIdentifier="YES" id="iPA-sO-sfv" customClass="AddMemoViewController" customModule="Every_Memo" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="KtB-w6-ab9">
+                <viewController storyboardIdentifier="Title" useStoryboardIdentifierAsRestorationIdentifier="YES" id="OuY-pD-djM" customClass="TitleViewController" customModule="Every_Memo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="k3K-Cp-xZk">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="メモ追加" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1PM-Hu-LiV">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="タイトル" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qH3-sI-SMb">
                                 <rect key="frame" x="172.5" y="437.5" width="69.5" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <viewLayoutGuide key="safeArea" id="KMj-YJ-Me3"/>
+                        <viewLayoutGuide key="safeArea" id="Hu3-hq-Mf6"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="1PM-Hu-LiV" firstAttribute="centerY" secondItem="KtB-w6-ab9" secondAttribute="centerY" id="RYL-ul-Nz2"/>
-                            <constraint firstItem="1PM-Hu-LiV" firstAttribute="centerX" secondItem="KtB-w6-ab9" secondAttribute="centerX" id="VcC-fO-SY9"/>
+                            <constraint firstItem="qH3-sI-SMb" firstAttribute="centerX" secondItem="k3K-Cp-xZk" secondAttribute="centerX" id="GJV-fX-4BA"/>
+                            <constraint firstItem="qH3-sI-SMb" firstAttribute="centerY" secondItem="k3K-Cp-xZk" secondAttribute="centerY" id="s9S-al-q1C"/>
                         </constraints>
                     </view>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="LCk-n2-cAC" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CDv-Mg-VkU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="251" y="148"/>
+            <point key="canvasLocation" x="-75" y="133"/>
         </scene>
     </scenes>
     <resources>
