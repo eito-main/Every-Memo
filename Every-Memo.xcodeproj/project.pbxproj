@@ -30,7 +30,6 @@
 		4E85AA922627F70500F81FA9 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E85AA912627F70500F81FA9 /* Search.storyboard */; };
 		4E85AA982627F74900F81FA9 /* Title.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E85AA972627F74900F81FA9 /* Title.storyboard */; };
 		4E85AA9B2627F75C00F81FA9 /* Memo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E85AA9A2627F75C00F81FA9 /* Memo.storyboard */; };
-		4E85AA9E2627F79F00F81FA9 /* AddMemo.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E85AA9D2627F79F00F81FA9 /* AddMemo.storyboard */; };
 		4E85AAA12627F7B800F81FA9 /* AddCategory.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E85AAA02627F7B800F81FA9 /* AddCategory.storyboard */; };
 		4ED921062671D57C00E79CE6 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED921052671D57C00E79CE6 /* Router.swift */; };
 		4ED921082671E5F600E79CE6 /* Category.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4ED921072671E5F600E79CE6 /* Category.storyboard */; };
@@ -39,7 +38,6 @@
 		4ED9210F2671E92C00E79CE6 /* CalendarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED9210E2671E92C00E79CE6 /* CalendarViewController.swift */; };
 		4ED921112671E93F00E79CE6 /* TitleViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED921102671E93F00E79CE6 /* TitleViewController.swift */; };
 		4ED921132671E95000E79CE6 /* MemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED921122671E95000E79CE6 /* MemoViewController.swift */; };
-		4ED921152671E96300E79CE6 /* AddMemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED921142671E96300E79CE6 /* AddMemoViewController.swift */; };
 		4ED921172671E97C00E79CE6 /* AddCategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED921162671E97C00E79CE6 /* AddCategoryViewController.swift */; };
 		4ED921192671E9A500E79CE6 /* AddMemoButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED921182671E9A500E79CE6 /* AddMemoButtonViewController.swift */; };
 		4ED9211C2671EBC800E79CE6 /* Storyboard+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED9211B2671EBC800E79CE6 /* Storyboard+.swift */; };
@@ -86,7 +84,6 @@
 		4E85AA912627F70500F81FA9 /* Search.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Search.storyboard; sourceTree = "<group>"; };
 		4E85AA972627F74900F81FA9 /* Title.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Title.storyboard; sourceTree = "<group>"; };
 		4E85AA9A2627F75C00F81FA9 /* Memo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Memo.storyboard; sourceTree = "<group>"; };
-		4E85AA9D2627F79F00F81FA9 /* AddMemo.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddMemo.storyboard; sourceTree = "<group>"; };
 		4E85AAA02627F7B800F81FA9 /* AddCategory.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = AddCategory.storyboard; sourceTree = "<group>"; };
 		4ED921052671D57C00E79CE6 /* Router.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
 		4ED921072671E5F600E79CE6 /* Category.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Category.storyboard; sourceTree = "<group>"; };
@@ -95,7 +92,6 @@
 		4ED9210E2671E92C00E79CE6 /* CalendarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalendarViewController.swift; sourceTree = "<group>"; };
 		4ED921102671E93F00E79CE6 /* TitleViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleViewController.swift; sourceTree = "<group>"; };
 		4ED921122671E95000E79CE6 /* MemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MemoViewController.swift; sourceTree = "<group>"; };
-		4ED921142671E96300E79CE6 /* AddMemoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemoViewController.swift; sourceTree = "<group>"; };
 		4ED921162671E97C00E79CE6 /* AddCategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCategoryViewController.swift; sourceTree = "<group>"; };
 		4ED921182671E9A500E79CE6 /* AddMemoButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemoButtonViewController.swift; sourceTree = "<group>"; };
 		4ED9211B2671EBC800E79CE6 /* Storyboard+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+.swift"; sourceTree = "<group>"; };
@@ -167,6 +163,8 @@
 		4ED921042671D3EE00E79CE6 /* Router */ = {
 			isa = PBXGroup;
 			children = (
+				4ED921182671E9A500E79CE6 /* AddMemoButtonViewController.swift */,
+				4ED9211D26720BDE00E79CE6 /* CustomTabBarController.swift */,
 				4ED921052671D57C00E79CE6 /* Router.swift */,
 			);
 			path = Router;
@@ -175,15 +173,12 @@
 		4ED921092671E7FB00E79CE6 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				4ED9211D26720BDE00E79CE6 /* CustomTabBarController.swift */,
 				4ED9210A2671E8FF00E79CE6 /* CategoryViewController.swift */,
 				4ED9210C2671E91700E79CE6 /* SearchViewController.swift */,
 				4ED9210E2671E92C00E79CE6 /* CalendarViewController.swift */,
 				4ED921102671E93F00E79CE6 /* TitleViewController.swift */,
 				4ED921122671E95000E79CE6 /* MemoViewController.swift */,
-				4ED921142671E96300E79CE6 /* AddMemoViewController.swift */,
 				4ED921162671E97C00E79CE6 /* AddCategoryViewController.swift */,
-				4ED921182671E9A500E79CE6 /* AddMemoButtonViewController.swift */,
 			);
 			name = Controller;
 			path = Model/Controller;
@@ -225,7 +220,6 @@
 				4E85AA8E2627F6E800F81FA9 /* Calendar.storyboard */,
 				4E85AA972627F74900F81FA9 /* Title.storyboard */,
 				4E85AA9A2627F75C00F81FA9 /* Memo.storyboard */,
-				4E85AA9D2627F79F00F81FA9 /* AddMemo.storyboard */,
 				4E85AAA02627F7B800F81FA9 /* AddCategory.storyboard */,
 				4E0B919725DAE87E006BF644 /* AddMemoButton.storyboard */,
 			);
@@ -353,7 +347,6 @@
 			files = (
 				4ED921082671E5F600E79CE6 /* Category.storyboard in Resources */,
 				4E85AA8F2627F6E800F81FA9 /* Calendar.storyboard in Resources */,
-				4E85AA9E2627F79F00F81FA9 /* AddMemo.storyboard in Resources */,
 				4E85AAA12627F7B800F81FA9 /* AddCategory.storyboard in Resources */,
 				4E0B919E25DAE87F006BF644 /* LaunchScreen.storyboard in Resources */,
 				4E0B919B25DAE87F006BF644 /* Assets.xcassets in Resources */,
@@ -434,7 +427,6 @@
 				4ED9211C2671EBC800E79CE6 /* Storyboard+.swift in Sources */,
 				4ED921172671E97C00E79CE6 /* AddCategoryViewController.swift in Sources */,
 				4E0B922D25F866FF006BF644 /* nCategoryListNavigationController.swift in Sources */,
-				4ED921152671E96300E79CE6 /* AddMemoViewController.swift in Sources */,
 				4ED9210F2671E92C00E79CE6 /* CalendarViewController.swift in Sources */,
 				4ED921062671D57C00E79CE6 /* Router.swift in Sources */,
 				4E0B91C725DD0A26006BF644 /* nAddMemoViewController.swift in Sources */,

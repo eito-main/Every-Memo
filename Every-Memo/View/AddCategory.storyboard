@@ -17,18 +17,28 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="カテゴリー追加" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XL0-CD-3ks">
-                                <rect key="frame" x="146" y="437.5" width="122" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UPb-Kg-ACm">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="kgU-Jr-Ogu">
+                                        <rect key="frame" x="0.0" y="24.5" width="414" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="kgU-Jr-Ogu" id="ILp-D5-uNB">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="KZ7-QG-fRX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="XL0-CD-3ks" firstAttribute="centerX" secondItem="2Yj-3r-l8A" secondAttribute="centerX" id="7tD-Ds-5cR"/>
-                            <constraint firstItem="XL0-CD-3ks" firstAttribute="centerY" secondItem="2Yj-3r-l8A" secondAttribute="centerY" id="ARR-hF-TaC"/>
+                            <constraint firstItem="KZ7-QG-fRX" firstAttribute="trailing" secondItem="UPb-Kg-ACm" secondAttribute="trailing" id="MRu-fy-cgT"/>
+                            <constraint firstItem="UPb-Kg-ACm" firstAttribute="top" secondItem="KZ7-QG-fRX" secondAttribute="top" id="Spn-3f-3LY"/>
+                            <constraint firstItem="UPb-Kg-ACm" firstAttribute="leading" secondItem="KZ7-QG-fRX" secondAttribute="leading" id="dcn-H3-r0F"/>
+                            <constraint firstItem="KZ7-QG-fRX" firstAttribute="bottom" secondItem="UPb-Kg-ACm" secondAttribute="bottom" id="w0k-1h-UXW"/>
                         </constraints>
                     </view>
                 </viewController>

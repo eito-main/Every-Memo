@@ -7,57 +7,72 @@ import UIKit
 final class Router {
     
     static let shared: Router = .init()
-    private init() {} // ?
+    private init() {}
     
-    
-//    func setupTab() {
-//        let firstViewController = FirstViewController()
-//        firstViewController.tabBarItem = UITabBarItem(title: "tab1", image: .none, tag: 0)
-//
-//        let secondViewController = SecondViewController()
-//        secondViewController.tabBarItem = UITabBarItem(tabBarSystemItem: .bookmarks, tag: 0)
-//
-//        viewControllers = [firstViewController, secondViewController]
-//    }
     private var window: UIWindow?
+    
     func setupTab(window: UIWindow?) {
-        
-    }
-    
-    
-    func showRoot(window: UIWindow?, whereWill: UIViewController) {
-//        let vc = RegistrationViewController.makeFromStoryboard()
-//        let nav = UINavigationController(rootViewController: vc)
-//        window?.rootViewController = nav
-        
-//        switch whereWill {
-//
-//        case is CategoryViewController:
-//            print("a")
-//        case is SearchViewController:
-//            print("i")
-//        case is CalendarViewController:
-//            print("u")
-//        default:
-//            print("e")
-//        }
-        
+        window?.rootViewController = CustomTabBarController()
         window?.makeKeyAndVisible()
+
         self.window = window
     }
     
+    
+//    func showRoot(window: UIWindow?, whereWill: UIViewController) {
+////        let vc = RegistrationViewController.makeFromStoryboard()
+////        let nav = UINavigationController(rootViewController: vc)
+////        window?.rootViewController = nav
+//
+////        switch whereWill {
+////
+////        case is CategoryViewController:
+////            print("a")
+////        case is SearchViewController:
+////            print("i")
+////        case is CalendarViewController:
+////            print("u")
+////        default:
+////            print("e")
+////        }
+//
+//        window?.makeKeyAndVisible()
+//        self.window = window
+//    }
+//
+    func showCategory(from: UIViewController) {
+        let vc = CategoryViewController.makeFromStoryboard()
+        show(from: from, next: vc)
+    }
+
+    func showSearch(from: UIViewController) {
+        let vc = SearchViewController.makeFromStoryboard()
+        show(from: from, next: vc)
+    }
+
     func showCalendar(from: UIViewController) {
-        let vc = FirstViewController.makeFromStoryboard()
+        let vc = CalendarViewController.makeFromStoryboard()
         show(from: from, next: vc)
     }
     
-    func showCalendar(from: UIViewController) {
-        let vc = FirstViewController.makeFromStoryboard()
+    func showTitle(from: UIViewController) {
+        let vc = TitleViewController.makeFromStoryboard()
         show(from: from, next: vc)
     }
     
-    func showCalendar(from: UIViewController) {
-        let vc = FirstViewController.makeFromStoryboard()
+    func showMemo(from: UIViewController) {
+        let vc = MemoViewController.makeFromStoryboard()
+        show(from: from, next: vc)
+    }
+    
+    func showAddCategory(from: UIViewController) {
+        let vc = AddCategoryViewController.makeFromStoryboard()
+        show(from: from, next: vc)
+    }
+    
+    //??
+    func showAddMemoButton(from: UIViewController) {
+        let vc = AddMemoButtonViewController.makeFromStoryboard()
         show(from: from, next: vc)
     }
 }

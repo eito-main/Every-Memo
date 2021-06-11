@@ -24,10 +24,6 @@ extension UIStoryboard {
         UIStoryboard.init(name: "Memo", bundle: nil).instantiateInitialViewController() as! MemoViewController
     }
     
-    static var addMemoViewController: AddMemoViewController {
-        UIStoryboard.init(name: "AddMemo", bundle: nil).instantiateInitialViewController() as! AddMemoViewController
-    }
-    
     static var addCategoryViewController: AddCategoryViewController {
         UIStoryboard.init(name: "AddCategory", bundle: nil).instantiateInitialViewController() as! AddCategoryViewController
     }
