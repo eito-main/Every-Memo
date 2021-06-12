@@ -42,6 +42,12 @@
 		4ED921192671E9A500E79CE6 /* AddMemoButtonViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED921182671E9A500E79CE6 /* AddMemoButtonViewController.swift */; };
 		4ED9211C2671EBC800E79CE6 /* Storyboard+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED9211B2671EBC800E79CE6 /* Storyboard+.swift */; };
 		4ED9211E26720BDE00E79CE6 /* CustomTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED9211D26720BDE00E79CE6 /* CustomTabBarController.swift */; };
+		4ED92121267346F800E79CE6 /* CategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED9211F267346F800E79CE6 /* CategoryCell.swift */; };
+		4ED92122267346F800E79CE6 /* CategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ED92120267346F800E79CE6 /* CategoryCell.xib */; };
+		4ED92126267349C800E79CE6 /* TitleCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED92124267349C800E79CE6 /* TitleCell.swift */; };
+		4ED92127267349C800E79CE6 /* TitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ED92125267349C800E79CE6 /* TitleCell.xib */; };
+		4ED9212A26734A0200E79CE6 /* AddCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED9212826734A0200E79CE6 /* AddCategoryCell.swift */; };
+		4ED9212B26734A0200E79CE6 /* AddCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ED9212926734A0200E79CE6 /* AddCategoryCell.xib */; };
 		4EEA05362646916500E74C57 /* Every_MemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEA05352646916500E74C57 /* Every_MemoTests.swift */; };
 		E9AA080A9E118BC7AD342818 /* Pods_Every_Memo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 026CA9E013A2D03A9E190A5C /* Pods_Every_Memo.framework */; };
 /* End PBXBuildFile section */
@@ -96,6 +102,12 @@
 		4ED921182671E9A500E79CE6 /* AddMemoButtonViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMemoButtonViewController.swift; sourceTree = "<group>"; };
 		4ED9211B2671EBC800E79CE6 /* Storyboard+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Storyboard+.swift"; sourceTree = "<group>"; };
 		4ED9211D26720BDE00E79CE6 /* CustomTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTabBarController.swift; sourceTree = "<group>"; };
+		4ED9211F267346F800E79CE6 /* CategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCell.swift; sourceTree = "<group>"; };
+		4ED92120267346F800E79CE6 /* CategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CategoryCell.xib; sourceTree = "<group>"; };
+		4ED92124267349C800E79CE6 /* TitleCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TitleCell.swift; sourceTree = "<group>"; };
+		4ED92125267349C800E79CE6 /* TitleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleCell.xib; sourceTree = "<group>"; };
+		4ED9212826734A0200E79CE6 /* AddCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCategoryCell.swift; sourceTree = "<group>"; };
+		4ED9212926734A0200E79CE6 /* AddCategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddCategoryCell.xib; sourceTree = "<group>"; };
 		4EEA05332646916500E74C57 /* Every-MemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Every-MemoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EEA05352646916500E74C57 /* Every_MemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Every_MemoTests.swift; sourceTree = "<group>"; };
 		4EEA05372646916500E74C57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -146,12 +158,13 @@
 		4E0B919025DAE87E006BF644 /* Every-Memo */ = {
 			isa = PBXGroup;
 			children = (
-				4ED9211A2671EBA700E79CE6 /* Extension */,
 				4EFA9740261C75FB00655626 /* Model */,
 				4EFA9741261C760600655626 /* View */,
+				4ED921232673471F00E79CE6 /* Xib */,
 				4ED921092671E7FB00E79CE6 /* Controller */,
 				4ED921042671D3EE00E79CE6 /* Router */,
-				4EFA9742261C760F00655626 /* Controller */,
+				4ED9211A2671EBA700E79CE6 /* Extension */,
+				4EFA9742261C760F00655626 /* nController */,
 				4E0B919125DAE87E006BF644 /* AppDelegate.swift */,
 				4E0B919C25DAE87F006BF644 /* LaunchScreen.storyboard */,
 				4E0B919A25DAE87F006BF644 /* Assets.xcassets */,
@@ -163,8 +176,6 @@
 		4ED921042671D3EE00E79CE6 /* Router */ = {
 			isa = PBXGroup;
 			children = (
-				4ED921182671E9A500E79CE6 /* AddMemoButtonViewController.swift */,
-				4ED9211D26720BDE00E79CE6 /* CustomTabBarController.swift */,
 				4ED921052671D57C00E79CE6 /* Router.swift */,
 			);
 			path = Router;
@@ -179,9 +190,10 @@
 				4ED921102671E93F00E79CE6 /* TitleViewController.swift */,
 				4ED921122671E95000E79CE6 /* MemoViewController.swift */,
 				4ED921162671E97C00E79CE6 /* AddCategoryViewController.swift */,
+				4ED921182671E9A500E79CE6 /* AddMemoButtonViewController.swift */,
+				4ED9211D26720BDE00E79CE6 /* CustomTabBarController.swift */,
 			);
-			name = Controller;
-			path = Model/Controller;
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		4ED9211A2671EBA700E79CE6 /* Extension */ = {
@@ -190,6 +202,19 @@
 				4ED9211B2671EBC800E79CE6 /* Storyboard+.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		4ED921232673471F00E79CE6 /* Xib */ = {
+			isa = PBXGroup;
+			children = (
+				4ED9211F267346F800E79CE6 /* CategoryCell.swift */,
+				4ED92120267346F800E79CE6 /* CategoryCell.xib */,
+				4ED92124267349C800E79CE6 /* TitleCell.swift */,
+				4ED92125267349C800E79CE6 /* TitleCell.xib */,
+				4ED9212826734A0200E79CE6 /* AddCategoryCell.swift */,
+				4ED9212926734A0200E79CE6 /* AddCategoryCell.xib */,
+			);
+			path = Xib;
 			sourceTree = "<group>";
 		};
 		4EEA05342646916500E74C57 /* Every-MemoTests */ = {
@@ -226,7 +251,7 @@
 			path = View;
 			sourceTree = "<group>";
 		};
-		4EFA9742261C760F00655626 /* Controller */ = {
+		4EFA9742261C760F00655626 /* nController */ = {
 			isa = PBXGroup;
 			children = (
 				4E0B922C25F866FF006BF644 /* nCategoryListNavigationController.swift */,
@@ -241,7 +266,7 @@
 				4E0B91A725DC2EC3006BF644 /* nTitleListViewController.swift */,
 				4E0B91AA25DC2FB8006BF644 /* nMemoViewController.swift */,
 			);
-			path = Controller;
+			path = nController;
 			sourceTree = "<group>";
 		};
 		F6430532E8FC5E404B810FC9 /* Frameworks */ = {
@@ -350,10 +375,13 @@
 				4E85AAA12627F7B800F81FA9 /* AddCategory.storyboard in Resources */,
 				4E0B919E25DAE87F006BF644 /* LaunchScreen.storyboard in Resources */,
 				4E0B919B25DAE87F006BF644 /* Assets.xcassets in Resources */,
+				4ED92122267346F800E79CE6 /* CategoryCell.xib in Resources */,
 				4E85AA9B2627F75C00F81FA9 /* Memo.storyboard in Resources */,
+				4ED92127267349C800E79CE6 /* TitleCell.xib in Resources */,
 				4E0B919925DAE87E006BF644 /* AddMemoButton.storyboard in Resources */,
 				4E85AA922627F70500F81FA9 /* Search.storyboard in Resources */,
 				4E85AA982627F74900F81FA9 /* Title.storyboard in Resources */,
+				4ED9212B26734A0200E79CE6 /* AddCategoryCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,8 +449,10 @@
 				4E0B91CD25DD21B0006BF644 /* nAddMemoCategoryViewController.swift in Sources */,
 				4E0B91BE25DD0554006BF644 /* nCalenderViewController.swift in Sources */,
 				4E0B923025FC8906006BF644 /* nSearchNavigationController.swift in Sources */,
+				4ED92126267349C800E79CE6 /* TitleCell.swift in Sources */,
 				4E0B91AB25DC2FB8006BF644 /* nMemoViewController.swift in Sources */,
 				4E0B91B025DC32FA006BF644 /* MemoData.swift in Sources */,
+				4ED9212A26734A0200E79CE6 /* AddCategoryCell.swift in Sources */,
 				4ED9210D2671E91700E79CE6 /* SearchViewController.swift in Sources */,
 				4ED9211C2671EBC800E79CE6 /* Storyboard+.swift in Sources */,
 				4ED921172671E97C00E79CE6 /* AddCategoryViewController.swift in Sources */,
@@ -436,6 +466,7 @@
 				4ED921132671E95000E79CE6 /* MemoViewController.swift in Sources */,
 				4ED921192671E9A500E79CE6 /* AddMemoButtonViewController.swift in Sources */,
 				4E0B91BA25DC8BF1006BF644 /* nCategoryListButtonViewController.swift in Sources */,
+				4ED92121267346F800E79CE6 /* CategoryCell.swift in Sources */,
 				4E5E37A0262522F600BD3F39 /* OperationCategory.swift in Sources */,
 				4E0B91EC25E965F4006BF644 /* SaveMemo.swift in Sources */,
 				4ED9211E26720BDE00E79CE6 /* CustomTabBarController.swift in Sources */,

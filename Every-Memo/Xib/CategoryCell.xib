@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="85" id="KGk-i7-Jjw" customClass="CategoryCell" customModule="Every_Memo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="474" height="85"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="474" height="85"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="nI5-Eh-Tlj">
+                        <rect key="frame" x="5" y="7.5" width="75" height="69.5"/>
+                        <color key="tintColor" systemColor="opaqueSeparatorColor"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="nI5-Eh-Tlj" secondAttribute="height" multiplier="1:1" id="BbK-44-tDN"/>
+                        </constraints>
+                        <imageReference key="image" image="folder" catalog="system" symbolScale="small"/>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="カテゴリー名" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uxW-QE-urb">
+                        <rect key="frame" x="85" y="5" width="224" height="75"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Uhm-D4-RJL">
+                        <rect key="frame" x="314" y="5" width="75" height="75"/>
+                        <constraints>
+                            <constraint firstAttribute="width" secondItem="Uhm-D4-RJL" secondAttribute="height" multiplier="1:1" id="yqQ-lC-ppN"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NqD-Mu-aSB">
+                        <rect key="frame" x="394" y="8" width="75" height="69"/>
+                        <color key="tintColor" systemColor="opaqueSeparatorColor"/>
+                        <imageReference key="image" image="chevron.forward" catalog="system" symbolScale="small"/>
+                    </imageView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="uxW-QE-urb" firstAttribute="leading" secondItem="nI5-Eh-Tlj" secondAttribute="trailing" constant="5" id="3Aw-vf-3Je"/>
+                    <constraint firstItem="Uhm-D4-RJL" firstAttribute="leading" secondItem="uxW-QE-urb" secondAttribute="trailing" constant="5" id="4ce-is-q4Y"/>
+                    <constraint firstAttribute="bottom" secondItem="uxW-QE-urb" secondAttribute="bottom" constant="5" id="4wv-h1-M0g"/>
+                    <constraint firstItem="Uhm-D4-RJL" firstAttribute="leading" secondItem="uxW-QE-urb" secondAttribute="trailing" constant="5" id="7o1-7h-zdg"/>
+                    <constraint firstItem="NqD-Mu-aSB" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="DDM-8a-fX9"/>
+                    <constraint firstItem="nI5-Eh-Tlj" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="DNk-en-ZzF"/>
+                    <constraint firstItem="uxW-QE-urb" firstAttribute="leading" secondItem="nI5-Eh-Tlj" secondAttribute="trailing" constant="5" id="KYx-w1-saN"/>
+                    <constraint firstAttribute="bottom" secondItem="Uhm-D4-RJL" secondAttribute="bottom" constant="5" id="OFd-aM-iBK"/>
+                    <constraint firstAttribute="trailing" secondItem="NqD-Mu-aSB" secondAttribute="trailing" constant="5" id="Q5J-qy-7aG"/>
+                    <constraint firstItem="nI5-Eh-Tlj" firstAttribute="height" secondItem="NqD-Mu-aSB" secondAttribute="height" id="WXA-ZM-myc"/>
+                    <constraint firstItem="uxW-QE-urb" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="Y3Z-Jb-ppV"/>
+                    <constraint firstAttribute="bottom" secondItem="nI5-Eh-Tlj" secondAttribute="bottom" constant="5" id="e4m-wr-CRx"/>
+                    <constraint firstItem="NqD-Mu-aSB" firstAttribute="leading" secondItem="Uhm-D4-RJL" secondAttribute="trailing" constant="5" id="hSR-Dq-gg4"/>
+                    <constraint firstItem="Uhm-D4-RJL" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="5" id="jpF-Lz-R4G"/>
+                    <constraint firstItem="nI5-Eh-Tlj" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="5" id="om4-Eb-pH0"/>
+                    <constraint firstItem="nI5-Eh-Tlj" firstAttribute="width" secondItem="NqD-Mu-aSB" secondAttribute="width" id="qlF-C0-9f7"/>
+                    <constraint firstItem="NqD-Mu-aSB" firstAttribute="leading" secondItem="Uhm-D4-RJL" secondAttribute="trailing" constant="5" id="sAQ-lH-hPr"/>
+                    <constraint firstAttribute="bottom" secondItem="NqD-Mu-aSB" secondAttribute="bottom" constant="5" id="x6Y-Mt-826"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="category" destination="uxW-QE-urb" id="t5q-Hf-knh"/>
+                <outlet property="count" destination="Uhm-D4-RJL" id="whh-rP-zDz"/>
+                <outlet property="endIcon" destination="NqD-Mu-aSB" id="uKN-Jk-xp5"/>
+                <outlet property="icon" destination="nI5-Eh-Tlj" id="nWE-n2-XC5"/>
+            </connections>
+            <point key="canvasLocation" x="165.21739130434784" y="45.870535714285715"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="chevron.forward" catalog="system" width="96" height="128"/>
+        <image name="folder" catalog="system" width="128" height="97"/>
+        <systemColor name="opaqueSeparatorColor">
+            <color red="0.77647058823529413" green="0.77647058823529413" blue="0.78431372549019607" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>

@@ -41,6 +41,9 @@
                             <constraint firstItem="Zjr-8a-wKf" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="mGR-D7-qBz"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="Zjr-8a-wKf" id="fdy-2v-ypC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
