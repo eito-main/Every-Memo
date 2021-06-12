@@ -53,10 +53,20 @@ final class Router {
 private extension Router {
     
     func show(from: UIViewController, next: UIViewController, animated: Bool = true) {
-        if let nav = from.navigationController {
-            nav.pushViewController(next, animated: animated)
-        } else {
-            from.present(next, animated: animated, completion: nil)
+        
+        switch from {
+        
+        case is AddMemoButtonViewController :
+            let nav = UINavigationController(rootViewController: next)
+            nav.modalPresentationStyle = .fullScreen
+            from.present(nav, animated: animated, completion: nil)
+            
+        default:
+            if let nav = from.navigationController {
+                nav.pushViewController(next, animated: animated)
+            } else {
+                from.present(next, animated: animated, completion: nil)
+            }
         }
     }
 }

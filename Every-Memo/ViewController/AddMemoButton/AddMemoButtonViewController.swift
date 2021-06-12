@@ -8,6 +8,10 @@ class AddMemoButtonViewController: UIViewController {
 
     @IBOutlet weak var container: UIView!
     
+    @IBAction func tapButton(_ sender: Any) {
+        Router.shared.showMemo(from: self)
+    }
+    
     static func makeFromStoryboard() -> AddMemoButtonViewController {
       let vc = UIStoryboard.addMemoButtonViewController
         

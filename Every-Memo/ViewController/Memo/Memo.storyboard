@@ -67,6 +67,12 @@
                             <constraint firstItem="hoE-zq-N0b" firstAttribute="top" secondItem="FJg-bi-R2k" secondAttribute="bottom" id="znb-TT-aU9"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="categoryLabel" destination="OKT-ur-bIU" id="D0J-1h-mua"/>
+                        <outlet property="dateLabel" destination="hoE-zq-N0b" id="FwG-c6-ts7"/>
+                        <outlet property="textTextView" destination="aq3-6i-QEQ" id="E7B-gg-YJd"/>
+                        <outlet property="titleTextField" destination="FJg-bi-R2k" id="1JY-MB-VId"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tK2-RG-XwI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

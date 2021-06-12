@@ -160,8 +160,7 @@
 			children = (
 				4EFA9740261C75FB00655626 /* Model */,
 				4EFA9741261C760600655626 /* View */,
-				4ED921232673471F00E79CE6 /* Xib */,
-				4ED921092671E7FB00E79CE6 /* Controller */,
+				4ED921092671E7FB00E79CE6 /* ViewController */,
 				4ED921042671D3EE00E79CE6 /* Router */,
 				4ED9211A2671EBA700E79CE6 /* Extension */,
 				4EFA9742261C760F00655626 /* nController */,
@@ -181,19 +180,19 @@
 			path = Router;
 			sourceTree = "<group>";
 		};
-		4ED921092671E7FB00E79CE6 /* Controller */ = {
+		4ED921092671E7FB00E79CE6 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
-				4ED9210A2671E8FF00E79CE6 /* CategoryViewController.swift */,
-				4ED9210C2671E91700E79CE6 /* SearchViewController.swift */,
-				4ED9210E2671E92C00E79CE6 /* CalendarViewController.swift */,
-				4ED921102671E93F00E79CE6 /* TitleViewController.swift */,
-				4ED921122671E95000E79CE6 /* MemoViewController.swift */,
-				4ED921162671E97C00E79CE6 /* AddCategoryViewController.swift */,
-				4ED921182671E9A500E79CE6 /* AddMemoButtonViewController.swift */,
+				4ED9213526747DDA00E79CE6 /* Category */,
+				4ED9213426747DD600E79CE6 /* Search */,
+				4ED9213326747DD300E79CE6 /* Calendar */,
+				4ED9213226747DC900E79CE6 /* Title */,
+				4ED9213126747DBE00E79CE6 /* Memo */,
+				4ED9213026747DBB00E79CE6 /* AddCategory */,
+				4ED9212F26747DB700E79CE6 /* AddMemoButton */,
 				4ED9211D26720BDE00E79CE6 /* CustomTabBarController.swift */,
 			);
-			path = Controller;
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 		4ED9211A2671EBA700E79CE6 /* Extension */ = {
@@ -204,17 +203,94 @@
 			path = Extension;
 			sourceTree = "<group>";
 		};
-		4ED921232673471F00E79CE6 /* Xib */ = {
+		4ED9212C267475E800E79CE6 /* CategoryCell */ = {
 			isa = PBXGroup;
 			children = (
-				4ED9211F267346F800E79CE6 /* CategoryCell.swift */,
 				4ED92120267346F800E79CE6 /* CategoryCell.xib */,
-				4ED92124267349C800E79CE6 /* TitleCell.swift */,
-				4ED92125267349C800E79CE6 /* TitleCell.xib */,
-				4ED9212826734A0200E79CE6 /* AddCategoryCell.swift */,
-				4ED9212926734A0200E79CE6 /* AddCategoryCell.xib */,
+				4ED9211F267346F800E79CE6 /* CategoryCell.swift */,
 			);
-			path = Xib;
+			path = CategoryCell;
+			sourceTree = "<group>";
+		};
+		4ED9212D2674760500E79CE6 /* TitleCell */ = {
+			isa = PBXGroup;
+			children = (
+				4ED92125267349C800E79CE6 /* TitleCell.xib */,
+				4ED92124267349C800E79CE6 /* TitleCell.swift */,
+			);
+			path = TitleCell;
+			sourceTree = "<group>";
+		};
+		4ED9212E2674762B00E79CE6 /* AddCategoryCell */ = {
+			isa = PBXGroup;
+			children = (
+				4ED9212926734A0200E79CE6 /* AddCategoryCell.xib */,
+				4ED9212826734A0200E79CE6 /* AddCategoryCell.swift */,
+			);
+			path = AddCategoryCell;
+			sourceTree = "<group>";
+		};
+		4ED9212F26747DB700E79CE6 /* AddMemoButton */ = {
+			isa = PBXGroup;
+			children = (
+				4E0B919725DAE87E006BF644 /* AddMemoButton.storyboard */,
+				4ED921182671E9A500E79CE6 /* AddMemoButtonViewController.swift */,
+			);
+			path = AddMemoButton;
+			sourceTree = "<group>";
+		};
+		4ED9213026747DBB00E79CE6 /* AddCategory */ = {
+			isa = PBXGroup;
+			children = (
+				4E85AAA02627F7B800F81FA9 /* AddCategory.storyboard */,
+				4ED921162671E97C00E79CE6 /* AddCategoryViewController.swift */,
+			);
+			path = AddCategory;
+			sourceTree = "<group>";
+		};
+		4ED9213126747DBE00E79CE6 /* Memo */ = {
+			isa = PBXGroup;
+			children = (
+				4E85AA9A2627F75C00F81FA9 /* Memo.storyboard */,
+				4ED921122671E95000E79CE6 /* MemoViewController.swift */,
+			);
+			path = Memo;
+			sourceTree = "<group>";
+		};
+		4ED9213226747DC900E79CE6 /* Title */ = {
+			isa = PBXGroup;
+			children = (
+				4E85AA972627F74900F81FA9 /* Title.storyboard */,
+				4ED921102671E93F00E79CE6 /* TitleViewController.swift */,
+			);
+			path = Title;
+			sourceTree = "<group>";
+		};
+		4ED9213326747DD300E79CE6 /* Calendar */ = {
+			isa = PBXGroup;
+			children = (
+				4E85AA8E2627F6E800F81FA9 /* Calendar.storyboard */,
+				4ED9210E2671E92C00E79CE6 /* CalendarViewController.swift */,
+			);
+			path = Calendar;
+			sourceTree = "<group>";
+		};
+		4ED9213426747DD600E79CE6 /* Search */ = {
+			isa = PBXGroup;
+			children = (
+				4E85AA912627F70500F81FA9 /* Search.storyboard */,
+				4ED9210C2671E91700E79CE6 /* SearchViewController.swift */,
+			);
+			path = Search;
+			sourceTree = "<group>";
+		};
+		4ED9213526747DDA00E79CE6 /* Category */ = {
+			isa = PBXGroup;
+			children = (
+				4ED921072671E5F600E79CE6 /* Category.storyboard */,
+				4ED9210A2671E8FF00E79CE6 /* CategoryViewController.swift */,
+			);
+			path = Category;
 			sourceTree = "<group>";
 		};
 		4EEA05342646916500E74C57 /* Every-MemoTests */ = {
@@ -240,13 +316,9 @@
 		4EFA9741261C760600655626 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				4ED921072671E5F600E79CE6 /* Category.storyboard */,
-				4E85AA912627F70500F81FA9 /* Search.storyboard */,
-				4E85AA8E2627F6E800F81FA9 /* Calendar.storyboard */,
-				4E85AA972627F74900F81FA9 /* Title.storyboard */,
-				4E85AA9A2627F75C00F81FA9 /* Memo.storyboard */,
-				4E85AAA02627F7B800F81FA9 /* AddCategory.storyboard */,
-				4E0B919725DAE87E006BF644 /* AddMemoButton.storyboard */,
+				4ED9212C267475E800E79CE6 /* CategoryCell */,
+				4ED9212D2674760500E79CE6 /* TitleCell */,
+				4ED9212E2674762B00E79CE6 /* AddCategoryCell */,
 			);
 			path = View;
 			sourceTree = "<group>";
