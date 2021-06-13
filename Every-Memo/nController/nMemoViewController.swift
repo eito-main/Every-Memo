@@ -15,7 +15,7 @@
 //    private var editButton: UIBarButtonItem!
 //    private var operationMemo: OperationMemo!
 //    private var edit = false
-//    
+//
 //    override func viewDidLoad() {
 //        super.viewDidLoad()
 //        

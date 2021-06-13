@@ -38,13 +38,14 @@ final class Router {
         show(from: from, next: vc)
     }
     
-    func showMemo(from: UIViewController) {
-        let vc = MemoViewController.makeFromStoryboard()
+    func showMemo(from: UIViewController, flag: Bool) {
+        let vc = MemoViewController.makeFromStoryboard(flag: flag)
         show(from: from, next: vc)
     }
     
     func showAddCategory(from: UIViewController) {
         let vc = AddCategoryViewController.makeFromStoryboard()
+        vc.delegate = from as! MemoViewController
         show(from: from, next: vc)
     }
     
@@ -57,6 +58,7 @@ private extension Router {
         switch from {
         
         case is AddMemoButtonViewController :
+            
             let nav = UINavigationController(rootViewController: next)
             nav.modalPresentationStyle = .fullScreen
             from.present(nav, animated: animated, completion: nil)

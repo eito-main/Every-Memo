@@ -48,6 +48,8 @@
 		4ED92127267349C800E79CE6 /* TitleCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ED92125267349C800E79CE6 /* TitleCell.xib */; };
 		4ED9212A26734A0200E79CE6 /* AddCategoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED9212826734A0200E79CE6 /* AddCategoryCell.swift */; };
 		4ED9212B26734A0200E79CE6 /* AddCategoryCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ED9212926734A0200E79CE6 /* AddCategoryCell.xib */; };
+		4ED921382675D74600E79CE6 /* AddCategoryPlusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ED921362675D74600E79CE6 /* AddCategoryPlusCell.swift */; };
+		4ED921392675D74600E79CE6 /* AddCategoryPlusCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4ED921372675D74600E79CE6 /* AddCategoryPlusCell.xib */; };
 		4EEA05362646916500E74C57 /* Every_MemoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEA05352646916500E74C57 /* Every_MemoTests.swift */; };
 		E9AA080A9E118BC7AD342818 /* Pods_Every_Memo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 026CA9E013A2D03A9E190A5C /* Pods_Every_Memo.framework */; };
 /* End PBXBuildFile section */
@@ -108,6 +110,8 @@
 		4ED92125267349C800E79CE6 /* TitleCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TitleCell.xib; sourceTree = "<group>"; };
 		4ED9212826734A0200E79CE6 /* AddCategoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCategoryCell.swift; sourceTree = "<group>"; };
 		4ED9212926734A0200E79CE6 /* AddCategoryCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddCategoryCell.xib; sourceTree = "<group>"; };
+		4ED921362675D74600E79CE6 /* AddCategoryPlusCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddCategoryPlusCell.swift; sourceTree = "<group>"; };
+		4ED921372675D74600E79CE6 /* AddCategoryPlusCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddCategoryPlusCell.xib; sourceTree = "<group>"; };
 		4EEA05332646916500E74C57 /* Every-MemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Every-MemoTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EEA05352646916500E74C57 /* Every_MemoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Every_MemoTests.swift; sourceTree = "<group>"; };
 		4EEA05372646916500E74C57 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -293,6 +297,15 @@
 			path = Category;
 			sourceTree = "<group>";
 		};
+		4ED9213A2675D74F00E79CE6 /* AddCategory+Cell */ = {
+			isa = PBXGroup;
+			children = (
+				4ED921372675D74600E79CE6 /* AddCategoryPlusCell.xib */,
+				4ED921362675D74600E79CE6 /* AddCategoryPlusCell.swift */,
+			);
+			path = "AddCategory+Cell";
+			sourceTree = "<group>";
+		};
 		4EEA05342646916500E74C57 /* Every-MemoTests */ = {
 			isa = PBXGroup;
 			children = (
@@ -319,6 +332,7 @@
 				4ED9212C267475E800E79CE6 /* CategoryCell */,
 				4ED9212D2674760500E79CE6 /* TitleCell */,
 				4ED9212E2674762B00E79CE6 /* AddCategoryCell */,
+				4ED9213A2675D74F00E79CE6 /* AddCategory+Cell */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -454,6 +468,7 @@
 				4E85AA922627F70500F81FA9 /* Search.storyboard in Resources */,
 				4E85AA982627F74900F81FA9 /* Title.storyboard in Resources */,
 				4ED9212B26734A0200E79CE6 /* AddCategoryCell.xib in Resources */,
+				4ED921392675D74600E79CE6 /* AddCategoryPlusCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -520,6 +535,7 @@
 				4E0B919625DAE87E006BF644 /* nCategoryListViewController.swift in Sources */,
 				4E0B91CD25DD21B0006BF644 /* nAddMemoCategoryViewController.swift in Sources */,
 				4E0B91BE25DD0554006BF644 /* nCalenderViewController.swift in Sources */,
+				4ED921382675D74600E79CE6 /* AddCategoryPlusCell.swift in Sources */,
 				4E0B923025FC8906006BF644 /* nSearchNavigationController.swift in Sources */,
 				4ED92126267349C800E79CE6 /* TitleCell.swift in Sources */,
 				4E0B91AB25DC2FB8006BF644 /* nMemoViewController.swift in Sources */,

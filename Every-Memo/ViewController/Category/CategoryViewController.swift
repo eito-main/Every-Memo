@@ -23,33 +23,33 @@ class CategoryViewController: UIViewController {
         operationMemo = OperationMemo()
         operationCategory = OperationCategory()
         
-        settingNavigation()
+//        settingNavigation()
         settingTableView()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
+    override func viewDidAppear(_ animated: Bool) {
         
         operationMemo = OperationMemo()
         operationCategory = OperationCategory()
-        
+        tableView.reloadData()
     }
 }
 
 
 extension CategoryViewController {
     
-    private func settingNavigation() {
-        
-        self.navigationItem.title = "Category"
-        
-        self.navigationItem.backBarButtonItem = UIBarButtonItem(
-            title: "",
-            style: .plain,
-            target: nil,
-            action: nil
-        )
-    }
+    
+//    private func settingNavigation() {
+//
+//        self.navigationItem.title = "Category"
+//
+//        self.navigationItem.backBarButtonItem = UIBarButtonItem(
+//            title: "",
+//            style: .plain,
+//            target: nil,
+//            action: nil
+//        )
+//    }
     
     private func settingTableView() {
         

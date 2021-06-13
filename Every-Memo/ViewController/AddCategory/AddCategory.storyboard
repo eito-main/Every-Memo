@@ -41,6 +41,9 @@
                             <constraint firstItem="KZ7-QG-fRX" firstAttribute="bottom" secondItem="UPb-Kg-ACm" secondAttribute="bottom" id="w0k-1h-UXW"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="tableView" destination="UPb-Kg-ACm" id="WhA-ST-spa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lx2-tA-416" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
