@@ -11,9 +11,10 @@ class MemoViewController: UIViewController {
     @IBOutlet weak var textTextView: UITextView!
     
     
-    static func makeFromStoryboard(flag: Bool) -> MemoViewController {
+    static func makeFromStoryboard(flag: Bool, memo: MemoData?) -> MemoViewController {
         let vc = UIStoryboard.memoViewController
         vc.flag = flag
+        vc.memo = memo
         return vc
     }
     
@@ -21,6 +22,7 @@ class MemoViewController: UIViewController {
     var cancelButton: UIBarButtonItem?
     private var operationMemo: OperationMemo!
     var flag: Bool = false
+    var memo: MemoData?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,6 +44,11 @@ class MemoViewController: UIViewController {
             cancelButton = UIBarButtonItem(barButtonSystemItem: .cancel, target: self, action: #selector(cancelButtonPressed(_:)))
             self.navigationItem.rightBarButtonItem = saveButton
             self.navigationItem.leftBarButtonItem = cancelButton
+        } else {
+            categoryLabel.text = memo?.category
+            titleTextField.text = memo?.title
+            dateLabel.text = memo?.date
+            textTextView.text = memo?.text
         }
     }
 }

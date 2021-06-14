@@ -38,8 +38,8 @@ final class Router {
         show(from: from, next: vc)
     }
     
-    func showMemo(from: UIViewController, flag: Bool) {
-        let vc = MemoViewController.makeFromStoryboard(flag: flag)
+    func showMemo(from: UIViewController, flag: Bool, memo: MemoData?) {
+        let vc = MemoViewController.makeFromStoryboard(flag: flag, memo: memo)
         show(from: from, next: vc)
     }
     
