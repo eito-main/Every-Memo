@@ -20,12 +20,12 @@ final class OperationMemo {
         currentMemos = saveMemo.allMemos()
     }
     
-    internal func add(memo: MemoData) {
+    func add(memo: MemoData) {
         
         currentMemos.append(memo)
     }
     
-    internal func deleteMemo(for id: String) {
+    func deleteMemo(for id: String) {
         
         guard let index = currentMemos.firstIndex(where: { $0.id == id }) else {
             
@@ -34,7 +34,7 @@ final class OperationMemo {
         currentMemos.remove(at: index)
     }
     
-    internal func updateMemo(for id: String, to newMemo: MemoData) {
+    func updateMemo(for id: String, to newMemo: MemoData) {
         
         guard let index = currentMemos.firstIndex(where: { $0.id == id }) else {
             
