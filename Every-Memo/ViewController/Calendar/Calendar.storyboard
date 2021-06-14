@@ -50,6 +50,10 @@
                             <constraint firstItem="gmJ-4S-xuh" firstAttribute="top" secondItem="Hyq-sA-crk" secondAttribute="bottom" id="yOC-Fb-YIs"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="calendar" destination="Hyq-sA-crk" id="5wZ-2e-t8R"/>
+                        <outlet property="tableView" destination="gmJ-4S-xuh" id="buu-mA-rAB"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="tan-D3-OaQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

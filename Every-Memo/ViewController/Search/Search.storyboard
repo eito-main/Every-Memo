@@ -51,6 +51,10 @@
                             <constraint firstItem="JNk-w9-KKi" firstAttribute="leading" secondItem="0l6-tF-tlr" secondAttribute="leading" id="siV-cT-Fk0"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="searchBar" destination="JNk-w9-KKi" id="WPB-86-rW4"/>
+                        <outlet property="tableView" destination="GAO-co-U0L" id="6hR-eR-ili"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Bw4-zD-6bO" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

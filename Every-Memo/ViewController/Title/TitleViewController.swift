@@ -87,7 +87,7 @@ extension TitleViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: cellId, for: indexPath) as? TitleCell
-        cell?.category.text = "\(memoList[indexPath.row].title)"
+        cell?.title.text = "\(memoList[indexPath.row].title)"
         
         return cell!
     }

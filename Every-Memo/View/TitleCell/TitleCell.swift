@@ -10,7 +10,7 @@ import UIKit
 class TitleCell: UITableViewCell {
     
     @IBOutlet weak var icon: UIImageView!
-    @IBOutlet weak var category: UILabel!
+    @IBOutlet weak var title: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()

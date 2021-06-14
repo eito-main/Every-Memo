@@ -37,7 +37,7 @@ class MemoViewController: UIViewController {
             
             getDate()
             
-            titleTextField.placeholder = "タイトルを入力"
+            titleTextField.placeholder = "タイトルを入力してください"
             categoryLabel.text = "カテゴリー未指定"
             
             saveButton = UIBarButtonItem(barButtonSystemItem: .save, target: self, action: #selector(saveButtonPressed(_:)))
