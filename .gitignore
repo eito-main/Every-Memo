@@ -1,25 +1,48 @@
-# Xcode
-build/
-*.pbxuser
-!default.pbxuser
-*.mode1v3
-!default.mode1v3
-*.mode2v3
-!default.mode2v3
-*.perspectivev3
-!default.perspectivev3
-xcuserdata
+### プロジェクトのカスタムschemeが保存されるディレクトリ
+xcuserdata/
+
+### gitなどのVCSに関するメタデータが含まれる。
 *.xccheckout
+
+### 詳細不明だが上記のファイルと同様にVCSに関する設定値が含まれている
+*.xcscmblueprint
+
+### Xcodeのビルドファイル
+build/
+DerivedData/
+
+### 手動で廃止（deprecate）したクラスのファイルがここへ移動する（同じ名前のクラスを定義しようとしたときなど）
 *.moved-aside
-DerivedData
-*.hmap
-*.ipa
-*.xcuserstate
 
-# CocoaPod
-Pods/*
+### Xcodeのプライベート設定（ウィンドウサイズ、ブックマーク、ブレイクポイントなど）
+*.pbxuser
+*.mode1v3
+*.mode2v3
+*.perspectivev3
 
-# others
-*.swp
-!.gitkeep
+### 上記4項目のデフォルト設定ファイル。これらは除外せずに追加（除外の除外）をする。
+!default.pbxuser
+!default.mode1v3
+!default.mode2v3
+!default.perspectivev3
+
+### プロジェクトファイルのパッケージ（ディレクトリ）の全体を除外し、必要なものだけ追加（除外からの除外）をしていきます
+*.xcodeproj/*
+
+### プロジェクトの構成情報を格納するファイル
+!*.xcodeproj/project.pbxproj
+
+### XcodeのプロジェクトのビルドSchemeを格納するファイル
+!*.xcodeproj/xcshareddata/
+
+### プロジェクトのワークスペースのデータを格納するXMLファイル
+!*.xcworkspace/contents.xcworkspacedata
+
+### 「File > Workspace Settings」で設定できるワークスペースの設定値。
+**/xcshareddata/WorkspaceSettings.xcsettings
+
+### コードカバレッジの計測を有効化（GCC_GENERATE_TEST_COVERAGE_FILES = YES）していると生成される。
+/*.gcno
+
+### その他
 .DS_Store
