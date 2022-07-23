@@ -30,7 +30,7 @@ class CustomTabBarController: UITabBarController {
         super.viewDidLoad()
 
         let vcs = [vc1, vc2, vc3]
-        let viewControllers = vcs.map{ UINavigationController(rootViewController: $0)}
+        let viewControllers = vcs.map{ UINavigationController(rootViewController: $0) }
         setViewControllers(viewControllers, animated: false)
     }
 }
